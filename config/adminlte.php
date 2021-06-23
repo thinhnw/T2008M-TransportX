@@ -279,16 +279,7 @@ return [
         [
             'text'    => 'Company Branches',
             'icon'    => 'fas fa-fw fa-building',
-            'submenu' => [
-                [
-                    'text' => 'All Branches',
-                    'url'  => 'branches/list',
-                ],
-                [
-                    'text' => 'Add New Branch',
-                    'url'  => 'branches/new',
-                ]
-            ]
+            'url'  => 'branches',
         ],
         [
             'text'    => 'Users',
@@ -312,6 +303,25 @@ return [
             'text'    => 'Track',
             'icon'    => 'fas fa-fw fa-search',
             'url'  => 'track',
+        ],
+
+        [
+            'text'    => 'Settings',
+            'icon'    => 'fas fa-fw fa-cog',
+            'submenu' => [
+                [
+                    'text' => 'Shipping Rates',
+                    'url'  => 'settings/rate',
+                ],
+                [
+                    'text' => 'Package Types',
+                    'url'  => 'settings/package-types',
+                ],
+                [
+                    'text' => 'General Settings',
+                    'url'  => 'settings/general',
+                ]
+            ]
         ],
         // [
         //     'text'        => 'pages',
