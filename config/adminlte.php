@@ -250,34 +250,34 @@ return [
         ],
         [
             'text'    => 'Shipments',
-            'icon'    => 'fas fa-fw fa-box-open',
-            'submenu' => [
-                [
-                    'text' => 'All Branches',
-                    'url'  => 'branches/list',
-                ],
-                [
-                    'text' => 'Add New Branch',
-                    'url'  => 'branches/new',
-                ]
-            ]
-        ],
-        [
-            'text'    => 'Missions',
             'icon'    => 'fas fa-fw fa-truck',
             'submenu' => [
                 [
                     'text' => 'All Branches',
-                    'url'  => 'branches/list',
+                    'url'  => 'shipments/list',
                 ],
                 [
                     'text' => 'Add New Branch',
-                    'url'  => 'branches/new',
+                    'url'  => 'shipments/new',
                 ]
             ]
         ],
         [
-            'text'    => 'Branch',
+            'text'    => 'Packages',
+            'icon'    => 'fas fa-fw fa-box-open',
+            'submenu' => [
+                [
+                    'text' => 'All Branches',
+                    'url'  => 'packages/list',
+                ],
+                [
+                    'text' => 'Add New Branch',
+                    'url'  => 'packages/new',
+                ]
+            ]
+        ],
+        [
+            'text'    => 'Company Branches',
             'icon'    => 'fas fa-fw fa-building',
             'submenu' => [
                 [
@@ -291,32 +291,27 @@ return [
             ]
         ],
         [
-            'text'    => 'Branch staff',
+            'text'    => 'Users',
             'icon'    => 'fas fa-fw fa-users',
             'submenu' => [
                 [
-                    'text' => 'All Branches',
-                    'url'  => 'branches/list',
+                    'text' => 'All',
+                    'url'  => 'users/list',
                 ],
                 [
-                    'text' => 'Add New Branch',
-                    'url'  => 'branches/new',
+                    'text' => 'Drivers',
+                    'url'  => 'users/list?type=driver',
+                ],
+                [
+                    'text' => 'Customers',
+                    'url'  => 'users/list?type=customer',
                 ]
             ]
         ],
         [
             'text'    => 'Track',
-            'icon'    => 'fas fa-fw fa-users',
-            'submenu' => [
-                [
-                    'text' => 'All Branches',
-                    'url'  => 'branches/list',
-                ],
-                [
-                    'text' => 'Add New Branch',
-                    'url'  => 'branches/new',
-                ]
-            ]
+            'icon'    => 'fas fa-fw fa-search',
+            'url'  => 'track',
         ],
         // [
         //     'text'        => 'pages',
