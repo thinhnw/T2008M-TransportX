@@ -26,7 +26,7 @@
             <th scope="col">Weight (kg)</th>
             <th scope="col">Status</th>
             <th scope="col">Processed by branch</th>
-            <th scope="col">Remove package</th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -40,12 +40,13 @@
                     <td>{{ $package->weight }}</td>
                     <td>New</td>
                     <td>0</td>
-                    <td>
+                    <td class="d-flex align-items-center">
+                        <a href="/packages/{{$package->id}}" class="mr-3">Edit</a>
                         <form method="POST" action="/packages/{{$package->id}}">
                             @csrf
                             @method('DELETE')
                             {{-- <input type="submit" class="btn btn-danger delete-pacakge" value="Delete user"> --}}
-                            <button type="submit" class="btn btn-light">
+                            <button type="submit" class="btn btn-light delete-package">
                                 <i class="fas fa-minus-circle text-danger"></i>
                             </button>
                         </form>
