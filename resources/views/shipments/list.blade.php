@@ -1,14 +1,14 @@
 @extends('adminlte::page')
 
-@section('title', 'Packages')
+@section('title', 'Shipments')
 
 @section('content_header')
     <div class="d-flex justify-content-between px-5 mt-3">
         <div>
-            <h1>All Packages</h1>
+            <h1>All Shipments</h1>
         </div>
         <div>
-            <button class="btn btn-primary" onclick="window.location='{{ url("packages/create") }}'">+ Add Package</button>
+            <button class="btn btn-primary" onclick="window.location='{{ url("shipments/create") }}'">+ Add Shipment</button>
         </div>
     </div>
 @stop
@@ -19,38 +19,29 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Package ID</th>
-            <th scope="col">Receiver's Name</th>
-            <th scope="col">Receiver's Address</th>
-            <th scope="col">Width (cm)</th>
-            <th scope="col">Length (cm)</th>
-            <th scope="col">Height (cm)</th>
-            <th scope="col">Weight (kg)</th>
+            <th scope="col">Code</th>
             <th scope="col">Status</th>
-            <th scope="col">Processed by branch</th>
+            <th scope="col">Type</th>
+            <th scope="col">Branch</th>
+            <th scope="col">Shipping Cost</th>
+            <th scope="col">Shipping Date</th>
+            <th scope="col">Created At</th>
             <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
-            @foreach ($packages as $index => $package)
+            @foreach ($shipments as $index => $shipment)
                 <tr class="cursor-pointer">
                     <th scope="row">{{ $index }}</th>
-                    <td>{{ formatID($package->id) }}</td>
-                    <td>{{ $package->receiver }}</td>
-                    <td>{{ $package->receiver_address }}</td>
-                    <td>{{ $package->width }}</td>
-                    <td>{{ $package->length }}</td>
-                    <td>{{ $package->height }}</td>
-                    <td>{{ $package->weight }}</td>
+                    <td>{{ formatID($shipment->id) }}</td>
                     <td>New</td>
                     <td>0</td>
                     <td class="d-flex align-items-center">
-                        <a href="/packages/{{$package->id}}/edit" class="mr-3">Edit</a>
-                        <form method="POST" action="/packages/{{$package->id}}">
+                        <a href="/shipments/{{$shipment->id}}/edit" class="mr-3">Edit</a>
+                        <form method="POST" action="/shipments/{{$shipment->id}}">
                             @csrf
                             @method('DELETE')
-                            {{-- <input type="submit" class="btn btn-danger delete-pacakge" value="Delete user"> --}}
-                            <button type="submit" class="btn btn-light delete-package">
+                            <button type="submit" class="btn btn-light delete-shipment">
                                 <i class="fas fa-minus-circle text-danger"></i>
                             </button>
                         </form>
@@ -60,9 +51,6 @@
             @endforeach
         </tbody>
     </table>
-    <div class="d-flex justify-content-center">
-        {{ $packages->links() }}
-    </div>
 </div>
     
 @stop
@@ -73,7 +61,7 @@
 
 @section('js')
     <script>
-    $('.delete-package').click(function(e){
+    $('.delete-shipment').click(function(e){
         e.preventDefault() // Don't post the form, unless confirmed
         if (confirm('Are you sure?')) {
             // Post the form
@@ -93,6 +81,6 @@
         while (strlen($result) < 6)  {
             $result = "0" . $result;
         }
-        return "PK" . $result;
+        return "SH" . $result;
     }
 @endphp

@@ -251,16 +251,7 @@ return [
         [
             'text'    => 'Shipments',
             'icon'    => 'fas fa-fw fa-truck',
-            'submenu' => [
-                [
-                    'text' => 'All Shipments',
-                    'url'  => 'shipments',
-                ],
-                [
-                    'text' => 'Add New Shipment',
-                    'url'  => 'shipments/new',
-                ]
-            ]
+            'url'  => 'shipments',
         ],
         [
             'text'    => 'Packages',

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use App\Models\Package;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Pagination\Paginator;
 
 class PackageController extends Controller
 {
@@ -17,7 +18,8 @@ class PackageController extends Controller
     public function index()
     {
         //
-        return view('packages.list', [ "packages" => Package::all() ]);
+        Paginator::useBootstrap();
+        return view('packages.list', [ "packages" => Package::paginate(10) ]);
     }
 
     /**
@@ -70,6 +72,7 @@ class PackageController extends Controller
     public function edit($id)
     {
         //
+        return view('packages.edit', [ "package" => Package::find($id) ]);
     }
 
     /**
@@ -82,6 +85,15 @@ class PackageController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $package = Package::find($id);
+        $package->update([
+            "width" => $request->input('width'),
+            'length' => $request->input('length'),
+            'height' => $request->input('height'),
+            'weight' => $request->input('weight'),
+        ]);
+
+        return redirect()->action([PackageController::class, 'index']);
     }
 
     /**

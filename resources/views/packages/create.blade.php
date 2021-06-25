@@ -18,6 +18,17 @@
         @csrf
         <div class="row">
             <div class="col col-6 form-group">
+                <label>Receiver's Name</label>
+                <input type="text" class="form-control" placeholder="Enter the receiver's name" name="receiver" required />
+            </div>
+            <div class="col col-6 form-group">
+                <label>Receiver's Address</label>
+                <input type="text" class="form-control" placeholder="Enter the receiver's address" name="receiver_address" required />
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col col-6 form-group">
                 <label>Width (cm)</label>
                 <input type="number" step="any" class="form-control" placeholder="Enter package witdh" name="width" required />
             </div>

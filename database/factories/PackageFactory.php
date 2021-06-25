@@ -22,11 +22,15 @@ class PackageFactory extends Factory
      */
     public function definition()
     {
+        $package_receiver = $this->faker->firstName() . ' ' . $this->faker->lastName;
+        $package_receiver_address = $this->faker->address;
         $package_height = $this->faker->numberBetween(1, 20);
         $package_width = $this->faker->numberBetween(1, 20);
         $package_length = $this->faker->numberBetween(1, 20);
         $package_weight = $this->faker->numberBetween(1, 20);
         return [
+            'receiver' => $package_receiver,
+            'receiver_address' => $package_receiver_address,
             'height' => $package_height,
             'width' => $package_width,
             'length' => $package_length,

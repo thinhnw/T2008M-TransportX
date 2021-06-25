@@ -15,7 +15,7 @@ class ShipmentController extends Controller
     public function index()
     {
         //
-        return Shipment::all();
+        return view('shipments.list', [ "shipments" => Shipment::all() ]);
     }
 
     /**
