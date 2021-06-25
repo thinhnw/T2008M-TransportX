@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use App\Models\Package;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class PackageController extends Controller
 {
@@ -92,5 +93,8 @@ class PackageController extends Controller
     public function destroy($id)
     {
         //
+        $package = Package::find($id);
+        $package->delete();
+        return redirect()->action([PackageController::class, 'index']);
     }
 }
