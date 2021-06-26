@@ -237,7 +237,7 @@ return [
         ],
 
         // Sidebar items:
-      
+
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
@@ -261,7 +261,16 @@ return [
         [
             'text'    => 'Company Branches',
             'icon'    => 'fas fa-fw fa-building',
-            'url'  => 'branches',
+            'submenu' => [
+                [
+                    'text' => 'List Branches',
+                    'url'  => 'branches',
+                ],
+                [
+                    'text' => 'Add New Branches',
+                    'url'  => 'branches/new',
+                ]
+            ]
         ],
         [
             'text'    => 'Users',

@@ -5,7 +5,7 @@
 @section('content_header')
     <div class="d-flex justify-content-between px-5 mt-3">
         <div>
-            <h1>Edit Package {{ formatID($package->id) }}</h1>
+            <h1>Edit Package</h1>
         </div>
         <div>
         </div>
@@ -20,24 +20,24 @@
         <div class="row">
             <div class="col col-6 form-group">
                 <label>Receiver's Name</label>
-                <input 
-                    type="text" 
+                <input
+                    type="text"
                     value="{{ $package->receiver }}"
-                    class="form-control" 
-                    placeholder="Enter the receiver's name" 
-                    name="receiver" 
-                    required 
+                    class="form-control"
+                    placeholder="Enter the receiver's name"
+                    name="receiver"
+                    required
                 />
             </div>
             <div class="col col-6 form-group">
                 <label>Receiver's Address</label>
-                <input 
-                    type="text" 
+                <input
+                    type="text"
                     value="{{ $package->receiver_address }}"
-                    class="form-control" 
-                    placeholder="Enter the receiver's address" 
-                    name="receiver_address" 
-                    required 
+                    class="form-control"
+                    placeholder="Enter the receiver's address"
+                    name="receiver_address"
+                    required
                 />
             </div>
         </div>
@@ -45,50 +45,50 @@
         <div class="row">
             <div class="col col-6 form-group">
                 <label>Width (cm)</label>
-                <input 
-                    type="number" 
+                <input
+                    type="number"
                     value="{{ $package->width }}"
-                    step="any" 
-                    class="form-control" 
-                    placeholder="Enter package witdh" 
-                    name="width" 
-                    required 
+                    step="any"
+                    class="form-control"
+                    placeholder="Enter package witdh"
+                    name="width"
+                    required
                 />
             </div>
             <div class="col col-6 form-group">
                 <label>Length (cm)</label>
-                <input 
-                    type="number" 
+                <input
+                    type="number"
                     value="{{ $package->length }}"
-                    step="any" 
-                    class="form-control" 
-                    placeholder="Enter package length" 
-                    name="length" 
-                    required 
+                    step="any"
+                    class="form-control"
+                    placeholder="Enter package length"
+                    name="length"
+                    required
                 />
             </div>
             <div class="col col-6 form-group">
                 <label>Height (cm)</label>
-                <input 
-                    type="number" 
+                <input
+                    type="number"
                     value="{{ $package->height }}"
-                    step="any" 
-                    class="form-control" 
-                    placeholder="Enter package height" 
-                    name="height" 
-                    required 
+                    step="any"
+                    class="form-control"
+                    placeholder="Enter package height"
+                    name="height"
+                    required
                 />
             </div>
             <div class="col col-6 form-group">
                 <label>Weight (kg)</label>
-                <input 
-                    type="number" 
+                <input
+                    type="number"
                     value="{{ $package->weight }}"
-                    step="any" 
-                    class="form-control" 
-                    placeholder="Enter package weight" 
-                    name="weight" 
-                    required 
+                    step="any"
+                    class="form-control"
+                    placeholder="Enter package weight"
+                    name="weight"
+                    required
                 />
             </div>
             <div class="col col-6 mt-3">
@@ -97,7 +97,7 @@
         </div>
     </form>
 </div>
-    
+
 @stop
 
 @section('css')

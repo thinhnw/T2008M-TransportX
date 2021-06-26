@@ -56,7 +56,7 @@
                         </form>
                     </td>
                 </tr>
-                
+
             @endforeach
         </tbody>
     </table>
@@ -64,7 +64,7 @@
         {{ $packages->links() }}
     </div>
 </div>
-    
+
 @stop
 
 @section('css')

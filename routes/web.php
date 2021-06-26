@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShipmentController;
 use App\Http\Controllers\PackageController;
+use App\Http\Controllers\BranchesController;
 use Illuminate\Http\Request;
 
 
@@ -27,4 +28,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::resource('shipments', ShipmentController::class);
 Route::resource('packages', PackageController::class);
-
+Route::get('/branches',[BranchesController::class,"all"]);
+Route::get('/branches/new',[BranchesController::class,"new"]);
+Route::post('/branches/save',[BranchesController::class,"save"]);
+Route::get('/branches/edit/{id}',[BranchesController::class,"edit"]);
+Route::post('/branches/update/{id}',[BranchesController::class,"update"]);
