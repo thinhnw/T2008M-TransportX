@@ -251,44 +251,61 @@ return [
         [
             'text'    => 'Shipments',
             'icon'    => 'fas fa-fw fa-truck',
-            'url'  => 'shipments',
+            'submenu' => [
+                [
+                    'text' => 'All Branches',
+                    'url'  => 'shipments/list',
+                ],
+                [
+                    'text' => 'Add New Branch',
+                    'url'  => 'shipments/new',
+                    'can' => 'manage'
+                ]
+            ]
         ],
         [
             'text'    => 'Packages',
             'icon'    => 'fas fa-fw fa-box-open',
-            'url'  => 'packages',
+            'submenu' => [
+                [
+                    'text' => 'All Branches',
+                    'url'  => 'packages/list',
+                ],
+                [
+                    'text' => 'Add New Branch',
+                    'url'  => 'packages/new',
+                    'can' => 'manage'
+                ]
+            ]
         ],
         [
             'text'    => 'Company Branches',
             'icon'    => 'fas fa-fw fa-building',
-            'submenu' => [
-                [
-                    'text' => 'List Branches',
-                    'url'  => 'branches',
-                ],
-                [
-                    'text' => 'Add New Branches',
-                    'url'  => 'branches/new',
-                ]
-            ]
+            'url'  => 'branches',
         ],
         [
             'text'    => 'Users',
             'icon'    => 'fas fa-fw fa-users',
             'submenu' => [
                 [
+                    'text' => 'Add New User ',
+                    'url'  => 'users/new',
+                    'can' => 'manage'
+                ],
+                [
                     'text' => 'All',
                     'url'  => 'users/list',
                 ],
                 [
                     'text' => 'Drivers',
-                    'url'  => 'users/list?type=driver',
+                    'url'  => 'users/list/driver',
                 ],
                 [
                     'text' => 'Customers',
-                    'url'  => 'users/list?type=customer',
+                    'url'  => 'users/list/customer',
                 ]
-            ]
+            ],
+            'can' => 'manage'
         ],
         [
             'text'    => 'Track',
