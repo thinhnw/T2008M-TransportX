@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Package extends Model
 {
     use HasFactory;
-    protected $fillable = array('width', 'length', 'height', 'weight');
+    protected $fillable = array('width', 'length', 'height', 'weight', 'receiver', 'receiver_address' ,'shipment_id');
 }
