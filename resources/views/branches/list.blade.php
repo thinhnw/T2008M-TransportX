@@ -40,7 +40,12 @@
                     <td >{{$cat->phone_number}}</td>
                     <td >{{$cat->created_at}}</td>
                     <td >{{$cat->updated_at}}</td>
-                    <td ><a href="{{url("/branches/edit",["id"=>$cat->id])}}">Edit</a></td>
+                    <td class="d-flex align-items-center">
+                        <a href="{{url("/branches/edit",["id"=>$cat->id])}}">Edit</a>
+                    <button type="submit" class="btn btn-light delete-package">
+                        <i class="fas fa-minus-circle text-danger"></i>
+                    </button>
+                    </td>
                 </tr>
             @endforeach
             </tbody>
