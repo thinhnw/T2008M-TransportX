@@ -26,20 +26,26 @@
                 <th scope="col">Phone Number</th>
                 <th scope="col">Created_at</th>
                 <th scope="col">Updated_at</th>
+                <th scope="col">Actions</th>
             </tr>
             </thead>
             <tbody>
             @foreach($branches as $cat)
-                <tr>
-                    <th scope="col">{{$cat->id}}</th>
-                    <th scope="col">{{$cat->address}}</th>
-                    <th scope="col">{{$cat->city}}</th>
-                    <th scope="col">{{$cat->country}}</th>
-                    <th scope="col">{{$cat->zip_code}}</th>
-                    <th scope="col">{{$cat->phone_number}}</th>
-                    <th scope="col">{{$cat->created_at}}</th>
-                    <th scope="col">{{$cat->updated_at}}</th>
-                    <th scope="col"><a href="{{url("/branches/edit",["id"=>$cat->id])}}">Edit</a></th>
+                <tr class="cursor-pointer">
+                    <td >{{$cat->id}}</td>
+                    <td >{{$cat->address}}</td>
+                    <td >{{$cat->city}}</td>
+                    <td >{{$cat->country}}</td>
+                    <td >{{$cat->zip_code}}</td>
+                    <td >{{$cat->phone_number}}</td>
+                    <td >{{$cat->created_at}}</td>
+                    <td >{{$cat->updated_at}}</td>
+                    <td class="d-flex align-items-center">
+                        <a href="{{url("/branches/edit",["id"=>$cat->id])}}">Edit</a>
+                    <button type="submit" class="btn btn-light delete-package">
+                        <i class="fas fa-minus-circle text-danger"></i>
+                    </button>
+                    </td>
                 </tr>
             @endforeach
             </tbody>

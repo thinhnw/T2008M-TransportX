@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Branches;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -9,9 +10,7 @@ use Illuminate\Support\Facades\DB;
 class BranchesController extends Controller
 {
     public function all(){
-        $branches = DB::table("table_branches")->get();
-//        var_dump($branches);die("a");
-//        dd($branches);
+        $branches = Branches::all();
         return view("branches.list",[
             "branches"=>$branches
         ]);
@@ -30,7 +29,7 @@ class BranchesController extends Controller
         $C= $request->get("country");
         $z= $request->get("zip_code");
         $p= $request->get("phone_number");
-        DB::table("table_branches")->insert([
+        Branches::create([
             "address"=>$a,
             "city"=>$c,
             "country"=>$C,
@@ -43,17 +42,15 @@ class BranchesController extends Controller
     }
 
     public function edit($id){
-        $cat = DB::table("table_branches")->where("id",$id)->first();//tra ve null neu k co
-        if ($cat == null) return redirect()->to("branches");
+        $cat = Branches::findOrFail($id);
         return view("branches.edit",[
            "cat"=>$cat,
         ]);
     }
 
     public function update(Request $request,$id){
-        $cat = DB::table("table_branches")->where("id",$id)->first();
-        if ($cat == null) return redirect()->to("branches");
-        DB::table("table_branches")->where("id",$id)->update([
+        $cat = Branches::findOrFail($id);
+        $cat->update([
             "address"=>$request->get("address"),
             "city"=>$request->get("city"),
             "country"=>$request->get("country"),
