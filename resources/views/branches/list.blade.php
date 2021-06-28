@@ -31,16 +31,21 @@
             </thead>
             <tbody>
             @foreach($branches as $cat)
-                <tr>
-                    <td scope="col">{{$cat->id}}</td>
-                    <td scope="col">{{$cat->address}}</td>
-                    <td scope="col">{{$cat->city}}</td>
-                    <td scope="col">{{$cat->country}}</td>
-                    <td scope="col">{{$cat->zip_code}}</td>
-                    <td scope="col">{{$cat->phone_number}}</td>
-                    {{-- <td scope="col">{{$cat->created_at}}</th>
-                    <td scope="col">{{$cat->updated_at}}</th> --}}
-                    <th scope="col"><a href="{{url("/branches/edit",["id"=>$cat->id])}}">Edit</a></th>
+                <tr class="cursor-pointer">
+                    <td >{{$cat->id}}</td>
+                    <td >{{$cat->address}}</td>
+                    <td >{{$cat->city}}</td>
+                    <td >{{$cat->country}}</td>
+                    <td >{{$cat->zip_code}}</td>
+                    <td >{{$cat->phone_number}}</td>
+                    {{-- <td >{{$cat->created_at}}</td>
+                    <td >{{$cat->updated_at}}</td> --}}
+                    <td class="d-flex align-items-center">
+                        <a href="{{url("/branches/edit",["id"=>$cat->id])}}">Edit</a>
+                    <button type="submit" class="btn btn-light delete-package">
+                        <i class="fas fa-minus-circle text-danger"></i>
+                    </button>
+                    </td>
                 </tr>
             @endforeach
             </tbody>
