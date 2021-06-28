@@ -266,17 +266,7 @@ return [
         [
             'text'    => 'Packages',
             'icon'    => 'fas fa-fw fa-box-open',
-            'submenu' => [
-                [
-                    'text' => 'All Branches',
-                    'url'  => 'packages/list',
-                ],
-                [
-                    'text' => 'Add New Branch',
-                    'url'  => 'packages/new',
-                    'can' => 'manage'
-                ]
-            ]
+                    'url'  => 'packages',
         ],
         [
             'text'    => 'Company Branches',
