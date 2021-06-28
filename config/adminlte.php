@@ -251,22 +251,14 @@ return [
         [
             'text'    => 'Shipments',
             'icon'    => 'fas fa-fw fa-truck',
-            'submenu' => [
-                [
-                    'text' => 'All Branches',
-                    'url'  => 'shipments/list',
-                ],
-                [
-                    'text' => 'Add New Branch',
-                    'url'  => 'shipments/new',
-                    'can' => 'manage'
-                ]
-            ]
+          
+            'url'  => 'shipments',
+            'can' => 'manage'
         ],
         [
             'text'    => 'Packages',
             'icon'    => 'fas fa-fw fa-box-open',
-                    'url'  => 'packages',
+            'url'  => 'packages',
         ],
         [
             'text'    => 'Company Branches',

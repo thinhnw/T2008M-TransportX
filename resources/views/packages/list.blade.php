@@ -28,7 +28,7 @@
             <th scope="col">Weight (kg)</th>
             <th scope="col">Status</th>
             <th scope="col">Processed by branch</th>
-            <th scope="col">Actions</th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>

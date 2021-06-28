@@ -5,7 +5,7 @@
 @section('content_header')
     <div class="d-flex justify-content-between px-5 mt-3">
         <div>
-            <h1>Add New Branches</h1>
+            <h1>Add New Branch</h1>
         </div>
         <div>
         </div>
@@ -37,9 +37,9 @@
                     <label>Phone Number</label>
                     <input type="text" class="form-control" placeholder="Enter Phone Number..." name="phone_number" required />
                 </div>
-            </div>
-            <div class="form-group">
-                <button style="margin-left: 45%" type="submit" class="btn btn-primary">Submit</button>
+                <div class="col col-12 mt-3">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
             </div>
         </form>
     </div>
@@ -48,7 +48,4 @@
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-@section('js')
-    <script> console.log('Hi!'); </script>
 @stop

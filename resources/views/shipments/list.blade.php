@@ -26,7 +26,7 @@
             <th scope="col">Shipping Cost</th>
             <th scope="col">Shipping Date</th>
             <th scope="col">Created At</th>
-            <th scope="col">Actions</th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>

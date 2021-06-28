@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Shipment;
+use App\Models\Package;
+use Illuminate\Support\Facades\DB;
 
 class ShipmentController extends Controller
 {
@@ -26,6 +28,8 @@ class ShipmentController extends Controller
     public function create()
     {
         //
+        $branches = DB::table("table_branches")->get();
+        return view('shipments.create', [ 'branches' => $branches, 'packages' => Package::all() ] );
     }
     /**
      * Store a newly created resource in storage.
@@ -35,7 +39,22 @@ class ShipmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // 
+        $shipment = new Shipment;
+        $shipment->type = $request->input('shipment_type');
+        $shipment->from_branch_id = $request->input('from_branch_id');
+        $shipment->from_date = $request->input('from_date');
+        $shipment->to_date = $request->input('to_date');
+        if ($shipment->type == 0) {
+            $to_branch_id =  $request->input('to_branch_id');
+            $shipment->to_branch_id = $to_branch_id;
+            // $shipment->to_address = DB::table('table_branches')
+        } else {
+            $shipment->to_address = $request->input('to_address');
+        }
+
+        $shipment->save();
+        return redirect()->action([ ShipmentController::class, 'index' ]);
     }
 
     /**
