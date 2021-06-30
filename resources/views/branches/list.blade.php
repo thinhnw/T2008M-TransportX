@@ -24,6 +24,8 @@
                 <th scope="col">Country</th>
                 <th scope="col">Zip Code</th>
                 <th scope="col">Phone Number</th>
+                <th scope="col">Created_at</th>
+                <th scope="col">Updated_at</th>
                 <th scope="col">Actions</th>
             </tr>
             </thead>
@@ -36,6 +38,8 @@
                     <td >{{$cat->country}}</td>
                     <td >{{$cat->zip_code}}</td>
                     <td >{{$cat->phone_number}}</td>
+                    <td >{{$cat->created_at}}</td>
+                    <td >{{$cat->updated_at}}</td>
                     <td class="d-flex align-items-center">
                         <a href="{{url("/branches/edit",["id"=>$cat->id])}}">Edit</a>
                     <button type="submit" class="btn btn-light delete-package">

@@ -18,24 +18,29 @@
             <div class="row">
                 <div class="col col-6 form-group">
                     <label>Address</label>
-                    <span type="text" class="form-control" value="{{$cat->address}}" placeholder="Enter address..." name="address"/>
+                    <span type="text" class="form-control"  placeholder="Enter address..." name="address"/>{{$cat->address}}</span>
                 </div>
                 <div class="col col-6 form-group">
                     <label>City</label>
-                    <span type="text" class="form-control" value="{{$cat->city}}" placeholder="Enter City..." name="city" />
+                    <span type="text" class="form-control"  placeholder="Enter City..." name="city"/>{{$cat->city}}</span>
                 </div>
                 <div class="col col-6 form-group">
                     <label>Country</label>
-                    <span type="text" class="form-control" value="{{$cat->country}}" placeholder="Enter Country..." name="country"/>
+                    <span type="text" class="form-control" placeholder="Enter Country..." name="country"/>{{$cat->country}}</span>
                 </div>
                 <div class="col col-6 form-group">
                     <label>Zip-Code</label>
-                    <span type="text" class="form-control" value="{{$cat->zip_code}}" placeholder="Enter Zip-Code..." name="zip_code"/>
+                    <span type="text" class="form-control" placeholder="Enter Zip-Code..." name="zip_code"/>{{$cat->zip_code}}</span>
                 </div>
                 <div class="col col-6 form-group">
                     <label>Phone Number</label>
-                    <span type="text" class="form-control" value="{{$cat->phone_number}}" placeholder="Enter Phone Number..."/>
+                    <span type="text" class="form-control" placeholder="Enter Phone Number..."/>{{$cat->phone_number}}</span>
                 </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" style="margin-left: 45%" class="btn btn-primary">
+                    <a style="color: #fff" href="{{url("/branches/edit",["id"=>$cat->id])}}">Edit</a>
+                </button>
             </div>
         </form>
     </div>
