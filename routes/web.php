@@ -33,3 +33,4 @@ Route::get('/branches/new',[BranchesController::class,"new"]);
 Route::post('/branches/save',[BranchesController::class,"save"]);
 Route::get('/branches/edit/{id}',[BranchesController::class,"edit"]);
 Route::post('/branches/update/{id}',[BranchesController::class,"update"]);
+Route::get('/branches/list/delete/{id}',[BranchesController::class,"delete"]);

@@ -43,7 +43,10 @@
                     <td class="d-flex align-items-center">
                         <a href="{{url("/branches/edit",["id"=>$cat->id])}}">Edit</a>
                     <button type="submit" class="btn btn-light delete-package">
-                        <i class="fas fa-minus-circle text-danger"></i>
+                        <a href="{{url("/branches/list/delete",['id'=>$cat->id])}}">
+                            <i class="fas fa-minus-circle text-danger"></i>
+
+                        </a>
                     </button>
                     </td>
                 </tr>

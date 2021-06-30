@@ -60,4 +60,15 @@ class BranchesController extends Controller
         ]);
         return redirect()->to("branches");
     }
+
+    public function delete($id){
+        $cat = Branches::findOrFail($id);
+        try {
+            $cat->delete();
+            return redirect()->to("branches");
+
+        }catch (\Exception $e){
+            abort(404);
+        }
+    }
 }
