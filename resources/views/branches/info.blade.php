@@ -39,7 +39,7 @@
             </div>
             <div class="form-group">
                 <button type="submit" style="margin-left: 45%" class="btn btn-primary">
-                    <a style="color: #fff" href="{{url("/branches/edit",["id"=>$cat->id])}}">Edit</a>
+                    <a style="color: #fff" href="{{url("/branches")}}">Back</a>
                 </button>
             </div>
         </form>
@@ -52,4 +52,5 @@
 @stop
 @section('js')
     <script> console.log('Hi!'); </script>
+
 @stop
