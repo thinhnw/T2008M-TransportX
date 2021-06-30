@@ -20,9 +20,6 @@ class BranchesController extends Controller
     }
 
     public function save(Request $request){
-        // dùng để nhận dữ liệu gửi lên
-//        $data = $request->all();
-//        dd($data);
         $now = Carbon::now();
         $a= $request->get("address");
         $c= $request->get("city");
@@ -71,5 +68,12 @@ class BranchesController extends Controller
         } catch (\Exception $e) {
             abort(404);
         }
+    }
+
+    public function info(){
+        $branches = Branches::all();
+        return view("branches.info",[
+            "branches"=>$branches
+        ]);
     }
 }

@@ -5,7 +5,7 @@
 @section('content_header')
     <div class="d-flex justify-content-between px-5 mt-3">
         <div>
-            <h1>Add New Branches</h1>
+            <h1>Edit Branches</h1>
         </div>
         <div>
         </div>
@@ -48,4 +48,7 @@
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+@section('js')
+    <script> console.log('Hi!'); </script>
 @stop
