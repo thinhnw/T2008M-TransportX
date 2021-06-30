@@ -69,11 +69,4 @@ class BranchesController extends Controller
             abort(404);
         }
     }
-
-    public function info(){
-        $branches = Branches::all();
-        return view("branches.info",[
-            "branches"=>$branches
-        ]);
-    }
 }

@@ -12,39 +12,32 @@
     </div>
 @stop
 @section('content')
-    <div class="px-5">
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Address</th>
-                <th scope="col">City</th>
-                <th scope="col">Country</th>
-                <th scope="col">Zip Code</th>
-                <th scope="col">Phone Number</th>
-                <th scope="col">Created_at</th>
-                <th scope="col">Updated_at</th>
-                <th scope="col">Actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($branches as $cat)
-                <tr class="cursor-pointer">
-                    <td >{{$cat->id}}</td>
-                    <td >{{$cat->address}}</td>
-                    <td >{{$cat->city}}</td>
-                    <td >{{$cat->country}}</td>
-                    <td >{{$cat->zip_code}}</td>
-                    <td >{{$cat->phone_number}}</td>
-                    <td >{{$cat->created_at}}</td>
-                    <td >{{$cat->updated_at}}</td>
-                    <td class="d-flex align-items-center">
-                    <a href="{{url("/branches/edit",["id"=>$cat->id])}}">Edit</a>
-                    </td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
+    <div class="px-5 mt-5">
+        <form action="{{url("/branches/update",["id"=>$cat->id])}}" method="post">
+            @csrf
+            <div class="row">
+                <div class="col col-6 form-group">
+                    <label>Address</label>
+                    <input type="text" class="form-control" value="{{$cat->address}}" placeholder="Enter address..." name="address" required />
+                </div>
+                <div class="col col-6 form-group">
+                    <label>City</label>
+                    <input type="text" class="form-control" value="{{$cat->city}}" placeholder="Enter City..." name="city" required />
+                </div>
+                <div class="col col-6 form-group">
+                    <label>Country</label>
+                    <input type="text" class="form-control" value="{{$cat->country}}" placeholder="Enter Country..." name="country" required />
+                </div>
+                <div class="col col-6 form-group">
+                    <label>Zip-Code</label>
+                    <input type="text" class="form-control" value="{{$cat->zip_code}}" placeholder="Enter Zip-Code..." name="zip_code" required />
+                </div>
+                <div class="col col-6 form-group">
+                    <label>Phone Number</label>
+                    <input type="text" class="form-control" value="{{$cat->phone_number}}" placeholder="Enter Phone Number..." name="phone_number" required />
+                </div>
+            </div>
+        </form>
     </div>
 
 @stop

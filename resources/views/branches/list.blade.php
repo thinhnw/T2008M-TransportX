@@ -37,6 +37,7 @@
                     <td >{{$cat->zip_code}}</td>
                     <td >{{$cat->phone_number}}</td>
                     <td class="d-flex align-items-center">
+                        <a href="{{url("/branches/edit",["id"=>$cat->id])}}">Edit</a>
                     <button type="submit" class="btn btn-light delete-package">
                         <a href="{{url("/branches/list/delete",['id'=>$cat->id])}}">
                             <i class="fas fa-minus-circle text-danger"></i>
