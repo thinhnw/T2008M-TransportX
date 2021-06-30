@@ -14,7 +14,7 @@
 
 @section('content')
 <div class="px-5 mt-3">
-    <form action="/shipment" method="POST" class="border p-3">
+    <form action="/shipments" method="POST" class="border p-3">
         @csrf
         <div class="border-bottom">
             <h4>Shipment Info</h4> 
@@ -23,11 +23,11 @@
             <b for="">Shipment Type</b>
             <div class="btn-group-toggle" data-toggle="buttons">
                 <label class="btn btn-outline-primary ml-5 font-weight-normal" for="delivery">
-                    <input type="radio" name="type" value="delivery" id="delivery">
+                    <input type="radio" name="type" value="0" id="delivery">
                     Delivery (door to door)
                 </label>
                 <label class="btn btn-outline-primary ml-5 font-weight-normal" for="pickup">
-                    <input type="radio" name="type" value="pickup" id="pickup">
+                    <input type="radio" name="type" value="1" id="pickup">
                     Pickup (receiver pick up package at the closest branch)
                 </label>
             </div>
@@ -37,7 +37,7 @@
             <div class="row">
                 <div class="col col-6 form-group pl-0">
                     <label>From Branch</label>
-                    <select class="custom-select" placeholder="Enter the starting branch">
+                    <select class="custom-select" placeholder="Enter the starting branch" name="from_branch_id">
                         @foreach ($branches as $index => $branch)
                             <option value="{{ $branch->id }}">{{ fullAddress($branch) }}</option>
                         @endforeach
@@ -49,7 +49,7 @@
                 </div>
                 <div class="col col-6 form-group pl-0 if-pickup">
                     <label>To Branch</label>
-                    <select class="custom-select" placeholder="Enter the receiving branch">
+                    <select class="custom-select" placeholder="Enter the receiving branch" name="to_branch_id">
                         @foreach ($branches as $index => $branch)
                             <option value="{{ $branch->id }}">{{ fullAddress($branch) }}</option>
                         @endforeach
@@ -57,7 +57,7 @@
                 </div>
                 <div class="col col-6 form-group pl-0 if-delivery">
                     <label for="receiver_address">Shipping Address</label>
-                    <input type="text" class="form-control" placeholder="Enter shipping address">
+                    <input type="text" class="form-control" placeholder="Enter shipping address" name="to_address">
                 </div>
                 <div class="col col-6 form-group pr-0">
                     <label for="to_date">To Date</label>
