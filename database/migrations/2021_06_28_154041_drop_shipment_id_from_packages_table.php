@@ -15,7 +15,8 @@ class DropShipmentIdFromPackagesTable extends Migration
     {
         Schema::table('packages', function (Blueprint $table) {
             //
-            $table->unsignedBigInteger('shipment_id')->nullable()->change();
+            $table->unsignedBigInteger('shipment_id')->nullable();
+            $table->foreign('shipment_id')->references('id')->on('shipments');
         });
     }
 
