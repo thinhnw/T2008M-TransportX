@@ -44,7 +44,7 @@
                         </a>
                     </button>
                         <button type="button" class="btn btn-info btn-flat view_parcel" data-id="6">
-                            <a href="{{url("/branches/info")}}">
+                            <a href="{{url("/branches/info",["id"=>$cat->id])}}">
                                 <i style="color: #fff" class="fas fa-eye"></i>
                             </a>
                         </button>

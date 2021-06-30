@@ -69,4 +69,10 @@ class BranchesController extends Controller
             abort(404);
         }
     }
+    public function info($id){
+        $cat = Branches::findOrFail($id);
+        return view("branches.info",[
+            "cat"=>$cat,
+        ]);
+    }
 }

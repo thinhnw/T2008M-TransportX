@@ -13,28 +13,28 @@
 @stop
 @section('content')
     <div class="px-5 mt-5">
-        <form action="{{url("/branches/update",["id"=>$cat->id])}}" method="post">
+        <form action="{{url("/branches/info",["id"=>$cat->id])}}" method="get">
             @csrf
             <div class="row">
                 <div class="col col-6 form-group">
                     <label>Address</label>
-                    <input type="text" class="form-control" value="{{$cat->address}}" placeholder="Enter address..." name="address" required />
+                    <span type="text" class="form-control" value="{{$cat->address}}" placeholder="Enter address..." name="address"/>
                 </div>
                 <div class="col col-6 form-group">
                     <label>City</label>
-                    <input type="text" class="form-control" value="{{$cat->city}}" placeholder="Enter City..." name="city" required />
+                    <span type="text" class="form-control" value="{{$cat->city}}" placeholder="Enter City..." name="city" />
                 </div>
                 <div class="col col-6 form-group">
                     <label>Country</label>
-                    <input type="text" class="form-control" value="{{$cat->country}}" placeholder="Enter Country..." name="country" required />
+                    <span type="text" class="form-control" value="{{$cat->country}}" placeholder="Enter Country..." name="country"/>
                 </div>
                 <div class="col col-6 form-group">
                     <label>Zip-Code</label>
-                    <input type="text" class="form-control" value="{{$cat->zip_code}}" placeholder="Enter Zip-Code..." name="zip_code" required />
+                    <span type="text" class="form-control" value="{{$cat->zip_code}}" placeholder="Enter Zip-Code..." name="zip_code"/>
                 </div>
                 <div class="col col-6 form-group">
                     <label>Phone Number</label>
-                    <input type="text" class="form-control" value="{{$cat->phone_number}}" placeholder="Enter Phone Number..." name="phone_number" required />
+                    <span type="text" class="form-control" value="{{$cat->phone_number}}" placeholder="Enter Phone Number..."/>
                 </div>
             </div>
         </form>
