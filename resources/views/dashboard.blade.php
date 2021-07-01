@@ -87,12 +87,9 @@
         var myChartBar = new Chart(ctxBar, {
             type: 'bar',
             data: {
-                labels: [
-                    'Delivery',
-                    'Pickup',
-                ],
+             
                 datasets: [{
-                    label: 'My First Dataset',
+                    label: '',
                     data: [ delivery, pickup],
                     backgroundColor: [
                     'rgb(255, 99, 132)',
