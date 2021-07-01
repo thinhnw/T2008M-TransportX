@@ -237,16 +237,11 @@ return [
         ],
 
         // Sidebar items:
-
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
         [
             'text'        => 'Dashboard',
             'url'         => 'dashboard',
             'icon'        => 'fas fa-fw fa-tachometer-alt',
+            'plugins' => 'Chartjs'
         ],
         [
             'text'    => 'Shipments',
