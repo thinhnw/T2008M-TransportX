@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use App\Models\Package;
+use App\Models\Branches;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Pagination\Paginator;
 
@@ -30,7 +31,7 @@ class PackageController extends Controller
     public function create()
     {
         //
-        return view('packages.create', [ "packages" => Package::all() ]);
+        return view('packages.create', [ "packages" => Package::all(), "branches" => Branches::all() ]);
     }
 
     /**
@@ -46,7 +47,9 @@ class PackageController extends Controller
         $package->length = $request->input('length');
         $package->height = $request->input('height');
         $package->weight = $request->input('weight');
-        $package->branch_id = 0;
+        $package->branch_id = $request->input('branch_id');
+        $package->receiver = $request->input('receiver');
+        $package->receiver_address = $request->input('receiver_address');
 
         $package->save();
         return redirect()->action([PackageController::class, 'index']);

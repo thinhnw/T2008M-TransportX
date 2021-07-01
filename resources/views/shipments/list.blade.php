@@ -23,9 +23,10 @@
             <th scope="col">Status</th>
             <th scope="col">Type</th>
             <th scope="col">Branch</th>
-            <th scope="col">Shipping Cost</th>
-            <th scope="col">Shipping Date</th>
-            <th scope="col">Created At</th>
+            <th scope="col">From Address</th>
+            <th scope="col">To Address</th>
+            <th scope="col">From Date</th>
+            <th scope="col">To Date</th>
             <th scope="col"></th>
           </tr>
         </thead>
@@ -34,10 +35,20 @@
                 <tr class="cursor-pointer">
                     <th scope="row">{{ $index }}</th>
                     <td>{{ formatID($shipment->id) }}</td>
-                    <td>New</td>
-                    <td>0</td>
+                    <td>{{ $shipment->status_in_text }}</td>
+                    <td>{{ $shipment->shipment_type }}</td>
+                    <td>{{ $shipment->branch_id }}</td>
+                    <td>{{ $shipment->from_address }}</td>
+                    <td>{{ $shipment->to_address }}</td>
+                    <td>{{ $shipment->from_date }}</td>
+                    <td>{{ $shipment->to_date }}</td>
                     <td class="d-flex align-items-center">
-                        <a href="/shipments/{{$shipment->id}}/edit" class="mr-3">Edit</a>
+                        <a href="/shipments/{{$shipment->id}}" class="btn btn-light mr-1">
+                            <i class="fas fa-eye text-primary"></i>
+                        </a>
+                        <a href="/shipments/{{$shipment->id}}/edit" class="btn btn-light mr-1" id="edit">
+                            <i class="fas fa-edit btn-icon"></i>
+                        </a>
                         <form method="POST" action="/shipments/{{$shipment->id}}">
                             @csrf
                             @method('DELETE')

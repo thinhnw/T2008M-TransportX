@@ -19,7 +19,8 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'John Doe',
             'email' => 'admin@admin.com',
-            'password' => '12345678'
+            'password' => '$2y$10$ys3GxeEFgxB5ab2TAXx28.P/fro.60vK7sLNyWZ8D7Qo1QQ4Cxwwm', //12345678
+            'utype' => 1
         ]);
     }
 }

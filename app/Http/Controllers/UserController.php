@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Branches;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -42,7 +43,7 @@ class UserController extends Controller
         }
     }
     function New_User(){
-        return view('users.new_user');
+        return view('users.new_user', [ 'branches' => Branches::all() ]);
     }
     function Save(Request $request){
         $request->validate([

@@ -253,7 +253,6 @@ return [
             'icon'    => 'fas fa-fw fa-truck',
           
             'url'  => 'shipments',
-            'can' => 'manage'
         ],
         [
             'text'    => 'Packages',
@@ -272,7 +271,6 @@ return [
                 [
                     'text' => 'Add New User ',
                     'url'  => 'users/new',
-                    'can' => 'manage'
                 ],
                 [
                     'text' => 'All',
@@ -287,7 +285,6 @@ return [
                     'url'  => 'users/list/customer',
                 ]
             ],
-            'can' => 'manage'
         ],
         [
             'text'    => 'Track',
