@@ -20,9 +20,6 @@ class BranchesController extends Controller
     }
 
     public function save(Request $request){
-        // dùng để nhận dữ liệu gửi lên
-//        $data = $request->all();
-//        dd($data);
         $now = Carbon::now();
         $a= $request->get("address");
         $c= $request->get("city");
@@ -59,5 +56,23 @@ class BranchesController extends Controller
             "updated_at"=>Carbon::now()
         ]);
         return redirect()->to("branches");
+    }
+
+    public function delete($id)
+    {
+        $cat = Branches::findOrFail($id);
+        try {
+            $cat->delete();
+            return redirect()->to("branches");
+
+        } catch (\Exception $e) {
+            abort(404);
+        }
+    }
+    public function info($id){
+        $cat = Branches::findOrFail($id);
+        return view("branches.info",[
+            "cat"=>$cat,
+        ]);
     }
 }

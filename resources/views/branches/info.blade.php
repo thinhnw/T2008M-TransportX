@@ -5,41 +5,42 @@
 @section('content_header')
     <div class="d-flex justify-content-between px-5 mt-3">
         <div>
-            <h1>Edit Branches</h1>
+            <h1>BranChes Info</h1>
         </div>
         <div>
         </div>
     </div>
 @stop
-
 @section('content')
     <div class="px-5 mt-5">
-        <form action="{{url("/branches/update",["id"=>$cat->id])}}" method="post">
+        <form action="{{url("/branches/info",["id"=>$cat->id])}}" method="get">
             @csrf
             <div class="row">
                 <div class="col col-6 form-group">
                     <label>Address</label>
-                    <input type="text" class="form-control" value="{{$cat->address}}" placeholder="Enter address..." name="address" required />
+                    <span type="text" class="form-control"  placeholder="Enter address..." name="address"/>{{$cat->address}}</span>
                 </div>
                 <div class="col col-6 form-group">
                     <label>City</label>
-                    <input type="text" class="form-control" value="{{$cat->city}}" placeholder="Enter City..." name="city" required />
+                    <span type="text" class="form-control"  placeholder="Enter City..." name="city"/>{{$cat->city}}</span>
                 </div>
                 <div class="col col-6 form-group">
                     <label>Country</label>
-                    <input type="text" class="form-control" value="{{$cat->country}}" placeholder="Enter Country..." name="country" required />
+                    <span type="text" class="form-control" placeholder="Enter Country..." name="country"/>{{$cat->country}}</span>
                 </div>
                 <div class="col col-6 form-group">
                     <label>Zip-Code</label>
-                    <input type="text" class="form-control" value="{{$cat->zip_code}}" placeholder="Enter Zip-Code..." name="zip_code" required />
+                    <span type="text" class="form-control" placeholder="Enter Zip-Code..." name="zip_code"/>{{$cat->zip_code}}</span>
                 </div>
                 <div class="col col-6 form-group">
                     <label>Phone Number</label>
-                    <input type="text" class="form-control" value="{{$cat->phone_number}}" placeholder="Enter Phone Number..." name="phone_number" required />
+                    <span type="text" class="form-control" placeholder="Enter Phone Number..."/>{{$cat->phone_number}}</span>
                 </div>
             </div>
             <div class="form-group">
-                <button style="margin-left: 45%" type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" style="margin-left: 45%" class="btn btn-primary">
+                    <a style="color: #fff" href="{{url("/branches")}}">Back</a>
+                </button>
             </div>
         </form>
     </div>
@@ -51,4 +52,5 @@
 @stop
 @section('js')
     <script> console.log('Hi!'); </script>
+
 @stop

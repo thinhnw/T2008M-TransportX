@@ -41,10 +41,17 @@
                     <td >{{$cat->created_at}}</td>
                     <td >{{$cat->updated_at}}</td>
                     <td class="d-flex align-items-center">
-                        <a href="{{url("/branches/edit",["id"=>$cat->id])}}">Edit</a>
+                        <a href="{{url("/branches/edit",["id"=>$cat->id])}}"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABk0lEQVRIS82XjU3DMBBGv04ATACdAJgAmAS6AUwAG8AGwAhMAExAmQDYADZAD52ji4md2I7UnlRVUc/37j/uQhuSxYa42jrwrqTDgmy8S/o2fc7eSjqS9Cnpyr575oYivpB0XwB9lMQZBOizQYMJHDqTtPY2Y/CBpI+ZoF+S9s0W8GMfeQw+NY/RJ0U9LwcceklEGrLwIOncdNAl8j/JgVEKhnNJiNNLXZfuADZOYl4reKimMIh0ZbUP/fIqiYw2RxxDn8zwjkttAP3Yb13paiOOoaGmjBCpDXB8+AetrXEKGrJ4I+naHgahNeAxqN8BSWgpmDSyHIAjfnHwnIPyG93eTcnUGrdC6ezeeE4Bs83eKiPFYc4ixWC/zeL0jjWSP9sE9of9Okw10mzgS9vfNEt4I+W6dzZwvLOzI2PbiklorrEHj0HRbYqYuaU7Y2Eu+eSkCTxie35waKQWMJm6m1Lj0qtPiVN77kI4eL0tvexNgXMpYO47Sd2rUw01BRLr8PIPV99RcA2g6MzW/ZMo8r5G+RfGLJYf4pPcVQAAAABJRU5ErkJggg=="/></a>
                     <button type="submit" class="btn btn-light delete-package">
-                        <i class="fas fa-minus-circle text-danger"></i>
+                        <a href="{{url("/branches/list/delete",['id'=>$cat->id])}}">
+                            <i class="fas fa-minus-circle text-danger"></i>
+                        </a>
                     </button>
+                        <button type="button" class="btn btn-info btn-flat view_parcel" data-id="6">
+                            <a href="{{url("/branches/info",["id"=>$cat->id])}}">
+                                <i style="color: #fff" class="fas fa-eye"></i>
+                            </a>
+                        </button>
                     </td>
                 </tr>
             @endforeach
@@ -56,4 +63,8 @@
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+@section('js')
+    <script> console.log('Hi!'); </script>
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
 @stop
