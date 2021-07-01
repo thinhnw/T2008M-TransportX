@@ -1,11 +1,11 @@
 @extends('adminlte::page')
 
-@section('title', 'New Shipment')
+@section('title', 'Edit Shipment')
 
 @section('content_header')
     <div class="d-flex justify-content-between px-5 mt-3">
         <div>
-            <h1>Create New Shipment</h1>
+            <h1>Edit Shipment #{{ $shipment->id }}</h1>
         </div>
         <div>
         </div>
@@ -14,17 +14,17 @@
 
 @section('content')
 <div class="px-5 mt-3">
-    <form action="/shipments" method="POST" class="border p-3">
+    <form action="/shipments/{{$shipment->id}}" method="POST" class="border p-3">
         @csrf
-     
+        @method('PATCH')
         <div class="d-flex mt-3 align-items-center">
             <b for="">Shipment Type</b>
             <div class="btn-group-toggle" data-toggle="buttons">
                 <label class="btn btn-outline-primary ml-3 font-weight-normal" for="delivery">
-                    <input type="radio" name="type" value="0" id="delivery" required>
+                    <input type="radio" name="type" value="0" id="delivery" required checked="{{ false }}">
                     Delivery (door to door)
                 </label>
-                <label class="btn btn-outline-primary ml-3 font-weight-normal" for="pickup">
+                <label class="btn btn-outline-primary ml-3 font-weight-normal" for="pickup" >
                     <input type="radio" name="type" value="1" id="pickup">
                     Pickup (receiver pick up package at the closest branch)
                 </label>
@@ -37,7 +37,11 @@
                     <label>Processing Branch</label>
                     <select class="custom-select" placeholder="Enter the starting branch" name="branch_id" required>
                         @foreach ($branches as $index => $branch)
-                            <option value="{{ $branch->id }}">{{ fullAddress($branch) }}</option>
+                            @if ($branch->id != $shipment->branch_id)
+                                <option value="{{ $branch->id }}">{{ fullAddress($branch) }}</option>
+                            @else
+                                <option selected value="{{ $branch->id }}">{{ fullAddress($branch) }}</option>
+                            @endif
                         @endforeach
                     </select>
                 </div>
@@ -47,19 +51,19 @@
             <div class="row">
                 <div class="col col-6 form-group pl-0">
                     <label for="from_address">From Address</label>
-                    <input type="text" class="form-control" placeholder="Enter starting address" name="from_address" required>
+                    <input type="text" class="form-control" placeholder="Enter starting address" name="from_address" required value="{{ $shipment->from_address}}">
                 </div>
                 <div class="col col-6 form-group pr-0">
                     <label for="from_date">From Date</label>
-                    <input type="date" id="from_date" name="from_date" class="form-control" required />
+                    <input type="date" id="from_date" name="from_date" class="form-control" required value="{{ $shipment->from_date }}"/>
                 </div>
                 <div class="col col-6 form-group pl-0">
                     <label for="to_address">To Address</label>
-                    <input type="text" class="form-control" placeholder="Enter shipping address" name="to_address" required>
+                    <input type="text" class="form-control" placeholder="Enter shipping address" name="to_address" required value="{{ $shipment->to_address }}"/>
                 </div>
                 <div class="col col-6 form-group pr-0">
                     <label for="to_date">To Date</label>
-                    <input type="date" id="to_date" name="to_date" class="form-control" required/>
+                    <input type="date" id="to_date" name="to_date" class="form-control" required value="{{ $shipment->to_date }}"/>
                 </div>
             </div>
         </div>
@@ -84,7 +88,7 @@
                             <div class="modal-body">
                                 <select class="custom-select" placeholder="Select package" id="select-package">
                                     @foreach ($packages as $index => $package)
-                                        @if ($package->shipment_id == null)
+                                        @if ($package->shipment_id == null || $package->shipment_id == $shipment->id)
                                             <option value="{{ $package->id }}">{{ formatPackage($package) }}</option>
                                         @endif
                                     @endforeach
@@ -108,7 +112,8 @@
             <hr>
         <div class="row">
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Create</button>
+                <button type="submit" class="btn btn-primary ">Save</button>
+                <a href="/shipments" type="submit" class="btn btn-secondary">Cancel</a>
             </div>
         </div>
     </form>
@@ -123,9 +128,21 @@
 @section('js')
     <script>
         $('#select-package-error').hide()
-
+        let shipmentId = {!! $shipment->id !!}
         let allPackages = {!! json_encode($packages) !!}
         let selectedPackages = []
+        allPackages.forEach(pkg => {
+            if (pkg.shipment_id === shipmentId) {
+                selectedPackages.push(pkg.id)
+                $("input[name=packages]").val(selectedPackages.join(', '));
+                $('#packages').append(`<div class="btn bg-danger mr-3 p-2 mt-3"  id="package-${pkg.id}">${formatPackage(pkg.id)} <i class="fas fa-minus-circle"></i><div>`)
+                $(`#package-${pkg.id}`).click(function(e) {
+                    selectedPackages.splice(selectedPackages.indexOf(pkg.id));
+                    $("input[name=packages]").val(selectedPackages.join(', '));
+                    this.remove();
+                })
+            }
+        })
         $('#select-package').change(function (e) {
             let pkgId = $('#select-package').children(":selected").attr("value")
             if (selectedPackages.includes(pkgId)) {
@@ -145,16 +162,14 @@
             }
             selectedPackages.push(pkgId)
             $("input[name=packages]").val(selectedPackages.join(', '));
-            $('#packages').append(`<div class="btn bg-danger mr-3 p-2 mt-3" id="package-${pkgId}">${formatPackage(pkgId)} <i class="fas fa-minus-circle"></i><div>`)
+            $('#packages').append(`<div class="btn bg-danger mr-3 p-2 mt-3"  id="package-${pkgId}">${formatPackage(pkgId)} <i class="fas fa-minus-circle"></i><div>`)
             $(`#package-${pkgId}`).click(function(e) {
                 selectedPackages.splice(selectedPackages.indexOf(pkgId));
                 $("input[name=packages]").val(selectedPackages.join(', '));
-
                 this.remove();
             })
             $('#exampleModal').modal('hide')
         })
-        
         function formatPackage(id) {
             let result = "";
             while (id >= 1) {
@@ -166,7 +181,6 @@
             }
             return "PK" + result;
         }
-        console.log({!!json_encode($packages)!!});
     </script>
 
 @stop

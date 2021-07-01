@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Livewire\ShipmentComponent;
 use Illuminate\Http\Request;
 use App\Models\Shipment;
 use App\Models\Package;
 use App\Models\Branches;
+use App\Models\ShipmentTrack;
 use Illuminate\Support\Facades\DB;
+use phpDocumentor\Reflection\DocBlock\Tags\Var_;
 
 class ShipmentController extends Controller
 {
@@ -43,19 +46,21 @@ class ShipmentController extends Controller
         // 
         $shipment = new Shipment;
         $shipment->type = $request->input('type');
-        $shipment->from_branch_id = $request->input('from_branch_id');
+        $shipment->branch_id  = $request->input('branch_id');
         $shipment->from_date = $request->input('from_date');
+        $shipment->from_address = $request->input('from_address');
         $shipment->to_date = $request->input('to_date');
-        if ($shipment->type == 0) {
-            $to_branch_id =  $request->input('to_branch_id');
-            $shipment->to_branch_id = $to_branch_id;
-            $branch = Branches::find($to_branch_id);
-            $shipment->to_address = $branch->address;
-        } else {
-            $shipment->to_address = $request->input('to_address');
-        }
-
+        $shipment->to_address = $request->input('to_address');
         $shipment->save();
+        $shipment->packages()->saveMany(array_map(
+            function($id) {
+                return Package::find(intval($id));
+            }, explode(',', $request->input('packages'))
+        ));
+
+        $track = new ShipmentTrack;
+        $track->status = 0;
+        $shipment->shipment_tracks()->save($track);
         return redirect()->action([ ShipmentController::class, 'index' ]);
     }
 
@@ -68,6 +73,7 @@ class ShipmentController extends Controller
     public function show($id)
     {
         //
+        return view('shipments.show', [ "shipment" => Shipment::find($id), "branches" => Branches::all(), "packages" => Package::all() ]);
     }
 
     /**
@@ -79,6 +85,7 @@ class ShipmentController extends Controller
     public function edit($id)
     {
         //
+        return view('shipments.edit', [ "shipment" => Shipment::find($id), 'branches' => Branches::all(), 'packages' => Package::all() ] );
     }
 
     /**
@@ -91,6 +98,31 @@ class ShipmentController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $shipment = Shipment::find($id);
+        if (!$request->input('status_code')) {
+            $shipment->update([
+                'type' => $request->input('type'),
+                'branch_id'  => $request->input('branch_id'),
+                'from_date' => $request->input('from_date'),
+                'from_address' => $request->input('from_address'),
+                'to_date' => $request->input('to_date'),
+                'to_address' => $request->input('to_address')
+            ]);
+            $shipment->packages()->update([
+                'shipment_id' => null
+            ]);
+            $shipment->packages()->saveMany(array_map(
+                function($id) {
+                    return Package::find(intval($id));
+                }, explode(',', $request->input('packages'))
+            ));
+
+        } else {
+            $track = new ShipmentTrack;
+            $track->status = $request->input('status_code');
+            $shipment->shipment_tracks()->save($track);
+        }
+        return redirect()->action([ ShipmentController::class, 'index' ]);
     }
 
     /**
@@ -101,6 +133,11 @@ class ShipmentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // 
+        $shipment = Shipment::find($id);
+        $shipment->delete();
+        return redirect()->action([ShipmentController::class, 'index']);
     }
+
+  
 }

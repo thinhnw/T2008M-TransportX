@@ -18,6 +18,16 @@
         @csrf
         <div class="row">
             <div class="col col-6 form-group">
+                <label>Processing Branch</label>
+                <select class="custom-select" placeholder="Enter the starting branch" name="branch_id" required>
+                    @foreach ($branches as $index => $branch)
+                        <option value="{{ $branch->id }}">{{ fullAddress($branch) }}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-6 form-group">
                 <label>Receiver's Name</label>
                 <input type="text" class="form-control" placeholder="Enter the receiver's name" name="receiver" required />
             </div>
@@ -60,3 +70,8 @@
 @section('js')
     <script> console.log('Hi!'); </script>
 @stop
+@php
+    function fullAddress($branch) {
+        return 'BRANCH ' . $branch->id . ' (' . $branch->address . ', ' . $branch->city . ', ' . $branch->country . ')';
+    }
+@endphp
