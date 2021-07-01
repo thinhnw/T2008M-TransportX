@@ -20,6 +20,9 @@ class Branches extends Model
     public function shipments() {
         return $this->hasMany(Shipment::class);
     }
+    public function users() {
+        return $this->hasMany(User::class);
+    }
 
     public function getFullAddressAttribute() {
         return 'Branch ' . $this->id . ' (' . $this->address . ', ' . $this->city . ', ' . $this->country . ')';

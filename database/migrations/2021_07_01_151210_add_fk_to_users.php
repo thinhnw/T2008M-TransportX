@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class InsertColumnUsers extends Migration
+class AddFkToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,8 @@ class InsertColumnUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->string("employee_type")->nullable()->comment("driver or customer");
+            $table->unsignedBigInteger('user_branch')->nullable();
+            $table->foreign('user_branch')->references('id')->on('table_branches');
         });
     }
 

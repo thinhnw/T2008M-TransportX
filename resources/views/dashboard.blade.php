@@ -29,7 +29,7 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-4">
                 <div class="d-flex align-items-center justify-content-center card">
                     <canvas id="doughnut" class="w-100"  height="350" ></canvas>
@@ -38,6 +38,47 @@
             <div class="col-8">
                 <div class="d-flex align-items-center justify-content-center card">
                     <canvas id="bar" class="w-100"  height="350" ></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <div class="card p-3 text-dark">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <b>
+                            Total Branches
+                        </b>
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h2>
+                        {{ $branches->count() }}
+                    </h2>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card p-3 text-dark">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <b>
+                            Total Employees
+                        </b>
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h2>
+                        {{ $users->count() }}
+                    </h2>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card p-3 text-dark">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <b>
+                            Total Packages
+                        </b>
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h2>
+                        {{ $packages->count() }}
+                    </h2>
                 </div>
             </div>
         </div>
@@ -76,9 +117,9 @@
                 },
                 title: {
                     display: true,
-                    text: '#Delivery/Pickup Shipment',
+                    text: 'Number of Delivery/Pickup Shipments',
                     fontSize: 16,
-                    fontColor: 'black',
+                    fontColor: '#333',
                     padding: 16
                 }
             }
@@ -88,15 +129,65 @@
             type: 'bar',
             data: {
              
-                datasets: [{
-                    label: '',
-                    data: [ delivery, pickup],
-                    backgroundColor: [
-                    'rgb(255, 99, 132)',
-                    'rgb(54, 162, 235)',
-                    ],
-                    hoverOffset: 4
-                }],
+                datasets: [
+                    {
+                        label: 'Newly created',
+                        data: [ {!! $shipments->where('status', 0)->count() !!}],
+                        backgroundColor: [
+                        '#64b5f6',
+                        ],
+                        hoverOffset: 4
+                    },
+
+                    {
+                        label: 'Packages gathered by branch',
+                        data: [ {!! $shipments->where('status', 1)->count() !!}],
+                        backgroundColor: [
+                        '#4fc3f7',
+                        ],
+                        hoverOffset: 4
+                    },
+                    {
+                        label: 'Accepted by courier',
+                        data: [ {!! $shipments->where('status', 2)->count() !!}],
+                        backgroundColor: [
+                        '#4dd0e1',
+                        ],
+                        hoverOffset: 4
+                    },
+                    {
+                        label: 'Shipping',
+                        data: [ {!! $shipments->where('status', 3)->count() !!}],
+                        backgroundColor: [
+                        '#4db6ac',
+                        ],
+                        hoverOffset: 4
+                    },
+                    {
+                        label: 'Arrived at destination, waiting for receivers',
+                        data: [ {!! $shipments->where('status', 4)->count() !!}],
+                        backgroundColor: [
+                        '#81c784',
+                        ],
+                        hoverOffset: 4
+                    },
+                    {
+                        label: 'Delivered',
+                        data: [ {!! $shipments->where('status', 5)->count() !!}],
+                        backgroundColor: [
+                        '#aed581',
+                        ],
+                        hoverOffset: 4
+                    },
+                    {
+                        label: 'Failed to be delivered',
+                        data: [ {!! $shipments->where('status', -1)->count() !!}],
+                        backgroundColor: [
+                        '#f44336',
+                        ],
+                        hoverOffset: 4
+                    },
+                ],
             },
             options: {
                 legend: {
@@ -104,10 +195,17 @@
                 },
                 title: {
                     display: true,
-                    text: '#Delivery/Pickup Shipment',
+                    text: 'Number of Shipments by Status',
                     fontSize: 16,
-                    fontColor: 'black',
+                    fontColor: '#333',
                     padding: 16
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }]
                 }
             }
         });

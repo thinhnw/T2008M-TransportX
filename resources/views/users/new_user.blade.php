@@ -2,7 +2,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>List Customer</h1>
+    <h1>Add New Employee</h1>
 @stop
 
 @section('content')
@@ -39,10 +39,12 @@
 
         </div>
         <div class="form-group">
+            <label for="">Employee Type</label>
+            <br>
             <input type="radio" id="driver" name="employee_type" value="driver">
             <label for="html">Driver</label>
-            <input type="radio" id="customer" name="employee_type" value="customer">
-            <label for="css">Customer</label>
+            {{-- <input type="radio" id="customer" name="employee_type" value="customer">
+            <label for="css">Customer</label> --}}
             @error('employee_type')<div class="alert alert-danger">{{$message}}</div>@enderror
 
         </div>

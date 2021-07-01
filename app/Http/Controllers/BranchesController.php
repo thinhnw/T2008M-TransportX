@@ -64,9 +64,8 @@ class BranchesController extends Controller
         try {
             $cat->delete();
             return redirect()->to("branches");
-
         } catch (\Exception $e) {
-            abort(404);
+            return redirect()->to("branches");
         }
     }
     public function info($id){

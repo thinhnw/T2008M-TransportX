@@ -30,6 +30,18 @@
                 </label>
             </div>
         </div>
+        <div class="d-flex mt-3 align-items-center">
+            <div>
+                <b>Assigned Driver</b>
+            </div>
+            <select class="custom-select w-25 ml-3" placeholder="Assign a driver" name="driver_id">
+                @foreach ($users as $index => $user)
+                    @if ($user->employee_type == 'driver')
+                        <option value="{{ $user->id }}">{{ '#' . $user->id . ' ' .$user->name }}</option>
+                    @endif
+                @endforeach
+            </select>
+        </div>
         <hr> 
         <div class="container-fluid">
             <div class="row">

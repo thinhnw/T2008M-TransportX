@@ -31,16 +31,26 @@
             </thead>
             <tbody>
             @foreach($branches as $cat)
-                <tr>
-                    <td scope="col">{{$cat->id}}</td>
-                    <td scope="col">{{$cat->address}}</td>
-                    <td scope="col">{{$cat->city}}</td>
-                    <td scope="col">{{$cat->country}}</td>
-                    <td scope="col">{{$cat->zip_code}}</td>
-                    <td scope="col">{{$cat->phone_number}}</td>
-                    {{-- <td scope="col">{{$cat->created_at}}</th>
-                    <td scope="col">{{$cat->updated_at}}</th> --}}
-                    <th scope="col"><a href="{{url("/branches/edit",["id"=>$cat->id])}}">Edit</a></th>
+                <tr class="cursor-pointer">
+                    <td >{{$cat->id}}</td>
+                    <td >{{$cat->address}}</td>
+                    <td >{{$cat->city}}</td>
+                    <td >{{$cat->country}}</td>
+                    <td >{{$cat->zip_code}}</td>
+                    <td >{{$cat->phone_number}}</td>
+                    {{-- <td >{{$cat->created_at}}</td>
+                    <td >{{$cat->updated_at}}</td> --}}
+                    <td class="d-flex align-items-center">
+                        <a href="{{url("/branches/info",["id"=>$cat->id])}}" class="mr-3">
+                            <i  class="fas fa-eye"></i>
+                        </a>
+                        <a href="{{url("/branches/edit",["id"=>$cat->id])}}" class="mr-3">
+                            <i class="fas fa-edit text-secondary"></i>
+                        </a>
+                        <a href="{{url("/branches/list/delete",['id'=>$cat->id])}}">
+                            <i class="fas fa-minus-circle text-danger"></i>
+                        </a>
+                    </td>
                 </tr>
             @endforeach
             </tbody>
@@ -51,4 +61,8 @@
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+@section('js')
+    <script> console.log('Hi!'); </script>
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
 @stop

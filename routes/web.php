@@ -7,8 +7,11 @@ use App\Http\Controllers\BranchesController;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ShipmentTrackController;
 use App\Models\Branches;
+use App\Models\Package;
 use App\Models\Shipment;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +29,7 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard',  function () {
-    return view('dashboard', [ 'branches' => Branches::all(), 'shipments' => Shipment::all() ]);
+    return view('dashboard', [ 'branches' => Branches::all(), 'shipments' => Shipment::all(), 'users' => User::all(), 'packages' => Package::all() ]);
 } )->name('dashboard');
 Route::get("/users/list",[UserController::class,"ListAll"]);
 Route::get("/users/list/driver",[UserController::class,"Driver"]);
@@ -39,6 +42,8 @@ Route::get('/users/list/delete/{id}',[UserController::class,'Delete']);
 
 Route::resource('shipments', ShipmentController::class);
 Route::resource('packages', PackageController::class);
+Route::resource('track', ShipmentTrackController::class);
+
 Route::get('/branches',[BranchesController::class,"all"]);
 Route::get('/branches/new',[BranchesController::class,"new"]);
 Route::post('/branches/save',[BranchesController::class,"save"]);

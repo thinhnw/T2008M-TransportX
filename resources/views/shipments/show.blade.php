@@ -6,9 +6,11 @@
     <div class="d-flex justify-content-between px-5 mt-3">
         <div class="d-flex">
             <h1>Shipment {{ formatId($shipment->id) }}</h1>
-            <a href="/shipments/{{$shipment->id}}/edit" class="btn btn-light ml-3" id="edit">
-                <i class="fas fa-edit btn-icon"></i>
-            </a>
+            @if ($shipment->status != -1 && $shipment->status != 5)
+                <a href="/shipments/{{$shipment->id}}/edit" class="btn btn-light ml-3" id="edit">
+                    <i class="fas fa-edit btn-icon"></i>
+                </a>
+            @endif
         </div> 
         <div>
         </div>
@@ -22,21 +24,38 @@
             <span class="text-info ml-3">
                 {{ $shipment->status_in_text }}
             </span>
-            <form action="/shipments/{{$shipment->id}}" method="POST">
-                @csrf
-                @method('PATCH')
-                <input type="hidden" name="status_code" value="{{ $shipment->status + 1 }}">
-                <button class="btn btn-light">
-                    <i class="fas fa-check-circle text-success"></i>
-                </button>
-            </form>
-            <button class="btn btn-light">
-                <i class="fas fa-times-circle text-danger"></i>
-            </button>
+            @if ($shipment->status != 5 && $shipment->status != -1)
+                <form action="/shipments/{{$shipment->id}}" method="POST">
+                    @csrf
+                    @method('PATCH')
+                    <input type="hidden" name="status_code" value="{{ $shipment->status + 1 }}">
+                    <button class="btn btn-success btn-sm ml-3">
+                        <i class="fas fa-check-circle "></i>
+                        Next step
+                    </button>
+                </form>
+                <form action="/shipments/{{$shipment->id}}" method="POST">
+                    @csrf
+                    @method('PATCH')
+                    <input type="hidden" name="status_code" value="{{ -1 }}">
+                    <button class="btn btn-danger ml-3 btn-sm">
+                        <i class="fas fa-times-circle "></i>
+                        Cancel shipment
+                    </button>
+                </form>
+            @endif
         </div>
         <div class="d-flex mt-3 align-items-center">
             <b class="btn-icon">Shipment Type</b>
             <span class="ml-3 text-info" id="field-part">{{ $shipment->shipment_type }}</span>
+        </div>
+        <div class="d-flex mt-3 align-items-center">
+            <b class="btn-icon">Driver</b>
+            <span class="ml-3 text-primary underline" id="field-part">
+                {{
+                    $shipment->driver_id ? '#' . $shipment->driver_id . ' ' . $shipment->driver->name : 'Unassigned'
+                }}
+            </span>
         </div>
         <div class="container-fluid mt-3">
             <div class="row">
