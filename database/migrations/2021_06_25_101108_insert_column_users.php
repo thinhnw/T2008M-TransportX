@@ -16,6 +16,8 @@ class InsertColumnUsers extends Migration
         Schema::table('users', function (Blueprint $table) {
             //
             $table->string("employee_type")->nullable()->comment("driver or customer");
+            $table->unsignedBigInteger('user_branch')->nullable();
+            $table->foreign('user_branch')->references('id')->on('table_branches');
         });
     }
 
