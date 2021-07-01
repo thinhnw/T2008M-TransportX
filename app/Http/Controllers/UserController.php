@@ -25,7 +25,11 @@ class UserController extends Controller
         return view("users.driver",['list'=>$list]) ;    }
     function Edit($id){
         $user=User::findOrFail($id);
-        return view('users.edit_user',['user'=>$user]);
+        return view('users.edit_user',
+            [
+                'user'=>$user,
+                'branches' => Branches::all()
+            ]);
     }
     function Update(Request $request,$id){
         try {
