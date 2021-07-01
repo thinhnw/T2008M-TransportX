@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class DropSenderReceiverToShipmentsTable extends Migration
+class MakeDriverIdFkInShipmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,9 +14,9 @@ class DropSenderReceiverToShipmentsTable extends Migration
     public function up()
     {
         Schema::table('shipments', function (Blueprint $table) {
-            // 
-             $table->dropColumn('sender');
-            $table->dropColumn('receiver');
+            //
+            $table->unsignedBigInteger('driver_id')->nullable()->change();
+            $table->foreign('driver_id')->references('id')->on('users');
         });
     }
 
@@ -29,7 +29,6 @@ class DropSenderReceiverToShipmentsTable extends Migration
     {
         Schema::table('shipments', function (Blueprint $table) {
             //
-          
         });
     }
 }

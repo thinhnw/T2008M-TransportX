@@ -30,9 +30,10 @@
         <div class="form-group">
             <label for="inputAddress2">Branch</label>
             <select id="inputState" name="branch" class="form-control">
-                <option selected>Choose...</option>
-                <option>branch03</option>
-                <option>branch04</option>
+                <option disabled value selected>Choose Branch</option>
+                @foreach ($branches as $branch)
+                    <option value="{{ $branch->id }}">{{ $branch->full_address }}</option>
+                @endforeach
             </select>
             @error('branch')<div class="alert alert-danger">{{$message}}</div>@enderror
 

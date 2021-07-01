@@ -251,32 +251,13 @@ return [
         [
             'text'    => 'Shipments',
             'icon'    => 'fas fa-fw fa-truck',
-            'submenu' => [
-                [
-                    'text' => 'All Branches',
-                    'url'  => 'shipments/list',
-                ],
-                [
-                    'text' => 'Add New Branch',
-                    'url'  => 'shipments/new',
-                    'can' => 'manage'
-                ]
-            ]
+          
+            'url'  => 'shipments',
         ],
         [
             'text'    => 'Packages',
             'icon'    => 'fas fa-fw fa-box-open',
-            'submenu' => [
-                [
-                    'text' => 'All Branches',
-                    'url'  => 'packages/list',
-                ],
-                [
-                    'text' => 'Add New Branch',
-                    'url'  => 'packages/new',
-                    'can' => 'manage'
-                ]
-            ]
+            'url'  => 'packages',
         ],
         [
             'text'    => 'Company Branches',
@@ -290,7 +271,6 @@ return [
                 [
                     'text' => 'Add New User ',
                     'url'  => 'users/new',
-                    'can' => 'manage'
                 ],
                 [
                     'text' => 'All',
@@ -305,7 +285,6 @@ return [
                     'url'  => 'users/list/customer',
                 ]
             ],
-            'can' => 'manage'
         ],
         [
             'text'    => 'Track',

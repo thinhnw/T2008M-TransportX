@@ -19,14 +19,14 @@
             <thead>
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Address</th>
+                <th scope="col">Street/Building</th>
                 <th scope="col">City</th>
                 <th scope="col">Country</th>
                 <th scope="col">Zip Code</th>
                 <th scope="col">Phone Number</th>
-                <th scope="col">Created_at</th>
-                <th scope="col">Updated_at</th>
-                <th scope="col">Actions</th>
+                <th scope="col"></th>
+                {{-- <th scope="col">Created_at</th>
+                <th scope="col">Updated_at</th> --}}
             </tr>
             </thead>
             <tbody>
@@ -38,8 +38,8 @@
                     <td >{{$cat->country}}</td>
                     <td >{{$cat->zip_code}}</td>
                     <td >{{$cat->phone_number}}</td>
-                    <td >{{$cat->created_at}}</td>
-                    <td >{{$cat->updated_at}}</td>
+                    {{-- <td >{{$cat->created_at}}</td>
+                    <td >{{$cat->updated_at}}</td> --}}
                     <td class="d-flex align-items-center">
                         <a href="{{url("/branches/edit",["id"=>$cat->id])}}"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABk0lEQVRIS82XjU3DMBBGv04ATACdAJgAmAS6AUwAG8AGwAhMAExAmQDYADZAD52ji4md2I7UnlRVUc/37j/uQhuSxYa42jrwrqTDgmy8S/o2fc7eSjqS9Cnpyr575oYivpB0XwB9lMQZBOizQYMJHDqTtPY2Y/CBpI+ZoF+S9s0W8GMfeQw+NY/RJ0U9LwcceklEGrLwIOncdNAl8j/JgVEKhnNJiNNLXZfuADZOYl4reKimMIh0ZbUP/fIqiYw2RxxDn8zwjkttAP3Yb13paiOOoaGmjBCpDXB8+AetrXEKGrJ4I+naHgahNeAxqN8BSWgpmDSyHIAjfnHwnIPyG93eTcnUGrdC6ezeeE4Bs83eKiPFYc4ixWC/zeL0jjWSP9sE9of9Okw10mzgS9vfNEt4I+W6dzZwvLOzI2PbiklorrEHj0HRbYqYuaU7Y2Eu+eSkCTxie35waKQWMJm6m1Lj0qtPiVN77kI4eL0tvexNgXMpYO47Sd2rUw01BRLr8PIPV99RcA2g6MzW/ZMo8r5G+RfGLJYf4pPcVQAAAABJRU5ErkJggg=="/></a>
                     <button type="submit" class="btn btn-light delete-package">

@@ -20,6 +20,7 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Package ID</th>
+            <th scope="col">Processed by branch</th>
             <th scope="col">Receiver's Name</th>
             <th scope="col">Receiver's Address</th>
             <th scope="col">Width (cm)</th>
@@ -27,8 +28,7 @@
             <th scope="col">Height (cm)</th>
             <th scope="col">Weight (kg)</th>
             <th scope="col">Status</th>
-            <th scope="col">Processed by branch</th>
-            <th scope="col">Actions</th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -36,6 +36,7 @@
                 <tr class="cursor-pointer">
                     <th scope="row">{{ $index }}</th>
                     <td>{{ formatID($package->id) }}</td>
+                    <td>Branch {{ $package->branch_id }}</td>
                     <td>{{ $package->receiver }}</td>
                     <td>{{ $package->receiver_address }}</td>
                     <td>{{ $package->width }}</td>
@@ -43,7 +44,6 @@
                     <td>{{ $package->height }}</td>
                     <td>{{ $package->weight }}</td>
                     <td>New</td>
-                    <td>0</td>
                     <td class="d-flex align-items-center">
                         <a href="/packages/{{$package->id}}/edit" class="mr-3">Edit</a>
                         <form method="POST" action="/packages/{{$package->id}}">

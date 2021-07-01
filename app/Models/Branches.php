@@ -16,4 +16,12 @@ class Branches extends Model
         "zip_code",
         "phone_number"
     ];
+
+    public function shipments() {
+        return $this->hasMany(Shipment::class);
+    }
+
+    public function getFullAddressAttribute() {
+        return 'Branch ' . $this->id . ' (' . $this->address . ', ' . $this->city . ', ' . $this->country . ')';
+    }
 }
