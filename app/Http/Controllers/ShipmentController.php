@@ -119,26 +119,26 @@ class ShipmentController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $request->validate([
-            'type'=>'required',
-            'branch_id'=>'required',
-            'from_date'=>'required',
-            'from_address'=>'required',
-            'to_address'=>'required',
-            'to_date'=>'required',
-            'driver_id'=>'required'
-        ],[
-            "type.required"=>"The name field is required",
-            "branch_id.required"=>"The branch field is required",
-            "from_date.required"=>"The from date field is required",
-            "from_address.required"=>"The from address field is required",
-            "to_address.required"=>"The to address field is required",
-            "to_date.required"=>"The to date field is required",
-            "driver_id.required"=>"The driver id field is required",
-        ]);
         try {
             $shipment = Shipment::find($id);
             if (!$request->input('status_code')) {
+                $request->validate([
+                    'type'=>'required',
+                    'branch_id'=>'required',
+                    'from_date'=>'required',
+                    'from_address'=>'required',
+                    'to_address'=>'required',
+                    'to_date'=>'required',
+                    'driver_id'=>'required'
+                ],[
+                    "type.required"=>"The name field is required",
+                    "branch_id.required"=>"The branch field is required",
+                    "from_date.required"=>"The from date field is required",
+                    "from_address.required"=>"The from address field is required",
+                    "to_address.required"=>"The to address field is required",
+                    "to_date.required"=>"The to date field is required",
+                    "driver_id.required"=>"The driver id field is required",
+                ]);
                 $shipment->update([
                     'type' => $request->input('type'),
                     'branch_id'  => $request->input('branch_id'),
@@ -169,7 +169,6 @@ class ShipmentController extends Controller
         }catch (\Exception $e){
             // var_dump($e->getMessage());
             return $e;
-            return redirect()->action([ ShipmentController::class, 'index' ]);
         }
     }
 
