@@ -53,6 +53,17 @@
         </table>
     </div>
     {{$list->links()}}
+    <style>
+        .w-5{
+            width: 10px;
+        }
+        .flex-1{
+            display: none;
+        }
+        .hidden{
+            text-align: right;
+        }
+    </style>
 @stop
 
 @section('css')
