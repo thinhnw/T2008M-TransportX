@@ -1,7 +1,11 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            {{-- <x-jet-authentication-card-logo /> --}}
+
+            <h1 style="font-size: 50px;color: #333; font-weight: 700">
+                TRANSPORT X
+            </h1>
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />

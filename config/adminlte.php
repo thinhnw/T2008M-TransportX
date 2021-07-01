@@ -248,6 +248,7 @@ return [
             'icon'    => 'fas fa-fw fa-truck',
           
             'url'  => 'shipments',
+            
         ],
         [
             'text'    => 'Packages',
@@ -264,10 +265,6 @@ return [
             'icon'    => 'fas fa-fw fa-users',
             'submenu' => [
                 [
-                    'text' => 'Add New User ',
-                    'url'  => 'users/new',
-                ],
-                [
                     'text' => 'All',
                     'url'  => 'users/list',
                 ],
@@ -276,9 +273,13 @@ return [
                     'url'  => 'users/list/driver',
                 ],
                 [
-                    'text' => 'Customers',
-                    'url'  => 'users/list/customer',
-                ]
+                    'text' => 'Add New Employee ',
+                    'url'  => 'users/new',
+                ],
+                // [
+                //     'text' => 'Customers',
+                //     'url'  => 'users/list/customer',
+                // ]
             ],
         ],
         [
@@ -481,6 +482,21 @@ return [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js',
+                ],
+            ],
+        ],
+        'Toastr' => [
+            'active' => false,
+            'files' => [
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => 'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js'
                 ],
             ],
         ],
