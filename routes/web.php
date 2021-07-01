@@ -7,6 +7,9 @@ use App\Http\Controllers\BranchesController;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\UserController;
+use App\Models\Branches;
+use App\Models\Shipment;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,9 +25,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard',  function () {
+    return view('dashboard', [ 'branches' => Branches::all(), 'shipments' => Shipment::all() ]);
+} )->name('dashboard');
 Route::get("/users/list",[UserController::class,"ListAll"]);
 Route::get("/users/list/driver",[UserController::class,"Driver"]);
 Route::get("/users/list/customer",[UserController::class,"Customer"]);
