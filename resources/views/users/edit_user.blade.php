@@ -26,8 +26,9 @@
             <label for="inputAddress2">Branch</label>
             <select id="inputState" name="branch" class="form-control">
                 <option selected>Choose...</option>
-                <option>branch03</option>
-                <option>branch04</option>
+                @foreach ($branches as $branch)
+                    <option value="{{ $branch->id }}" @if($user->user_branch== $branch->id) selected @endif>{{ $branch->full_address }}</option>
+                @endforeach
             </select>
         </div>
         <div class="form-group">
