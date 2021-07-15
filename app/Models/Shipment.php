@@ -21,6 +21,10 @@ class Shipment extends Model
         return $this->belongsTo(Branches::class);
     }
 
+    public function driver() {
+        return $this->belongsTo(User::class, 'driver_id');
+    }
+
     public function getStatusAttribute() {
         return $this->shipment_tracks()->orderBy('created_at', 'desc')->first()->status;
     }

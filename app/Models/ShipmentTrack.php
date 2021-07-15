@@ -12,4 +12,22 @@ class ShipmentTrack extends Model
     {
         return $this->belongsTo('App\Models\Shipment');
     }
+    public function getStatusInTextAttribute() {
+        switch ($this->status) {
+            case 0:
+                return 'Newly Created';
+            case 1:
+                return 'Packages gathered at branch';
+            case 2:
+                return 'Accepted by courier';
+            case 3:
+                return 'Shipping';
+            case 4:
+                return 'Arrived at destination, waiting for receivers';
+            case 5:
+                return 'Delivered';
+            case -1:
+                return 'Failed to be delivered';
+        }
+    }
 }

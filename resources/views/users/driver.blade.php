@@ -2,12 +2,12 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>All Drivers</h1>
 @stop
 
 @section('content')
     <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table ">
             <thead>
             <tr>
                 <th scope="col">#</th>
