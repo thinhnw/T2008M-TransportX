@@ -6,10 +6,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
-function Example() {
+export default function Home() {
 	return (
-    <div className="container-fluid">
-
+    <div className="container-fluid bg-primary">
+      alo
     </div>
 	);
 }
