@@ -29,5 +29,9 @@
         "sass-loader": "^11.0.1",
         "tailwindcss": "^2.2.2",
         "vue-loader": "^15.9.7"
+    },
+    "dependencies": {
+        "react-router-dom": "^5.2.0",
+        "reactstrap": "^8.9.0"
     }
 }
