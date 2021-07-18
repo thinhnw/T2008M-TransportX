@@ -11,12 +11,14 @@ const items = [
   {
     src: 'img/Delivery-Express.jpg',
     altText: 'Slide 1',
-    caption: 'Slide 1'
+    header: 'Welcome to our company',
+    caption: 'TRANSPORT X'
   },
   {
     src: 'img/Druga-Pozadina.jpg',
     altText: 'Slide 2',
-    caption: 'Slide 2'
+    header: 'Parcel deliveries',
+    caption: 'AROUND THE WORLD',
   },
  
 ];
@@ -52,7 +54,15 @@ export default function Slider(props) {
         <div style={styles.imgWrapper}>
           <img src={item.src} alt={item.altText} style={styles.img} />
         </div>
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+        <CarouselCaption captionText={item.caption} captionHeader={item.header} />
+        <div className="icons">
+          <div>
+            <img src="img/truck-vignette-gray.png" alt="" />
+          </div>
+          <div>
+            <i class="fas fa-cloud-showers-heavy"></i>
+          </div>
+        </div>
       </CarouselItem>
     );
   });
@@ -63,6 +73,7 @@ export default function Slider(props) {
       next={next}
       previous={previous}
       style={{}}
+      className="slider"
     >
       <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
       {slides}

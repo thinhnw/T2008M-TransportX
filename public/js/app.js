@@ -2467,11 +2467,13 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var items = [{
   src: 'img/Delivery-Express.jpg',
   altText: 'Slide 1',
-  caption: 'Slide 1'
+  header: 'Welcome to our company',
+  caption: 'TRANSPORT X'
 }, {
   src: 'img/Druga-Pozadina.jpg',
   altText: 'Slide 2',
-  caption: 'Slide 2'
+  header: 'Parcel deliveries',
+  caption: 'AROUND THE WORLD'
 }];
 function Slider(props) {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
@@ -2518,7 +2520,19 @@ function Slider(props) {
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
         captionText: item.caption,
-        captionHeader: item.caption
+        captionHeader: item.header
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "icons",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: "img/truck-vignette-gray.png",
+            alt: ""
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("i", {
+            "class": "fas fa-cloud-showers-heavy"
+          })
+        })]
       })]
     }, item.src);
   });
@@ -2527,6 +2541,7 @@ function Slider(props) {
     next: next,
     previous: previous,
     style: {},
+    className: "slider",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
       items: items,
       activeIndex: activeIndex,
@@ -7463,7 +7478,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".features {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/shutterstock_234753442.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n.testimonials {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/Gray-background-with-trucks.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n.calculator {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-color: white;\n}\n\n.footer {\n  height: 400px;\n  width: 100%;\n  display: block;\n  background-color: #42576A;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".slider {\n  margin-top: 80px;\n}\n.slider .carousel-caption {\n  top: 50%;\n  transform: translateY(-50%);\n}\n.slider .carousel-caption h3 {\n  font-style: italic;\n  font-weight: 300;\n}\n.slider .carousel-caption h3:after {\n  display: block;\n  content: \" \";\n  width: 100px;\n  height: 3px;\n  background-color: red;\n  position: absolute;\n  left: 50%;\n  top: 70px;\n  transform: translateX(-50%);\n}\n.slider .carousel-caption p {\n  font-size: 80px;\n  font-weight: 500;\n}\n.slider .icons {\n  z-index: 10;\n  position: absolute;\n  display: block;\n  top: 60%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  color: white;\n}\n.slider .icons img {\n  width: 100%;\n  filter: invert(100%);\n}\n\n.features {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/shutterstock_234753442.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n.testimonials {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/Gray-background-with-trucks.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n.calculator {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-color: white;\n}\n\n.footer {\n  height: 400px;\n  width: 100%;\n  display: block;\n  background-color: #42576A;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
