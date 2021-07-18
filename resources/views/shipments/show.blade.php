@@ -7,7 +7,7 @@
         <div class="d-flex">
             <h1>Shipment {{ formatId($shipment->id) }}</h1>
             @if ($shipment->status != -1 && $shipment->status != 5)
-                <a href="/shipments/{{$shipment->id}}/edit" class="btn btn-light ml-3" id="edit">
+                <a href="/admin/shipments/{{$shipment->id}}/edit" class="btn btn-light ml-3" id="edit">
                     <i class="fas fa-edit btn-icon"></i>
                 </a>
             @endif
@@ -25,7 +25,7 @@
                 {{ $shipment->status_in_text }}
             </span>
             @if ($shipment->status != 5 && $shipment->status != -1)
-                <form action="/shipments/{{$shipment->id}}" method="POST">
+                <form action="/admin/shipments/{{$shipment->id}}" method="POST">
                     @csrf
                     @method('PATCH')
                     <input type="hidden" name="status_code" value="{{ $shipment->status + 1 }}">
@@ -34,7 +34,7 @@
                         Next step
                     </button>
                 </form>
-                <form action="/shipments/{{$shipment->id}}" method="POST">
+                <form action="/admin/shipments/{{$shipment->id}}" method="POST">
                     @csrf
                     @method('PATCH')
                     <input type="hidden" name="status_code" value="{{ -1 }}">

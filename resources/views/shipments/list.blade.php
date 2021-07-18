@@ -8,7 +8,7 @@
             <h1>All Shipments</h1>
         </div>
         <div>
-            <button class="btn btn-primary" onclick="window.location='{{ url("shipments/create") }}'">+ Add Shipment</button>
+            <button class="btn btn-primary" onclick="window.location='{{ url("/admin/shipments/create") }}'">+ Add Shipment</button>
         </div>
     </div>
 @stop
@@ -47,15 +47,15 @@
                     <td>{{ $shipment->from_date }}</td>
                     <td>{{ $shipment->to_date }}</td>
                     <td class="d-flex align-items-center">
-                        <a href="/shipments/{{$shipment->id}}" class="btn btn-light mr-1">
+                        <a href="/admin/shipments/{{$shipment->id}}" class="btn btn-light mr-1">
                             <i class="fas fa-eye text-primary"></i>
                         </a>
                         @if ($shipment->status != -1 && $shipment->status != 5)
-                            <a href="/shipments/{{$shipment->id}}/edit" class="btn btn-light mr-1" id="edit">
+                            <a href="/admin/shipments/{{$shipment->id}}/edit" class="btn btn-light mr-1" id="edit">
                                 <i class="fas fa-edit btn-icon"></i>
                             </a>
                         @endif
-                        <form method="POST" action="/shipments/{{$shipment->id}}">
+                        <form method="POST" action="/admin/shipments/{{$shipment->id}}">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-light delete-shipment">

@@ -8,7 +8,7 @@
             <h1>All Packages</h1>
         </div>
         <div>
-            <button class="btn btn-primary" onclick="window.location='{{ url("packages/create") }}'">+ Add Package</button>
+            <button class="btn btn-primary" onclick="window.location='{{ url("/admin/packages/create") }}'">+ Add Package</button>
         </div>
     </div>
 @stop
@@ -45,8 +45,10 @@
                     <td>{{ $package->weight }}</td>
                     <td>New</td>
                     <td class="d-flex align-items-center">
-                        <a href="/packages/{{$package->id}}/edit" class="mr-3">Edit</a>
-                        <form method="POST" action="/packages/{{$package->id}}">
+                        <a href="/admin/packages/{{$package->id}}/edit" class="mr-3 btn btn-light">
+                            <i class="fas fa-edit text-primary"></i>
+                        </a>
+                        <form method="POST" action="/admin/packages/{{$package->id}}">
                             @csrf
                             @method('DELETE')
                             {{-- <input type="submit" class="btn btn-danger delete-pacakge" value="Delete user"> --}}

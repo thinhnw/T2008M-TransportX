@@ -239,7 +239,7 @@ return [
         // Sidebar items:
         [
             'text'        => 'Dashboard',
-            'url'         => 'dashboard',
+            'url'         => 'admin/dashboard',
             'icon'        => 'fas fa-fw fa-tachometer-alt',
             'plugins' => 'Chartjs'
         ],
@@ -247,18 +247,18 @@ return [
             'text'    => 'Shipments',
             'icon'    => 'fas fa-fw fa-truck',
           
-            'url'  => 'shipments',
+            'url'  => 'admin/shipments',
             
         ],
         [
             'text'    => 'Packages',
             'icon'    => 'fas fa-fw fa-box-open',
-            'url'  => 'packages',
+            'url'  => 'admin/packages',
         ],
         [
             'text'    => 'Company Branches',
             'icon'    => 'fas fa-fw fa-building',
-            'url'  => 'branches',
+            'url'  => 'admin/branches',
         ],
         [
             'text'    => 'Users',
@@ -266,15 +266,15 @@ return [
             'submenu' => [
                 [
                     'text' => 'All',
-                    'url'  => 'users/list',
+                    'url'  => 'admin/users/list',
                 ],
                 [
                     'text' => 'Drivers',
-                    'url'  => 'users/list/driver',
+                    'url'  => 'admin/users/list/driver',
                 ],
                 [
                     'text' => 'Add New Employee ',
-                    'url'  => 'users/new',
+                    'url'  => 'admin/users/new',
                 ],
                 // [
                 //     'text' => 'Customers',
@@ -285,7 +285,7 @@ return [
         [
             'text'    => 'Track',
             'icon'    => 'fas fa-fw fa-search',
-            'url'  => 'track',
+            'url'  => 'admin/track',
         ],
 
         [
@@ -294,11 +294,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Shipping Rates',
-                    'url'  => 'settings/rate',
-                ],
-                [
-                    'text' => 'Package Types',
-                    'url'  => 'settings/package-types',
+                    'url'  => 'admin/settings/rate',
                 ],
                 [
                     'text' => 'General Settings',
