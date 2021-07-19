@@ -14,7 +14,7 @@
 
 @section('content')
 <div class="px-5 mt-3">
-    <form action="/shipments" method="POST" class="border p-3">
+    <form action="/admin/shipments" method="POST" class="border p-3">
         @csrf
      
         <div class="d-flex mt-3 align-items-center">

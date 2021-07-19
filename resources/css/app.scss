@@ -1,0 +1,70 @@
+.slider {
+  margin-top: 80px; 
+  .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    h3 {
+      font-style: italic;
+      font-weight: 300;
+      &:after {
+        display: block;
+        content: " ";
+        width: 100px;
+        height: 3px;
+        background-color: red;
+        position: absolute;
+        left: 50%;
+        top: 70px;
+        transform: translateX(-50%);
+      }
+    }
+    p {
+      font-size: 80px;
+      font-weight: 500;
+    }
+  }
+  .icons {
+    z-index: 10;
+    position: absolute;
+    display: block;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    img {
+      width: 100%;
+      filter: invert(100%);
+    }
+  }
+}
+.features {
+  height: 900px;
+  width: 100%;
+  display: block;
+  background-image: url('/img/shutterstock_234753442.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.testimonials {
+  height: 900px;
+  width: 100%;
+  display: block;
+  background-image: url('/img/Gray-background-with-trucks.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.calculator {
+  height: 900px;
+  width: 100%;
+  display: block;
+  background-color: white;
+}
+
+.footer {
+
+  height: 400px;
+  width: 100%;
+  display: block;
+  background-color: #42576A;
+}
