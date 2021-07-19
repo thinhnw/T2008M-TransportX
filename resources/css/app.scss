@@ -27,23 +27,71 @@
     z-index: 10;
     position: absolute;
     display: block;
-    top: 60%;
+    top: 375px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     color: white;
-    img {
+    .truck-img {
       width: 100%;
       filter: invert(100%);
+    }
+    .icon-wrapper {
+      width: 60px;
+      height: 60px;
+      display: block;
+      margin-top: 40px;
+        fill: white;
+      img {
+        width: 100%;
+        display: block;
+        filter: invert(100%);
+      }
     }
   }
 }
 .features {
-  height: 900px;
+  height: 1100px;
   width: 100%;
   display: block;
   background-image: url('/img/shutterstock_234753442.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  .features-1 {
+    .card {
+      border: none;
+      background: transparent;
+      .card-img-top {
+        border-radius: calc(0.25rem - 1px);
+        height: 130px;
+        img {
+          height: 150px;
+          display: block;
+        }
+      }
+      .card-body {
+        padding: 20px 8px;
+      }
+    }
+  }
+  .features-2 {
+    .card {
+      border: none;
+      background: transparent;
+      .card-img-top {
+        border-radius: calc(0.25rem - 1px);
+        height: 190px;
+        img {
+          height: 150px;
+          display: block;
+        }
+      }
+      .card-body {
+        padding: 20px 8px;
+      }
+    }
+  }
 }
 .testimonials {
   height: 900px;
@@ -52,6 +100,11 @@
   background-image: url('/img/Gray-background-with-trucks.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+	padding-top: 80px;
+	color: white;
+	h2 {
+		font-size: 40px;
+	}
 }
 
 .calculator {
