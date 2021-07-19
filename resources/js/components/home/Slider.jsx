@@ -56,11 +56,19 @@ export default function Slider(props) {
         </div>
         <CarouselCaption captionText={item.caption} captionHeader={item.header} />
         <div className="icons">
-          <div>
-            <img src="img/truck-vignette-gray.png" alt="" />
+          <div className="truck-img-wrapper">
+            <img src="img/truck-vignette-gray.png" className="truck-img" alt="" />
           </div>
-          <div>
-            <i class="fas fa-cloud-showers-heavy"></i>
+          <div className="d-flex justify-content-between">
+            <div className="icon-wrapper">
+              <img src="img/phone.svg" alt="" />
+            </div>
+            <div className="icon-wrapper">
+              <img src="img/umbrella.svg" alt="" />
+            </div>
+            <div className="icon-wrapper">
+              <img src="img/list.svg" alt="" />
+            </div>
           </div>
         </div>
       </CarouselItem>
