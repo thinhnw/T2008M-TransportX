@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-export default function Home() {
-	return (
-    <div className="container-fluid bg-primary">
-      alo
+import Menu from  '../partials/Menu.jsx'
+import Slider from './Slider.jsx'
+import Features from './Features.jsx';
+import Calculator from './Calculator.jsx';
+import Footer from '../partials/Footer.jsx'
+
+export default function Home(props) {
+  return (
+    <div>
+      <Menu /> 
+      <Slider />
+      <Features />
+      <Calculator />
+      <Footer />
     </div>
-	);
+  );
 }

@@ -22,7 +22,12 @@ class ShipmentFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'type' => $this->faker->numberBetween(0, 1),
+            'branch_id' => $this->faker->numberBetween(1, 2),
+            'from_address' => $this->faker->address,
+            'to_address' => $this->faker->address,
+            'from_date' => $this->faker->dateTimeBetween('2021-07-02 00:00:00', '2021-07-03 00:00:00' ),
+            'to_date' => $this->faker->dateTimeBetween('2021-07-03 00:00:00', '2021-07-10 00:00:00' ),
         ];
     }
 }
