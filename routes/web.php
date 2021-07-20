@@ -12,6 +12,7 @@ use App\Models\Branches;
 use App\Models\Package;
 use App\Models\Shipment;
 use App\Models\User;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,9 @@ use App\Models\User;
 Route::get('/', function () {
     return view('client');
 });
+
+Route::get('/post-office', function () {
+    return view('postOffice');
+});
+
+Route::get("/listBranch",[Controller::class,"listBranchData"]);
