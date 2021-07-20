@@ -5,7 +5,7 @@
 @section('content_header')
     <div class="d-flex justify-content-between px-5 mt-3">
         <div>
-            <h1>Add New Branches</h1>
+            <h1>Change Branch's Informations</h1>
         </div>
         <div>
         </div>
