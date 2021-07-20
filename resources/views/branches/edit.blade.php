@@ -37,7 +37,7 @@
                     <label>Phone Number</label>
                     <input type="text" class="form-control" value="{{$cat->phone_number}}" placeholder="Enter Phone Number..." name="phone_number" required />
                 </div>
-                <div class="col col-12 mt-3">
+                <div class="col col-6 mt-3">
                     <button type="submit" class="btn btn-primary">Save</button>
                 </div>
             </div>

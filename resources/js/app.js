@@ -5,6 +5,8 @@
  */
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
+
 import '../css/app.css'
 import '../css/app.scss'
 require('./bootstrap');
@@ -16,5 +18,6 @@ require('./bootstrap');
  */
 
 require('./components/Example');
+require('./components/PostOffice');
 
 

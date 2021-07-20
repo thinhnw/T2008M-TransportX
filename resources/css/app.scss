@@ -1,5 +1,5 @@
 .slider {
-  margin-top: 80px;
+  margin-top: 80px; 
   .carousel-caption {
     top: 50%;
     transform: translateY(-50%);
@@ -112,6 +112,13 @@
   width: 100%;
   display: block;
   background-color: white;
+	padding-top: 80px;
+	em {
+		font-size:18px;
+	}
+	h2 {
+		font-size: 40px;
+	}
 }
 
 .footer {

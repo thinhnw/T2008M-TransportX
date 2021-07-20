@@ -23,7 +23,9 @@ export default function Features(props) {
                   <CardBody>
                     <CardSubtitle tag="em" className="mb-2">Around the world</CardSubtitle>
                     <CardTitle tag="h5" className="text-danger">Shipping</CardTitle>
-                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                    <CardText>
+                      As one of the world’s leading supply chain management companies, we design and implement industry-leading solutions.
+                    </CardText>
                   </CardBody>
                 </Card>
               </div>
@@ -37,7 +39,7 @@ export default function Features(props) {
                   <CardBody>
                     <CardSubtitle tag="em" className="mb-2">24 hours a day</CardSubtitle>
                     <CardTitle tag="h5" className="text-danger">Courier Delivery</CardTitle>
-                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                    <CardText>Our commitment to sustainability helps us reduce waste and share the benefits with our customers.</CardText>
                   </CardBody>
                 </Card>
               </div>
@@ -51,7 +53,7 @@ export default function Features(props) {
                   <CardBody>
                     <CardSubtitle tag="em" className="mb-2">New service</CardSubtitle>
                     <CardTitle tag="h5" className="text-danger">B2B Exchange</CardTitle>
-                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                    <CardText>We strongly support best practice sharing across our operations around the world and across various industrial sectors.</CardText>
                   </CardBody>
                 </Card>
               </div>
@@ -65,7 +67,7 @@ export default function Features(props) {
                   <CardBody>
                     <CardSubtitle tag="em" className="mb-2">7 days a week</CardSubtitle>
                     <CardTitle tag="h5" className="text-danger">Logistics</CardTitle>
-                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                    <CardText>With AEO status, we provides faster processing of customs documents and goods, in priority order.</CardText>
                   </CardBody>
                 </Card>
               </div>
@@ -85,7 +87,9 @@ export default function Features(props) {
                   <CardImg top width="100%" src="img/Druga-Pozadina.jpg" alt="Card image cap" />
                   <CardBody>
                     <CardTitle tag="h5" className="">Shipping</CardTitle>
-                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                    <CardText>
+                      Following the quality of our service thus having gained trust of our many clients.
+                    </CardText>
                   </CardBody>
                 </Card>
               </div>
@@ -100,8 +104,10 @@ export default function Features(props) {
                     <div>
                     </div>
                     <div>
-                      <CardTitle tag="h5" className="">Worldwide</CardTitle>
-                      <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                      <CardTitle tag="h5" className="">Local Shipping</CardTitle>
+                      <CardText>
+                        We offer a state of the art, fully secured warehouse , so that your business is always protected.
+                      </CardText>
                     </div>
                   </CardBody>
                 </Card>
@@ -114,8 +120,10 @@ export default function Features(props) {
                 <Card>
                   <CardImg top width="100%" src="img/shutterstock_274586306-1080x540.jpg" alt="Card image cap" />
                   <CardBody>
-                    <CardTitle tag="h5" className="">Direct client contact</CardTitle>
-                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                    <CardTitle tag="h5" className="">Warehousing</CardTitle>
+                    <CardText>
+                      Individual solutions that always tailored for freight transport projects with special needs.
+                    </CardText>
                   </CardBody>
                 </Card>
               </div>
