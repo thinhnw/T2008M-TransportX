@@ -6,15 +6,17 @@ import Features from './Features.jsx';
 import Testimonials from './Testimonials.jsx'
 import Calculator from './Calculator.jsx';
 import Footer from '../partials/Footer.jsx'
+import About from "../about/About";
 
 export default function Home(props) {
   return (
     <div>
-      <Menu /> 
+      <Menu />
       <Slider />
       <Features />
       <Testimonials />
       <Calculator />
+        <About/>
       <Footer />
     </div>
   );

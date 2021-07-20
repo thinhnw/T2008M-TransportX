@@ -2342,6 +2342,160 @@ if (document.getElementById('example')) {
 
 /***/ }),
 
+/***/ "./resources/js/components/about/About.jsx":
+/*!*************************************************!*\
+  !*** ./resources/js/components/about/About.jsx ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ About)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/Card.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardBody.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardSubtitle.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardTitle.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/CardText.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+function About(props) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("section", {
+    className: "about",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "container",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "row",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "col text-center",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("em", {
+            children: "Donec vel accumsan velit."
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
+            className: "text-danger font-weight-bold mt-2",
+            children: "MANAGING DIRECTORS"
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "row mt-5 abouts",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "col-3",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "card",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+                    width: "100%",
+                    src: "img/4-600x540.jpg",
+                    alt: "Port"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+                    tag: "em",
+                    className: "mb-2",
+                    children: "Founder & CEO, DE LLC"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
+                    tag: "h5",
+                    className: "text-danger",
+                    children: "Mike Smart"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+                    children: "Morbi consequat, felis vitae dictum varius, purus mi porta urna, sed dictum dolor arcu id massa. Phasellus eu tortor quis massa tincidunt pharetra suspendisse."
+                  })]
+                })
+              })
+            })
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "col-3",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "card",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+                    width: "100%",
+                    src: "img/5-600x540.jpg",
+                    alt: "Port"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+                    tag: "em",
+                    className: "mb-2",
+                    children: "Managing Director, De LLC"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
+                    tag: "h5",
+                    className: "text-danger",
+                    children: "Matt McGregor"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+                    children: "Mauris bibendum consectetur dui, id tristique leo. Purus mi porta urna, sed dictum dolor arcu id massa. Phasellus eu tortor quis massa tincidunt pharetra suspendisse."
+                  })]
+                })
+              })
+            })
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "col-3",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "card",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+                    width: "100%",
+                    src: "img/1-600x540.jpg",
+                    alt: "Port"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+                    tag: "em",
+                    className: "mb-2",
+                    children: "HR Manager, DE LLC"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
+                    tag: "h5",
+                    className: "text-danger",
+                    children: "Susan Hamilton"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+                    children: " Phasellus eu tortor quis massa tincidunt pharetra. Mauris bibendum consectetur dui, id tristique leo. Morbi consequat, felis vitae dictum varius, purus mi porta urna."
+                  })]
+                })
+              })
+            })
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "col-3",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "card",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+                    width: "100%",
+                    src: "img/31-600x540.jpg",
+                    alt: "Port"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+                    tag: "em",
+                    className: "mb-2",
+                    children: "Logistics Manager, DE LLC"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_6__.default, {
+                    tag: "h5",
+                    className: "text-danger",
+                    children: "Robert Jackson"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_7__.default, {
+                    children: "Phasellus eu tortor quis massa tincidunt pharetra. Suspendisse posuere blandit mattis. Mauris bibendum consectetur dui, id tristique leo. Morbi consequat, felis."
+                  })]
+                })
+              })
+            })
+          })
+        })]
+      })]
+    })
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/components/home/Calculator.jsx":
 /*!*****************************************************!*\
   !*** ./resources/js/components/home/Calculator.jsx ***!
@@ -2630,7 +2784,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Testimonials_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Testimonials.jsx */ "./resources/js/components/home/Testimonials.jsx");
 /* harmony import */ var _Calculator_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Calculator.jsx */ "./resources/js/components/home/Calculator.jsx");
 /* harmony import */ var _partials_Footer_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../partials/Footer.jsx */ "./resources/js/components/partials/Footer.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _about_About__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../about/About */ "./resources/js/components/about/About.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -2642,8 +2798,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Home(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_partials_Menu_jsx__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Slider_jsx__WEBPACK_IMPORTED_MODULE_3__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Features_jsx__WEBPACK_IMPORTED_MODULE_4__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Testimonials_jsx__WEBPACK_IMPORTED_MODULE_5__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Calculator_jsx__WEBPACK_IMPORTED_MODULE_6__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_partials_Footer_jsx__WEBPACK_IMPORTED_MODULE_7__.default, {})]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_partials_Menu_jsx__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Slider_jsx__WEBPACK_IMPORTED_MODULE_3__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Features_jsx__WEBPACK_IMPORTED_MODULE_4__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Testimonials_jsx__WEBPACK_IMPORTED_MODULE_5__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Calculator_jsx__WEBPACK_IMPORTED_MODULE_6__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_about_About__WEBPACK_IMPORTED_MODULE_8__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_partials_Footer_jsx__WEBPACK_IMPORTED_MODULE_7__.default, {})]
   });
 }
 
@@ -7812,7 +7968,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".slider {\n  margin-top: 80px;\n}\n.slider .carousel-caption {\n  top: 50%;\n  transform: translateY(-50%);\n}\n.slider .carousel-caption h3 {\n  font-style: italic;\n  font-weight: 300;\n}\n.slider .carousel-caption h3:after {\n  display: block;\n  content: \" \";\n  width: 100px;\n  height: 3px;\n  background-color: red;\n  position: absolute;\n  left: 50%;\n  top: 70px;\n  transform: translateX(-50%);\n}\n.slider .carousel-caption p {\n  font-size: 80px;\n  font-weight: 500;\n}\n.slider .icons {\n  z-index: 10;\n  position: absolute;\n  display: block;\n  top: 375px;\n  left: 50%;\n  transform: translateX(-50%);\n  color: white;\n}\n.slider .icons .truck-img {\n  width: 100%;\n  filter: invert(100%);\n}\n.slider .icons .icon-wrapper {\n  width: 60px;\n  height: 60px;\n  display: block;\n  margin-top: 40px;\n  fill: white;\n}\n.slider .icons .icon-wrapper img {\n  width: 100%;\n  display: block;\n  filter: invert(100%);\n}\n\n.features {\n  height: 1100px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/shutterstock_234753442.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  padding-top: 80px;\n  padding-bottom: 80px;\n}\n.features .features-1 .card {\n  border: none;\n  background: transparent;\n}\n.features .features-1 .card .card-img-top {\n  border-radius: calc(0.25rem - 1px);\n  height: 130px;\n}\n.features .features-1 .card .card-img-top img {\n  height: 150px;\n  display: block;\n}\n.features .features-1 .card .card-body {\n  padding: 20px 8px;\n}\n.features .features-2 .card {\n  border: none;\n  background: transparent;\n}\n.features .features-2 .card .card-img-top {\n  border-radius: calc(0.25rem - 1px);\n  height: 190px;\n}\n.features .features-2 .card .card-img-top img {\n  height: 150px;\n  display: block;\n}\n.features .features-2 .card .card-body {\n  padding: 20px 8px;\n}\n\n.testimonials {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/Gray-background-with-trucks.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  padding-top: 80px;\n  color: white;\n}\n.testimonials h2 {\n  font-size: 40px;\n}\n\n.calculator {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-color: white;\n}\n\n.footer {\n  height: 400px;\n  width: 100%;\n  display: block;\n  background-color: #42576A;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".slider {\n  margin-top: 80px;\n}\n.slider .carousel-caption {\n  top: 50%;\n  transform: translateY(-50%);\n}\n.slider .carousel-caption h3 {\n  font-style: italic;\n  font-weight: 300;\n}\n.slider .carousel-caption h3:after {\n  display: block;\n  content: \" \";\n  width: 100px;\n  height: 3px;\n  background-color: red;\n  position: absolute;\n  left: 50%;\n  top: 70px;\n  transform: translateX(-50%);\n}\n.slider .carousel-caption p {\n  font-size: 80px;\n  font-weight: 500;\n}\n.slider .icons {\n  z-index: 10;\n  position: absolute;\n  display: block;\n  top: 375px;\n  left: 50%;\n  transform: translateX(-50%);\n  color: white;\n}\n.slider .icons .truck-img {\n  width: 100%;\n  filter: invert(100%);\n}\n.slider .icons .icon-wrapper {\n  width: 60px;\n  height: 60px;\n  display: block;\n  margin-top: 40px;\n  fill: white;\n}\n.slider .icons .icon-wrapper img {\n  width: 100%;\n  display: block;\n  filter: invert(100%);\n}\n\n.features {\n  height: 1100px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/shutterstock_234753442.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  padding-top: 80px;\n  padding-bottom: 80px;\n}\n.features .features-1 .card {\n  border: none;\n  background: transparent;\n}\n.features .features-1 .card .card-img-top {\n  border-radius: calc(0.25rem - 1px);\n  height: 130px;\n}\n.features .features-1 .card .card-img-top img {\n  height: 150px;\n  display: block;\n}\n.features .features-1 .card .card-body {\n  padding: 20px 8px;\n}\n.features .features-2 .card {\n  border: none;\n  background: transparent;\n}\n.features .features-2 .card .card-img-top {\n  border-radius: calc(0.25rem - 1px);\n  height: 190px;\n}\n.features .features-2 .card .card-img-top img {\n  height: 150px;\n  display: block;\n}\n.features .features-2 .card .card-body {\n  padding: 20px 8px;\n}\n\n.testimonials {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/Gray-background-with-trucks.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  padding-top: 80px;\n  color: white;\n}\n.testimonials h2 {\n  font-size: 40px;\n}\n\n.calculator {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-color: white;\n}\n\n.footer {\n  height: 400px;\n  width: 100%;\n  display: block;\n  background-color: #42576A;\n}\n\n.about {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/Transparent-background-with-dots.png\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  padding-top: 80px;\n  padding-bottom: 80px;\n}\n.about .abouts .card {\n  border: 2px solid #E4E4E4;\n  background: transparent;\n}\n.about .abouts .card .card-img-top {\n  border-radius: calc(0.25rem - 1px);\n  height: 130px;\n}\n.about .abouts .card .card-img-top img {\n  width: 150px;\n  display: block;\n}\n.about .abouts .card .card-body {\n  padding: 20px 8px;\n  background: #fff;\n}\n.about .row {\n  margin-top: 90px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
