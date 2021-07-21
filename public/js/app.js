@@ -2241,8 +2241,9 @@ var Search_post_office = function Search_post_office() {
   var latitudeAndLongitude = [[30.827433, -89.715243], [48.112830, 14.039010], [40.043080, -74.878040], [32.853410, -79.860910], [34.421300, -112.589670], [51.451110, -2.476020], [29.961160, -95.461910], [11.194340, 124.776450], [45.400510, -92.989410], [-37.015490, 144.650290]]; //Latitude and Longitude
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([30.827433, -89.715243]),
-      _useState4 = _slicedToArray(_useState3, 1),
-      position = _useState4[0]; //...................................................//
+      _useState4 = _slicedToArray(_useState3, 2),
+      position = _useState4[0],
+      setProsition = _useState4[1]; //...................................................//
   //getData using axios
 
 
@@ -2283,13 +2284,13 @@ var Search_post_office = function Search_post_office() {
       onClick: function onClick() {
         return flyTo(items.id);
       },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
         children: items.address
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
         children: items.city
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
         children: items.phone_number
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
         children: items.zip_code
       })]
     });
@@ -2326,7 +2327,7 @@ var Search_post_office = function Search_post_office() {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_leaflet__WEBPACK_IMPORTED_MODULE_5__.default, {
       ref: mapRef,
       center: position,
-      zoom: 8,
+      zoom: 2,
       scrollWheelZoom: true,
       id: "Map",
       minZoom: 2,
@@ -2336,45 +2337,102 @@ var Search_post_office = function Search_post_office() {
       }), renderMarker]
     });
   }; //...................................................//
+  //Search the office
 
 
-  var _mapRef$current2 = mapRef.current,
-      current = _mapRef$current2 === void 0 ? {} : _mapRef$current2;
-  var map = current.leafletElement;
-  map.on('Hà Nội', function (result) {
-    console.log(result.x, result.y);
-  });
+  var searchOffice = function searchOffice() {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+        type: 'text',
+        id: "addr"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+        type: 'button',
+        onClick: addr_search,
+        id: "click_search",
+        children: "Search"
+      })]
+    });
+  }; //Addr Search function
+
+
+  var addr_search = function addr_search() {
+    var inp = document.getElementById('addr');
+    var xmlhttp = new XMLHttpRequest();
+    var url = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q=" + inp.value;
+
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+      }
+    };
+
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+  }; //...................................................//
+  //myFunction()
+
+
+  var myFunction = function myFunction(arr) {
+    var _mapRef$current2 = mapRef.current,
+        current = _mapRef$current2 === void 0 ? {} : _mapRef$current2;
+    var map = current.leafletElement;
+    map.flyTo([arr[0].lat, arr[0].lon], 8, {
+      duration: 2
+    });
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_3__.default, {});
+  };
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       id: "about_post_office",
-      className: "container",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         id: "review_post_office",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+          id: "reviews",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
             children: "M\u1EA1ng l\u01B0\u1EDBi b\u01B0u c\u1EE5c tr\xEAn 63 t\u1EC9nh th\xE0nh"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("small", {
             children: "Ma\u0323ng l\u01B0\u01A1\u0301i chuy\xEA\u0309n pha\u0301t cu\u0309a Viettel Post ph\u1EE7 so\u0301ng kh\u0103\u0301p 63 t\u1EC9nh th\xE0nh tr\xEAn l\xE3nh th\u1ED5 Vi\u1EC7t Nam."
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          id: "advertise",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            id: "user_trust",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+                children: "328.633"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("small", {
+                children: "Kh\xE1ch h\xE0ng tin d\xF9ng"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+                children: "521.319"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("small", {
+                children: "\u0110\u01A1n h\xE0ng \u0111ang v\u1EADn chuy\u1EC3n"
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
             loading: "lazy",
             src: "https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4.png",
             width: "100%",
-            height: "745",
+            height: "400",
             alt: "",
             title: "buucuc4",
             className: "img-responsive wp-image-624",
             srcSet: "https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4-200x81.png 200w, https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4-400x163.png 400w, https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4-600x244.png 600w, https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4-800x326.png 800w, https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4-1200x488.png 1200w, https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4.png 1831w",
             sizes: "(max-width: 800px) 100vw, 1831px"
-          })
+          })]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        id: "branchAndMap",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          id: "listBranch",
-          children: renderListBranch
-        }), renderMap()]
+        id: "location",
+        children: [searchOffice(), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          id: "branchAndMap",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            id: "listBranch",
+            children: renderListBranch
+          }), renderMap()]
+        })]
       })]
     })
   });
