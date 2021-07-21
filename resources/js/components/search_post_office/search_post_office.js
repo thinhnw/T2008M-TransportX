@@ -1,52 +1,24 @@
-import {useEffect, useState} from "react";
-import {Marker,MapContainer,Popup,TileLayer} from "react-leaflet";
+import React, {useEffect, useRef, useState} from "react";
+import {Marker,Map,Popup,TileLayer} from "react-leaflet";
 
 const Search_post_office=()=>{
-    const [branches,setBranch]=useState([]);
+    const [branches,setBranch]=useState([]);//data
     const latitudeAndLongitude=[
-        {
-            latitude:30.827433,
-            longitude:-89.715243
-        },
-        {
-            latitude:48.112830,
-            longitude:14.039010
-        },
-        {
-            latitude:40.043080,
-            longitude:-74.878040
-        },
-        {
-            latitude:32.853410,
-            longitude: -79.860910
-        },
-        {
-            latitude:34.421300,
-            longitude:-112.589670
-        },
-        {
-            latitude:51.451110,
-            longitude:-2.476020
-        },
-        {
-            latitude:29.961160,
-            longitude:-95.461910
-        },
-        {
-            latitude:11.194340,
-            longitude:124.776450
-        },
-        {
-            latitude:45.400510,
-            longitude:-92.989410
-        },
-        {
-            latitude:-37.015490,
-            longitude:144.650290
-        }
-    ]
+        [30.827433, -89.715243],
+        [48.112830, 14.039010],
+        [40.043080, -74.878040],
+        [32.853410,-79.860910],
+        [34.421300,-112.589670],
+        [51.451110,-2.476020],
+        [29.961160,-95.461910],
+        [11.194340,124.776450],
+        [45.400510,-92.989410],
+        [-37.015490,144.650290]
+    ];//Latitude and Longitude
     const [position,setProsition]=useState([30.827433, -89.715243])
-    const [map,setMap]=useState(null);
+//...................................................//
+
+    //getData using axios
     useEffect(()=> {
         const getData = async () => {
             const rs = await axios.get("/listBranch");
@@ -54,7 +26,9 @@ const Search_post_office=()=>{
         }
         getData()
     },[])
+//...................................................//
 
+    //Render Data
     const renderListBranch=branches.map(
         (items,key)=>{
             return(
@@ -67,32 +41,48 @@ const Search_post_office=()=>{
             )
         }
     );
+//...................................................//
+
+    //Set Marker
     const nameBranch=branches.map(item=>item.address);
     const renderMarker= latitudeAndLongitude.map((item,key)=>{
             return(
-                <Marker position={[item.latitude, item.longitude]}>
+                <Marker position={item}>
                     <Popup>
                         {nameBranch[key]}
                     </Popup>
                 </Marker>
             )
         })
+//...................................................//
+
+    //fly to the location
+    const mapRef=useRef();
     const flyTo=(id)=>{
-        setProsition(latitudeAndLongitude[id-1]);
-        map.flyTo(Array.from(latitudeAndLongitude[id-1]))
+        const { current = {} } =mapRef;
+        const { leafletElement:map } =current;
+        map.flyTo(latitudeAndLongitude[(id-1)],8,{
+            duration:2
+        })
+
     }
 
+    //...................................................//
+
+    //Render Map
     const renderMap=()=>{
         return(
-            <MapContainer center={position} zoom={8} scrollWheelZoom={true} id={"Map"} whenCreated={map=>setMap(map)} minZoom={2}>
+            <Map ref={mapRef} center={position} zoom={8} scrollWheelZoom={true} id={"Map"}  minZoom={2}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 {renderMarker}
-            </MapContainer>
+            </Map>
         )
     }
+//...................................................//
+
 
     return(
         <>

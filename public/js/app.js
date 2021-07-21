@@ -1,6 +1,186 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _assertThisInitialized)
+/* harmony export */ });
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/createClass.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/createClass.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _createClass)
+/* harmony export */ });
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _defineProperty)
+/* harmony export */ });
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _extends)
+/* harmony export */ });
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _inheritsLoose)
+/* harmony export */ });
+/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js");
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__.default)(subClass, superClass);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _objectWithoutPropertiesLoose)
+/* harmony export */ });
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _setPrototypeOf)
+/* harmony export */ });
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/regenerator/index.js":
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
@@ -9,484 +189,6 @@
 
 module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
 
-
-/***/ }),
-
-/***/ "./node_modules/@react-leaflet/core/esm/attribution.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@react-leaflet/core/esm/attribution.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useAttribution": () => (/* binding */ useAttribution)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-function useAttribution(map, attribution) {
-  const attributionRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(attribution);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function updateAttribution() {
-    if (attribution !== attributionRef.current && map.attributionControl != null) {
-      if (attributionRef.current != null) {
-        map.attributionControl.removeAttribution(attributionRef.current);
-      }
-
-      if (attribution != null) {
-        map.attributionControl.addAttribution(attribution);
-      }
-    }
-
-    attributionRef.current = attribution;
-  }, [map, attribution]);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@react-leaflet/core/esm/component.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/@react-leaflet/core/esm/component.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createContainerComponent": () => (/* binding */ createContainerComponent),
-/* harmony export */   "createDivOverlayComponent": () => (/* binding */ createDivOverlayComponent),
-/* harmony export */   "createLeafComponent": () => (/* binding */ createLeafComponent)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./context */ "./node_modules/@react-leaflet/core/esm/context.js");
-
-
-
-function createContainerComponent(useElement) {
-  function ContainerComponent(props, ref) {
-    const {
-      instance,
-      context
-    } = useElement(props).current;
-    (0,react__WEBPACK_IMPORTED_MODULE_0__.useImperativeHandle)(ref, () => instance);
-    return props.children == null ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_context__WEBPACK_IMPORTED_MODULE_2__.LeafletProvider, {
-      value: context
-    }, props.children);
-  }
-
-  return /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(ContainerComponent);
-}
-function createDivOverlayComponent(useElement) {
-  function OverlayComponent(props, ref) {
-    const [isOpen, setOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-    const {
-      instance
-    } = useElement(props, setOpen).current;
-    (0,react__WEBPACK_IMPORTED_MODULE_0__.useImperativeHandle)(ref, () => instance);
-    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function updateOverlay() {
-      if (isOpen) {
-        instance.update();
-      }
-    }, [instance, isOpen, props.children]); // @ts-ignore _contentNode missing in type definition
-
-    const contentNode = instance._contentNode;
-    return contentNode ? /*#__PURE__*/(0,react_dom__WEBPACK_IMPORTED_MODULE_1__.createPortal)(props.children, contentNode) : null;
-  }
-
-  return /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(OverlayComponent);
-}
-function createLeafComponent(useElement) {
-  function LeafComponent(props, ref) {
-    const {
-      instance
-    } = useElement(props).current;
-    (0,react__WEBPACK_IMPORTED_MODULE_0__.useImperativeHandle)(ref, () => instance);
-    return null;
-  }
-
-  return /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(LeafComponent);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@react-leaflet/core/esm/context.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/@react-leaflet/core/esm/context.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "CONTEXT_VERSION": () => (/* binding */ CONTEXT_VERSION),
-/* harmony export */   "LeafletContext": () => (/* binding */ LeafletContext),
-/* harmony export */   "LeafletProvider": () => (/* binding */ LeafletProvider),
-/* harmony export */   "useLeafletContext": () => (/* binding */ useLeafletContext)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-const CONTEXT_VERSION = 1;
-const LeafletContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(null);
-const LeafletProvider = LeafletContext.Provider;
-function useLeafletContext() {
-  const context = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(LeafletContext);
-
-  if (context == null) {
-    throw new Error('No context provided: useLeafletContext() can only be used in a descendant of <MapContainer>');
-  }
-
-  return context;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@react-leaflet/core/esm/control.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/@react-leaflet/core/esm/control.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createControlHook": () => (/* binding */ createControlHook)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./context */ "./node_modules/@react-leaflet/core/esm/context.js");
-
-
-function createControlHook(useElement) {
-  return function useLeafletControl(props) {
-    const context = (0,_context__WEBPACK_IMPORTED_MODULE_1__.useLeafletContext)();
-    const elementRef = useElement(props, context);
-    const {
-      instance
-    } = elementRef.current;
-    const positionRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(props.position);
-    const {
-      position
-    } = props;
-    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function addControl() {
-      instance.addTo(context.map);
-      return function removeControl() {
-        instance.remove();
-      };
-    }, [context.map, instance]);
-    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function updateControl() {
-      if (position != null && position !== positionRef.current) {
-        instance.setPosition(position);
-        positionRef.current = position;
-      }
-    }, [instance, position]);
-    return elementRef;
-  };
-}
-
-/***/ }),
-
-/***/ "./node_modules/@react-leaflet/core/esm/div-overlay.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@react-leaflet/core/esm/div-overlay.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createDivOverlayHook": () => (/* binding */ createDivOverlayHook)
-/* harmony export */ });
-/* harmony import */ var _attribution__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./attribution */ "./node_modules/@react-leaflet/core/esm/attribution.js");
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./context */ "./node_modules/@react-leaflet/core/esm/context.js");
-/* harmony import */ var _events__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./events */ "./node_modules/@react-leaflet/core/esm/events.js");
-/* harmony import */ var _pane__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pane */ "./node_modules/@react-leaflet/core/esm/pane.js");
-
-
-
-
-function createDivOverlayHook(useElement, useLifecycle) {
-  return function useDivOverlay(props, setOpen) {
-    const context = (0,_context__WEBPACK_IMPORTED_MODULE_0__.useLeafletContext)();
-    const elementRef = useElement((0,_pane__WEBPACK_IMPORTED_MODULE_1__.withPane)(props, context), context);
-    (0,_attribution__WEBPACK_IMPORTED_MODULE_2__.useAttribution)(context.map, props.attribution);
-    (0,_events__WEBPACK_IMPORTED_MODULE_3__.useEventHandlers)(elementRef.current, props.eventHandlers);
-    useLifecycle(elementRef.current, context, props, setOpen);
-    return elementRef;
-  };
-}
-
-/***/ }),
-
-/***/ "./node_modules/@react-leaflet/core/esm/element.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/@react-leaflet/core/esm/element.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createElementHook": () => (/* binding */ createElementHook)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-function createElementHook(createElement, updateElement) {
-  if (updateElement == null) {
-    return function useImmutableLeafletElement(props, context) {
-      return (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(createElement(props, context));
-    };
-  }
-
-  return function useMutableLeafletElement(props, context) {
-    const elementRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(createElement(props, context));
-    const propsRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(props);
-    const {
-      instance
-    } = elementRef.current;
-    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function updateElementProps() {
-      if (propsRef.current !== props) {
-        updateElement(instance, props, propsRef.current);
-        propsRef.current = props;
-      }
-    }, [instance, props, context]);
-    return elementRef;
-  };
-}
-
-/***/ }),
-
-/***/ "./node_modules/@react-leaflet/core/esm/events.js":
-/*!********************************************************!*\
-  !*** ./node_modules/@react-leaflet/core/esm/events.js ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useEventHandlers": () => (/* binding */ useEventHandlers)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-function useEventHandlers(element, eventHandlers) {
-  const eventHandlersRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function addEventHandlers() {
-    if (eventHandlers != null) {
-      element.instance.on(eventHandlers);
-    }
-
-    eventHandlersRef.current = eventHandlers;
-    return function removeEventHandlers() {
-      if (eventHandlersRef.current != null) {
-        element.instance.off(eventHandlersRef.current);
-      }
-
-      eventHandlersRef.current = null;
-    };
-  }, [element, eventHandlers]);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@react-leaflet/core/esm/generic.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/@react-leaflet/core/esm/generic.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "createControlComponent": () => (/* binding */ createControlComponent),
-/* harmony export */   "createLayerComponent": () => (/* binding */ createLayerComponent),
-/* harmony export */   "createOverlayComponent": () => (/* binding */ createOverlayComponent),
-/* harmony export */   "createPathComponent": () => (/* binding */ createPathComponent),
-/* harmony export */   "createTileLayerComponent": () => (/* binding */ createTileLayerComponent)
-/* harmony export */ });
-/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component */ "./node_modules/@react-leaflet/core/esm/component.js");
-/* harmony import */ var _control__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./control */ "./node_modules/@react-leaflet/core/esm/control.js");
-/* harmony import */ var _element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./element */ "./node_modules/@react-leaflet/core/esm/element.js");
-/* harmony import */ var _layer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./layer */ "./node_modules/@react-leaflet/core/esm/layer.js");
-/* harmony import */ var _div_overlay__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./div-overlay */ "./node_modules/@react-leaflet/core/esm/div-overlay.js");
-/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./path */ "./node_modules/@react-leaflet/core/esm/path.js");
-
-
-
-
-
-
-function createControlComponent(createInstance) {
-  function createElement(props, context) {
-    return {
-      instance: createInstance(props),
-      context
-    };
-  }
-
-  const useElement = (0,_element__WEBPACK_IMPORTED_MODULE_0__.createElementHook)(createElement);
-  const useControl = (0,_control__WEBPACK_IMPORTED_MODULE_1__.createControlHook)(useElement);
-  return (0,_component__WEBPACK_IMPORTED_MODULE_2__.createLeafComponent)(useControl);
-}
-function createLayerComponent(createElement, updateElement) {
-  const useElement = (0,_element__WEBPACK_IMPORTED_MODULE_0__.createElementHook)(createElement, updateElement);
-  const useLayer = (0,_layer__WEBPACK_IMPORTED_MODULE_3__.createLayerHook)(useElement);
-  return (0,_component__WEBPACK_IMPORTED_MODULE_2__.createContainerComponent)(useLayer);
-}
-function createOverlayComponent(createElement, useLifecycle) {
-  const useElement = (0,_element__WEBPACK_IMPORTED_MODULE_0__.createElementHook)(createElement);
-  const useOverlay = (0,_div_overlay__WEBPACK_IMPORTED_MODULE_4__.createDivOverlayHook)(useElement, useLifecycle);
-  return (0,_component__WEBPACK_IMPORTED_MODULE_2__.createDivOverlayComponent)(useOverlay);
-}
-function createPathComponent(createElement, updateElement) {
-  const useElement = (0,_element__WEBPACK_IMPORTED_MODULE_0__.createElementHook)(createElement, updateElement);
-  const usePath = (0,_path__WEBPACK_IMPORTED_MODULE_5__.createPathHook)(useElement);
-  return (0,_component__WEBPACK_IMPORTED_MODULE_2__.createContainerComponent)(usePath);
-}
-function createTileLayerComponent(createElement, updateElement) {
-  const useElement = (0,_element__WEBPACK_IMPORTED_MODULE_0__.createElementHook)(createElement, updateElement);
-  const useLayer = (0,_layer__WEBPACK_IMPORTED_MODULE_3__.createLayerHook)(useElement);
-  return (0,_component__WEBPACK_IMPORTED_MODULE_2__.createLeafComponent)(useLayer);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@react-leaflet/core/esm/grid-layer.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@react-leaflet/core/esm/grid-layer.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "updateGridLayer": () => (/* binding */ updateGridLayer)
-/* harmony export */ });
-function updateGridLayer(layer, props, prevProps) {
-  const {
-    opacity,
-    zIndex
-  } = props;
-
-  if (opacity != null && opacity !== prevProps.opacity) {
-    layer.setOpacity(opacity);
-  }
-
-  if (zIndex != null && zIndex !== prevProps.zIndex) {
-    layer.setZIndex(zIndex);
-  }
-}
-
-/***/ }),
-
-/***/ "./node_modules/@react-leaflet/core/esm/layer.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/@react-leaflet/core/esm/layer.js ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useLayerLifecycle": () => (/* binding */ useLayerLifecycle),
-/* harmony export */   "createLayerHook": () => (/* binding */ createLayerHook)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _attribution__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./attribution */ "./node_modules/@react-leaflet/core/esm/attribution.js");
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./context */ "./node_modules/@react-leaflet/core/esm/context.js");
-/* harmony import */ var _events__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./events */ "./node_modules/@react-leaflet/core/esm/events.js");
-/* harmony import */ var _pane__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pane */ "./node_modules/@react-leaflet/core/esm/pane.js");
-
-
-
-
-
-function useLayerLifecycle(element, context) {
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function addLayer() {
-    const container = context.layerContainer ?? context.map;
-    container.addLayer(element.instance);
-    return function removeLayer() {
-      var _context$layersContro;
-
-      (_context$layersContro = context.layersControl) == null ? void 0 : _context$layersContro.removeLayer(element.instance);
-      context.map.removeLayer(element.instance);
-    };
-  }, [context, element]);
-}
-function createLayerHook(useElement) {
-  return function useLayer(props) {
-    const context = (0,_context__WEBPACK_IMPORTED_MODULE_1__.useLeafletContext)();
-    const elementRef = useElement((0,_pane__WEBPACK_IMPORTED_MODULE_2__.withPane)(props, context), context);
-    (0,_attribution__WEBPACK_IMPORTED_MODULE_3__.useAttribution)(context.map, props.attribution);
-    (0,_events__WEBPACK_IMPORTED_MODULE_4__.useEventHandlers)(elementRef.current, props.eventHandlers);
-    useLayerLifecycle(elementRef.current, context);
-    return elementRef;
-  };
-}
-
-/***/ }),
-
-/***/ "./node_modules/@react-leaflet/core/esm/pane.js":
-/*!******************************************************!*\
-  !*** ./node_modules/@react-leaflet/core/esm/pane.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "withPane": () => (/* binding */ withPane)
-/* harmony export */ });
-function withPane(props, context) {
-  const pane = props.pane ?? context.pane;
-  return pane ? { ...props,
-    pane
-  } : props;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@react-leaflet/core/esm/path.js":
-/*!******************************************************!*\
-  !*** ./node_modules/@react-leaflet/core/esm/path.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "usePathOptions": () => (/* binding */ usePathOptions),
-/* harmony export */   "createPathHook": () => (/* binding */ createPathHook)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./context */ "./node_modules/@react-leaflet/core/esm/context.js");
-/* harmony import */ var _events__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./events */ "./node_modules/@react-leaflet/core/esm/events.js");
-/* harmony import */ var _layer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./layer */ "./node_modules/@react-leaflet/core/esm/layer.js");
-/* harmony import */ var _pane__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pane */ "./node_modules/@react-leaflet/core/esm/pane.js");
-
-
-
-
-
-function usePathOptions(element, props) {
-  const optionsRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function updatePathOptions() {
-    if (props.pathOptions !== optionsRef.current) {
-      const options = props.pathOptions ?? {};
-      element.instance.setStyle(options);
-      optionsRef.current = options;
-    }
-  }, [element, props]);
-}
-function createPathHook(useElement) {
-  return function usePath(props) {
-    const context = (0,_context__WEBPACK_IMPORTED_MODULE_1__.useLeafletContext)();
-    const elementRef = useElement((0,_pane__WEBPACK_IMPORTED_MODULE_2__.withPane)(props, context), context);
-    (0,_events__WEBPACK_IMPORTED_MODULE_3__.useEventHandlers)(elementRef.current, props.eventHandlers);
-    (0,_layer__WEBPACK_IMPORTED_MODULE_4__.useLayerLifecycle)(elementRef.current, context);
-    usePathOptions(elementRef.current, props);
-    return elementRef;
-  };
-}
 
 /***/ }),
 
@@ -2417,11 +2119,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 function Example() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_home_Home_jsx__WEBPACK_IMPORTED_MODULE_2__.default, {})
-  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_home_Home_jsx__WEBPACK_IMPORTED_MODULE_2__.default, {});
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Example);
@@ -2503,10 +2202,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Marker.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/Popup.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/MapContainer.js");
-/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/esm/TileLayer.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/es/Marker.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/es/Popup.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/es/Map.js");
+/* harmony import */ var react_leaflet__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-leaflet */ "./node_modules/react-leaflet/es/TileLayer.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
@@ -2536,49 +2235,16 @@ var Search_post_office = function Search_post_office() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
       branches = _useState2[0],
-      setBranch = _useState2[1];
+      setBranch = _useState2[1]; //data
 
-  var latitudeAndLongitude = [{
-    latitude: 30.827433,
-    longitude: -89.715243
-  }, {
-    latitude: 48.112830,
-    longitude: 14.039010
-  }, {
-    latitude: 40.043080,
-    longitude: -74.878040
-  }, {
-    latitude: 32.853410,
-    longitude: -79.860910
-  }, {
-    latitude: 34.421300,
-    longitude: -112.589670
-  }, {
-    latitude: 51.451110,
-    longitude: -2.476020
-  }, {
-    latitude: 29.961160,
-    longitude: -95.461910
-  }, {
-    latitude: 11.194340,
-    longitude: 124.776450
-  }, {
-    latitude: 45.400510,
-    longitude: -92.989410
-  }, {
-    latitude: -37.015490,
-    longitude: 144.650290
-  }];
+
+  var latitudeAndLongitude = [[30.827433, -89.715243], [48.112830, 14.039010], [40.043080, -74.878040], [32.853410, -79.860910], [34.421300, -112.589670], [51.451110, -2.476020], [29.961160, -95.461910], [11.194340, 124.776450], [45.400510, -92.989410], [-37.015490, 144.650290]]; //Latitude and Longitude
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([30.827433, -89.715243]),
-      _useState4 = _slicedToArray(_useState3, 2),
-      position = _useState4[0],
-      setProsition = _useState4[1];
+      _useState4 = _slicedToArray(_useState3, 1),
+      position = _useState4[0]; //...................................................//
+  //getData using axios
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
-      _useState6 = _slicedToArray(_useState5, 2),
-      map = _useState6[0],
-      setMap = _useState6[1];
 
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     var getData = /*#__PURE__*/function () {
@@ -2609,7 +2275,9 @@ var Search_post_office = function Search_post_office() {
     }();
 
     getData();
-  }, []);
+  }, []); //...................................................//
+  //Render Data
+
   var renderListBranch = branches.map(function (items, key) {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       onClick: function onClick() {
@@ -2625,41 +2293,57 @@ var Search_post_office = function Search_post_office() {
         children: items.zip_code
       })]
     });
-  });
+  }); //...................................................//
+  //Set Marker
+
   var nameBranch = branches.map(function (item) {
     return item.address;
   });
   var renderMarker = latitudeAndLongitude.map(function (item, key) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_3__.Marker, {
-      position: [item.latitude, item.longitude],
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_4__.Popup, {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_3__.default, {
+      position: item,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_4__.default, {
         children: nameBranch[key]
       })
     });
-  });
+  }); //...................................................//
+  //fly to the location
+
+  var mapRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)();
 
   var flyTo = function flyTo(id) {
-    setProsition(latitudeAndLongitude[id - 1]);
-    map.flyTo(Array.from(latitudeAndLongitude[id - 1]));
-  };
+    var _mapRef$current = mapRef.current,
+        current = _mapRef$current === void 0 ? {} : _mapRef$current;
+    var map = current.leafletElement;
+    map.flyTo(latitudeAndLongitude[id - 1], 8, {
+      duration: 2
+    });
+  }; //...................................................//
+  //Render Map
+
 
   var renderMap = function renderMap() {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_leaflet__WEBPACK_IMPORTED_MODULE_5__.MapContainer, {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_leaflet__WEBPACK_IMPORTED_MODULE_5__.default, {
+      ref: mapRef,
       center: position,
       zoom: 8,
       scrollWheelZoom: true,
       id: "Map",
-      whenCreated: function whenCreated(map) {
-        return setMap(map);
-      },
       minZoom: 2,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_6__.TileLayer, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_6__.default, {
         attribution: "\xA9 <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
         url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       }), renderMarker]
     });
-  };
+  }; //...................................................//
 
+
+  var _mapRef$current2 = mapRef.current,
+      current = _mapRef$current2 === void 0 ? {} : _mapRef$current2;
+  var map = current.leafletElement;
+  map.on('Hà Nội', function (result) {
+    console.log(result.x, result.y);
+  });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       id: "about_post_office",
@@ -7238,6 +6922,120 @@ module.exports = function (cssWithMappingToString) {
 
   return list;
 };
+
+/***/ }),
+
+/***/ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js ***!
+  \**********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var reactIs = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
+
+/**
+ * Copyright 2015, Yahoo! Inc.
+ * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
+ */
+var REACT_STATICS = {
+  childContextTypes: true,
+  contextType: true,
+  contextTypes: true,
+  defaultProps: true,
+  displayName: true,
+  getDefaultProps: true,
+  getDerivedStateFromError: true,
+  getDerivedStateFromProps: true,
+  mixins: true,
+  propTypes: true,
+  type: true
+};
+var KNOWN_STATICS = {
+  name: true,
+  length: true,
+  prototype: true,
+  caller: true,
+  callee: true,
+  arguments: true,
+  arity: true
+};
+var FORWARD_REF_STATICS = {
+  '$$typeof': true,
+  render: true,
+  defaultProps: true,
+  displayName: true,
+  propTypes: true
+};
+var MEMO_STATICS = {
+  '$$typeof': true,
+  compare: true,
+  defaultProps: true,
+  displayName: true,
+  propTypes: true,
+  type: true
+};
+var TYPE_STATICS = {};
+TYPE_STATICS[reactIs.ForwardRef] = FORWARD_REF_STATICS;
+TYPE_STATICS[reactIs.Memo] = MEMO_STATICS;
+
+function getStatics(component) {
+  // React v16.11 and below
+  if (reactIs.isMemo(component)) {
+    return MEMO_STATICS;
+  } // React v16.12 and above
+
+
+  return TYPE_STATICS[component['$$typeof']] || REACT_STATICS;
+}
+
+var defineProperty = Object.defineProperty;
+var getOwnPropertyNames = Object.getOwnPropertyNames;
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+var getPrototypeOf = Object.getPrototypeOf;
+var objectPrototype = Object.prototype;
+function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
+  if (typeof sourceComponent !== 'string') {
+    // don't hoist over string (html) components
+    if (objectPrototype) {
+      var inheritedComponent = getPrototypeOf(sourceComponent);
+
+      if (inheritedComponent && inheritedComponent !== objectPrototype) {
+        hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
+      }
+    }
+
+    var keys = getOwnPropertyNames(sourceComponent);
+
+    if (getOwnPropertySymbols) {
+      keys = keys.concat(getOwnPropertySymbols(sourceComponent));
+    }
+
+    var targetStatics = getStatics(targetComponent);
+    var sourceStatics = getStatics(sourceComponent);
+
+    for (var i = 0; i < keys.length; ++i) {
+      var key = keys[i];
+
+      if (!KNOWN_STATICS[key] && !(blacklist && blacklist[key]) && !(sourceStatics && sourceStatics[key]) && !(targetStatics && targetStatics[key])) {
+        var descriptor = getOwnPropertyDescriptor(sourceComponent, key);
+
+        try {
+          // Avoid failures from read-only properties
+          defineProperty(targetComponent, key, descriptor);
+        } catch (e) {}
+      }
+    }
+  }
+
+  return targetComponent;
+}
+
+module.exports = hoistNonReactStatics;
+
 
 /***/ }),
 
@@ -78667,245 +78465,1385 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/react-leaflet/esm/MapContainer.js":
-/*!********************************************************!*\
-  !*** ./node_modules/react-leaflet/esm/MapContainer.js ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "./node_modules/react-is/cjs/react-is.development.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-is/cjs/react-is.development.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useMapElement": () => (/* binding */ useMapElement),
-/* harmony export */   "MapContainer": () => (/* binding */ MapContainer)
-/* harmony export */ });
-/* harmony import */ var _react_leaflet_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @react-leaflet/core */ "./node_modules/@react-leaflet/core/esm/context.js");
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+/** @license React v16.13.1
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 
 
 
 
-function useMapElement(mapRef, props) {
-  const [map, setMap] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null);
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
-    if (mapRef.current !== null && map === null) {
-      const instance = new leaflet__WEBPACK_IMPORTED_MODULE_0__.Map(mapRef.current, props);
 
-      if (props.center != null && props.zoom != null) {
-        instance.setView(props.center, props.zoom);
-      } else if (props.bounds != null) {
-        instance.fitBounds(props.bounds, props.boundsOptions);
-      }
+if (true) {
+  (function() {
+'use strict';
 
-      if (props.whenReady != null) {
-        instance.whenReady(props.whenReady);
-      }
+// The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+// nor polyfill, then a plain number is used for performance.
+var hasSymbol = typeof Symbol === 'function' && Symbol.for;
+var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
+var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
+var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
+var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
+var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
+var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
+var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+// (unstable) APIs that have been removed. Can we remove the symbols?
 
-      setMap(instance);
-    }
-  }, [mapRef, map, props]);
-  return map;
-}
-function MapContainer({
-  children,
-  className,
-  id,
-  placeholder,
-  style,
-  whenCreated,
-  ...options
-}) {
-  const mapRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);
-  const map = useMapElement(mapRef, options);
-  const createdRef = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(false);
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
-    if (map != null && createdRef.current === false && whenCreated != null) {
-      createdRef.current = true;
-      whenCreated(map);
-    }
-  }, [map, whenCreated]);
-  const [props] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({
-    className,
-    id,
-    style
-  });
-  const context = (0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(() => map ? {
-    __version: _react_leaflet_core__WEBPACK_IMPORTED_MODULE_2__.CONTEXT_VERSION,
-    map
-  } : null, [map]);
-  const contents = context ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_react_leaflet_core__WEBPACK_IMPORTED_MODULE_2__.LeafletProvider, {
-    value: context
-  }, children) : placeholder ?? null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", _extends({}, props, {
-    ref: mapRef
-  }), contents);
+var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
+var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
+var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
+var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
+var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
+var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
+var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
+var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for('react.block') : 0xead9;
+var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
+var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
+var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
+
+function isValidElementType(type) {
+  return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+  type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
 }
 
+function typeOf(object) {
+  if (typeof object === 'object' && object !== null) {
+    var $$typeof = object.$$typeof;
+
+    switch ($$typeof) {
+      case REACT_ELEMENT_TYPE:
+        var type = object.type;
+
+        switch (type) {
+          case REACT_ASYNC_MODE_TYPE:
+          case REACT_CONCURRENT_MODE_TYPE:
+          case REACT_FRAGMENT_TYPE:
+          case REACT_PROFILER_TYPE:
+          case REACT_STRICT_MODE_TYPE:
+          case REACT_SUSPENSE_TYPE:
+            return type;
+
+          default:
+            var $$typeofType = type && type.$$typeof;
+
+            switch ($$typeofType) {
+              case REACT_CONTEXT_TYPE:
+              case REACT_FORWARD_REF_TYPE:
+              case REACT_LAZY_TYPE:
+              case REACT_MEMO_TYPE:
+              case REACT_PROVIDER_TYPE:
+                return $$typeofType;
+
+              default:
+                return $$typeof;
+            }
+
+        }
+
+      case REACT_PORTAL_TYPE:
+        return $$typeof;
+    }
+  }
+
+  return undefined;
+} // AsyncMode is deprecated along with isAsyncMode
+
+var AsyncMode = REACT_ASYNC_MODE_TYPE;
+var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
+var ContextConsumer = REACT_CONTEXT_TYPE;
+var ContextProvider = REACT_PROVIDER_TYPE;
+var Element = REACT_ELEMENT_TYPE;
+var ForwardRef = REACT_FORWARD_REF_TYPE;
+var Fragment = REACT_FRAGMENT_TYPE;
+var Lazy = REACT_LAZY_TYPE;
+var Memo = REACT_MEMO_TYPE;
+var Portal = REACT_PORTAL_TYPE;
+var Profiler = REACT_PROFILER_TYPE;
+var StrictMode = REACT_STRICT_MODE_TYPE;
+var Suspense = REACT_SUSPENSE_TYPE;
+var hasWarnedAboutDeprecatedIsAsyncMode = false; // AsyncMode should be deprecated
+
+function isAsyncMode(object) {
+  {
+    if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+      hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
+
+      console['warn']('The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
+    }
+  }
+
+  return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
+}
+function isConcurrentMode(object) {
+  return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
+}
+function isContextConsumer(object) {
+  return typeOf(object) === REACT_CONTEXT_TYPE;
+}
+function isContextProvider(object) {
+  return typeOf(object) === REACT_PROVIDER_TYPE;
+}
+function isElement(object) {
+  return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+}
+function isForwardRef(object) {
+  return typeOf(object) === REACT_FORWARD_REF_TYPE;
+}
+function isFragment(object) {
+  return typeOf(object) === REACT_FRAGMENT_TYPE;
+}
+function isLazy(object) {
+  return typeOf(object) === REACT_LAZY_TYPE;
+}
+function isMemo(object) {
+  return typeOf(object) === REACT_MEMO_TYPE;
+}
+function isPortal(object) {
+  return typeOf(object) === REACT_PORTAL_TYPE;
+}
+function isProfiler(object) {
+  return typeOf(object) === REACT_PROFILER_TYPE;
+}
+function isStrictMode(object) {
+  return typeOf(object) === REACT_STRICT_MODE_TYPE;
+}
+function isSuspense(object) {
+  return typeOf(object) === REACT_SUSPENSE_TYPE;
+}
+
+exports.AsyncMode = AsyncMode;
+exports.ConcurrentMode = ConcurrentMode;
+exports.ContextConsumer = ContextConsumer;
+exports.ContextProvider = ContextProvider;
+exports.Element = Element;
+exports.ForwardRef = ForwardRef;
+exports.Fragment = Fragment;
+exports.Lazy = Lazy;
+exports.Memo = Memo;
+exports.Portal = Portal;
+exports.Profiler = Profiler;
+exports.StrictMode = StrictMode;
+exports.Suspense = Suspense;
+exports.isAsyncMode = isAsyncMode;
+exports.isConcurrentMode = isConcurrentMode;
+exports.isContextConsumer = isContextConsumer;
+exports.isContextProvider = isContextProvider;
+exports.isElement = isElement;
+exports.isForwardRef = isForwardRef;
+exports.isFragment = isFragment;
+exports.isLazy = isLazy;
+exports.isMemo = isMemo;
+exports.isPortal = isPortal;
+exports.isProfiler = isProfiler;
+exports.isStrictMode = isStrictMode;
+exports.isSuspense = isSuspense;
+exports.isValidElementType = isValidElementType;
+exports.typeOf = typeOf;
+  })();
+}
+
+
 /***/ }),
 
-/***/ "./node_modules/react-leaflet/esm/Marker.js":
-/*!**************************************************!*\
-  !*** ./node_modules/react-leaflet/esm/Marker.js ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "./node_modules/react-is/index.js":
+/*!****************************************!*\
+  !*** ./node_modules/react-is/index.js ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Marker": () => (/* binding */ Marker)
-/* harmony export */ });
-/* harmony import */ var _react_leaflet_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @react-leaflet/core */ "./node_modules/@react-leaflet/core/esm/generic.js");
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
 
 
-const Marker = (0,_react_leaflet_core__WEBPACK_IMPORTED_MODULE_1__.createLayerComponent)(function createMarker({
-  position,
-  ...options
-}, ctx) {
-  const instance = new leaflet__WEBPACK_IMPORTED_MODULE_0__.Marker(position, options);
-  return {
-    instance,
-    context: { ...ctx,
-      overlayContainer: instance
-    }
-  };
-}, function updateMarker(marker, props, prevProps) {
-  if (props.position !== prevProps.position) {
-    marker.setLatLng(props.position);
-  }
+if (false) {} else {
+  module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/react-is/cjs/react-is.development.js");
+}
 
-  if (props.icon != null && props.icon !== prevProps.icon) {
-    marker.setIcon(props.icon);
-  }
-
-  if (props.zIndexOffset != null && props.zIndexOffset !== prevProps.zIndexOffset) {
-    marker.setZIndexOffset(props.zIndexOffset);
-  }
-
-  if (props.opacity != null && props.opacity !== prevProps.opacity) {
-    marker.setOpacity(props.opacity);
-  }
-
-  if (marker.dragging != null && props.draggable !== prevProps.draggable) {
-    if (props.draggable === true) {
-      marker.dragging.enable();
-    } else {
-      marker.dragging.disable();
-    }
-  }
-});
 
 /***/ }),
 
-/***/ "./node_modules/react-leaflet/esm/Popup.js":
-/*!*************************************************!*\
-  !*** ./node_modules/react-leaflet/esm/Popup.js ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Popup": () => (/* binding */ Popup)
-/* harmony export */ });
-/* harmony import */ var _react_leaflet_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @react-leaflet/core */ "./node_modules/@react-leaflet/core/esm/generic.js");
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-
-const Popup = (0,_react_leaflet_core__WEBPACK_IMPORTED_MODULE_2__.createOverlayComponent)(function createPopup(props, context) {
-  return {
-    instance: new leaflet__WEBPACK_IMPORTED_MODULE_0__.Popup(props, context.overlayContainer),
-    context
-  };
-}, function usePopupLifecycle(element, context, props, setOpen) {
-  const {
-    onClose,
-    onOpen,
-    position
-  } = props;
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function addPopup() {
-    const {
-      instance
-    } = element;
-
-    function onPopupOpen(event) {
-      if (event.popup === instance) {
-        instance.update();
-        setOpen(true);
-        onOpen == null ? void 0 : onOpen();
-      }
-    }
-
-    function onPopupClose(event) {
-      if (event.popup === instance) {
-        setOpen(false);
-        onClose == null ? void 0 : onClose();
-      }
-    }
-
-    context.map.on({
-      popupopen: onPopupOpen,
-      popupclose: onPopupClose
-    });
-
-    if (context.overlayContainer == null) {
-      // Attach to a Map
-      if (position != null) {
-        instance.setLatLng(position);
-      }
-
-      instance.openOn(context.map);
-    } else {
-      // Attach to container component
-      context.overlayContainer.bindPopup(instance);
-    }
-
-    return function removePopup() {
-      context.map.off({
-        popupopen: onPopupOpen,
-        popupclose: onPopupClose
-      });
-      context.map.removeLayer(instance);
-    };
-  }, [element, context, setOpen, onClose, onOpen, position]);
-});
-
-/***/ }),
-
-/***/ "./node_modules/react-leaflet/esm/TileLayer.js":
+/***/ "./node_modules/react-leaflet/es/DivOverlay.js":
 /*!*****************************************************!*\
-  !*** ./node_modules/react-leaflet/esm/TileLayer.js ***!
+  !*** ./node_modules/react-leaflet/es/DivOverlay.js ***!
   \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "TileLayer": () => (/* binding */ TileLayer)
+/* harmony export */   "default": () => (/* binding */ DivOverlay)
 /* harmony export */ });
-/* harmony import */ var _react_leaflet_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @react-leaflet/core */ "./node_modules/@react-leaflet/core/esm/generic.js");
-/* harmony import */ var _react_leaflet_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @react-leaflet/core */ "./node_modules/@react-leaflet/core/esm/pane.js");
-/* harmony import */ var _react_leaflet_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @react-leaflet/core */ "./node_modules/@react-leaflet/core/esm/grid-layer.js");
+/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _MapComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./MapComponent */ "./node_modules/react-leaflet/es/MapComponent.js");
+/* harmony import */ var _utils_updateClassName__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils/updateClassName */ "./node_modules/react-leaflet/es/utils/updateClassName.js");
+
+
+
+
+
+
+
+
+
+var DivOverlay = /*#__PURE__*/function (_MapComponent) {
+  (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__.default)(DivOverlay, _MapComponent);
+
+  function DivOverlay(props) {
+    var _this;
+
+    _this = _MapComponent.call(this, props) || this;
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__.default)(_this), "onClose", function () {
+      if (_this.props.onClose) {
+        _this.props.onClose();
+      }
+    });
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_0__.default)(_this), "onOpen", function () {
+      _this.forceUpdate(); // Re-render now that leafletElement is created
+
+
+      if (_this.props.onOpen) {
+        _this.props.onOpen();
+      }
+    });
+
+    _this.leafletElement = _this.createLeafletElement(props);
+    return _this;
+  }
+
+  var _proto = DivOverlay.prototype;
+
+  _proto.createLeafletElement = function createLeafletElement(_props) {
+    throw new Error('createLeafletElement() must be implemented');
+  };
+
+  _proto.updateLeafletElement = function updateLeafletElement(_prevProps, _props) {};
+
+  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+    (0,_utils_updateClassName__WEBPACK_IMPORTED_MODULE_4__.default)(this.leafletElement._container, prevProps.className, this.props.className);
+    this.updateLeafletElement(prevProps, this.props);
+
+    if (this.leafletElement.isOpen()) {
+      this.leafletElement.update();
+      this.onRender();
+    }
+  };
+
+  _proto.onRender = function onRender() {};
+
+  _proto.render = function render() {
+    if (this.leafletElement._contentNode) {
+      return /*#__PURE__*/(0,react_dom__WEBPACK_IMPORTED_MODULE_3__.createPortal)(this.props.children, this.leafletElement._contentNode);
+    }
+
+    return null;
+  };
+
+  return DivOverlay;
+}(_MapComponent__WEBPACK_IMPORTED_MODULE_5__.default);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/react-leaflet/es/GridLayer.js":
+/*!****************************************************!*\
+  !*** ./node_modules/react-leaflet/es/GridLayer.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ GridLayer)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _MapLayer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MapLayer */ "./node_modules/react-leaflet/es/MapLayer.js");
+
+
+
+
+
+
+
+var GridLayer = /*#__PURE__*/function (_MapLayer) {
+  (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__.default)(GridLayer, _MapLayer);
+
+  function GridLayer() {
+    return _MapLayer.apply(this, arguments) || this;
+  }
+
+  var _proto = GridLayer.prototype;
+
+  _proto.createLeafletElement = function createLeafletElement(props) {
+    return new leaflet__WEBPACK_IMPORTED_MODULE_2__.GridLayer(this.getOptions(props));
+  };
+
+  _proto.updateLeafletElement = function updateLeafletElement(fromProps, toProps) {
+    var opacity = toProps.opacity,
+        zIndex = toProps.zIndex;
+
+    if (opacity !== fromProps.opacity) {
+      this.leafletElement.setOpacity(opacity);
+    }
+
+    if (zIndex !== fromProps.zIndex) {
+      this.leafletElement.setZIndex(zIndex);
+    }
+  };
+
+  _proto.getOptions = function getOptions(props) {
+    var options = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, _MapLayer.prototype.getOptions.call(this, props));
+
+    var map = props.leaflet.map;
+
+    if (map != null) {
+      // $FlowFixMe: Object spread
+      if (options.maxZoom == null && map.options.maxZoom != null) {
+        // $FlowFixMe: Object spread
+        options.maxZoom = map.options.maxZoom;
+      } // $FlowFixMe: Object spread
+
+
+      if (options.minZoom == null && map.options.minZoom != null) {
+        // $FlowFixMe: Object spread
+        options.minZoom = map.options.minZoom;
+      }
+    }
+
+    return options;
+  };
+
+  _proto.render = function render() {
+    return null;
+  };
+
+  return GridLayer;
+}(_MapLayer__WEBPACK_IMPORTED_MODULE_3__.default);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/react-leaflet/es/Map.js":
+/*!**********************************************!*\
+  !*** ./node_modules/react-leaflet/es/Map.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Map)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./context */ "./node_modules/react-leaflet/es/context.js");
+/* harmony import */ var _MapEvented__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./MapEvented */ "./node_modules/react-leaflet/es/MapEvented.js");
+/* harmony import */ var _utils_updateClassName__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./utils/updateClassName */ "./node_modules/react-leaflet/es/utils/updateClassName.js");
+/* harmony import */ var _utils_omit__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./utils/omit */ "./node_modules/react-leaflet/es/utils/omit.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+var OTHER_PROPS = ['children', 'className', 'id', 'style', 'useFlyTo', 'whenReady'];
+
+var normalizeCenter = function normalizeCenter(pos) {
+  return Array.isArray(pos) ? [pos[0], pos[1]] : [pos.lat, pos.lon ? pos.lon : pos.lng];
+};
+
+var Map = /*#__PURE__*/function (_MapEvented) {
+  (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_3__.default)(Map, _MapEvented);
+
+  function Map(props) {
+    var _this;
+
+    _this = _MapEvented.call(this, props) || this;
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this), "className", void 0);
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this), "contextValue", void 0);
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this), "container", void 0);
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this), "viewport", {
+      center: undefined,
+      zoom: undefined
+    });
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this), "_ready", false);
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this), "_updating", false);
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this), "onViewportChange", function () {
+      var center = _this.leafletElement.getCenter();
+
+      _this.viewport = {
+        center: center ? [center.lat, center.lng] : undefined,
+        zoom: _this.leafletElement.getZoom()
+      };
+
+      if (_this.props.onViewportChange && !_this._updating) {
+        _this.props.onViewportChange(_this.viewport);
+      }
+    });
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this), "onViewportChanged", function () {
+      if (_this.props.onViewportChanged && !_this._updating) {
+        _this.props.onViewportChanged(_this.viewport);
+      }
+    });
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_4__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__.default)(_this), "bindContainer", function (container) {
+      _this.container = container;
+    });
+
+    _this.className = props.className;
+    return _this;
+  }
+
+  var _proto = Map.prototype;
+
+  _proto.createLeafletElement = function createLeafletElement(props) {
+    var viewport = props.viewport,
+        options = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__.default)(props, ["viewport"]);
+
+    if (viewport) {
+      if (viewport.center) {
+        options.center = viewport.center;
+      }
+
+      if (typeof viewport.zoom === 'number') {
+        options.zoom = viewport.zoom;
+      }
+    }
+
+    return new leaflet__WEBPACK_IMPORTED_MODULE_5__.Map(this.container, options);
+  };
+
+  _proto.updateLeafletElement = function updateLeafletElement(fromProps, toProps) {
+    this._updating = true;
+    var bounds = toProps.bounds,
+        boundsOptions = toProps.boundsOptions,
+        boxZoom = toProps.boxZoom,
+        center = toProps.center,
+        className = toProps.className,
+        doubleClickZoom = toProps.doubleClickZoom,
+        dragging = toProps.dragging,
+        keyboard = toProps.keyboard,
+        maxBounds = toProps.maxBounds,
+        scrollWheelZoom = toProps.scrollWheelZoom,
+        tap = toProps.tap,
+        touchZoom = toProps.touchZoom,
+        useFlyTo = toProps.useFlyTo,
+        viewport = toProps.viewport,
+        zoom = toProps.zoom;
+    (0,_utils_updateClassName__WEBPACK_IMPORTED_MODULE_7__.default)(this.container, fromProps.className, className);
+
+    if (viewport && viewport !== fromProps.viewport) {
+      var c = viewport.center ? viewport.center : center;
+      var z = viewport.zoom == null ? zoom : viewport.zoom;
+
+      if (useFlyTo === true) {
+        this.leafletElement.flyTo(c, z, this.getZoomPanOptions(toProps));
+      } else {
+        this.leafletElement.setView(c, z, this.getZoomPanOptions(toProps));
+      }
+    } else if (center && this.shouldUpdateCenter(center, fromProps.center)) {
+      if (useFlyTo === true) {
+        this.leafletElement.flyTo(center, zoom, this.getZoomPanOptions(toProps));
+      } else {
+        this.leafletElement.setView(center, zoom, this.getZoomPanOptions(toProps));
+      }
+    } else if (typeof zoom === 'number' && zoom !== fromProps.zoom) {
+      if (fromProps.zoom == null) {
+        this.leafletElement.setView(center, zoom, this.getZoomPanOptions(toProps));
+      } else {
+        this.leafletElement.setZoom(zoom, this.getZoomPanOptions(toProps));
+      }
+    }
+
+    if (maxBounds && this.shouldUpdateBounds(maxBounds, fromProps.maxBounds)) {
+      this.leafletElement.setMaxBounds(maxBounds);
+    }
+
+    if (bounds && (this.shouldUpdateBounds(bounds, fromProps.bounds) || boundsOptions !== fromProps.boundsOptions)) {
+      if (useFlyTo === true) {
+        this.leafletElement.flyToBounds(bounds, this.getFitBoundsOptions(toProps));
+      } else {
+        this.leafletElement.fitBounds(bounds, this.getFitBoundsOptions(toProps));
+      }
+    }
+
+    if (boxZoom !== fromProps.boxZoom) {
+      if (boxZoom === true) {
+        this.leafletElement.boxZoom.enable();
+      } else {
+        this.leafletElement.boxZoom.disable();
+      }
+    }
+
+    if (doubleClickZoom !== fromProps.doubleClickZoom) {
+      if (doubleClickZoom === true || typeof doubleClickZoom === 'string') {
+        this.leafletElement.options.doubleClickZoom = doubleClickZoom;
+        this.leafletElement.doubleClickZoom.enable();
+      } else {
+        this.leafletElement.doubleClickZoom.disable();
+      }
+    }
+
+    if (dragging !== fromProps.dragging) {
+      if (dragging === true) {
+        this.leafletElement.dragging.enable();
+      } else {
+        this.leafletElement.dragging.disable();
+      }
+    }
+
+    if (keyboard !== fromProps.keyboard) {
+      if (keyboard === true) {
+        this.leafletElement.keyboard.enable();
+      } else {
+        this.leafletElement.keyboard.disable();
+      }
+    }
+
+    if (scrollWheelZoom !== fromProps.scrollWheelZoom) {
+      if (scrollWheelZoom === true || typeof scrollWheelZoom === 'string') {
+        this.leafletElement.options.scrollWheelZoom = scrollWheelZoom;
+        this.leafletElement.scrollWheelZoom.enable();
+      } else {
+        this.leafletElement.scrollWheelZoom.disable();
+      }
+    }
+
+    if (tap !== fromProps.tap) {
+      if (tap === true) {
+        this.leafletElement.tap.enable();
+      } else {
+        this.leafletElement.tap.disable();
+      }
+    }
+
+    if (touchZoom !== fromProps.touchZoom) {
+      if (touchZoom === true || typeof touchZoom === 'string') {
+        this.leafletElement.options.touchZoom = touchZoom;
+        this.leafletElement.touchZoom.enable();
+      } else {
+        this.leafletElement.touchZoom.disable();
+      }
+    }
+
+    this._updating = false;
+  };
+
+  _proto.getZoomPanOptions = function getZoomPanOptions(props) {
+    var animate = props.animate,
+        duration = props.duration,
+        easeLinearity = props.easeLinearity,
+        noMoveStart = props.noMoveStart;
+    return {
+      animate: animate,
+      duration: duration,
+      easeLinearity: easeLinearity,
+      noMoveStart: noMoveStart
+    };
+  };
+
+  _proto.getFitBoundsOptions = function getFitBoundsOptions(props) {
+    var zoomPanOptions = this.getZoomPanOptions(props);
+    return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, zoomPanOptions, props.boundsOptions);
+  };
+
+  _proto.componentDidMount = function componentDidMount() {
+    var props = _utils_omit__WEBPACK_IMPORTED_MODULE_8__.default.apply(void 0, [this.props].concat(OTHER_PROPS));
+    this.leafletElement = this.createLeafletElement(props);
+    this.leafletElement.on('move', this.onViewportChange);
+    this.leafletElement.on('moveend', this.onViewportChanged);
+
+    if (props.bounds != null) {
+      this.leafletElement.fitBounds(props.bounds, this.getFitBoundsOptions(props));
+    }
+
+    this.contextValue = {
+      layerContainer: this.leafletElement,
+      map: this.leafletElement
+    };
+
+    _MapEvented.prototype.componentDidMount.call(this);
+
+    this.forceUpdate(); // Re-render now that leafletElement is created
+  };
+
+  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+    if (this._ready === false) {
+      this._ready = true;
+
+      if (this.props.whenReady) {
+        this.leafletElement.whenReady(this.props.whenReady);
+      }
+    }
+
+    _MapEvented.prototype.componentDidUpdate.call(this, prevProps);
+
+    this.updateLeafletElement(prevProps, this.props);
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    _MapEvented.prototype.componentWillUnmount.call(this);
+
+    this.leafletElement.off('move', this.onViewportChange);
+    this.leafletElement.off('moveend', this.onViewportChanged); // The canvas renderer uses requestAnimationFrame, making a deferred call to a deleted object
+    // When preferCanvas is set, use simpler teardown logic
+
+    if (this.props.preferCanvas === true) {
+      this.leafletElement._initEvents(true);
+
+      this.leafletElement._stop();
+    } else {
+      this.leafletElement.remove();
+    }
+  };
+
+  _proto.shouldUpdateCenter = function shouldUpdateCenter(next, prev) {
+    if (!prev) return true;
+    next = normalizeCenter(next);
+    prev = normalizeCenter(prev);
+    return next[0] !== prev[0] || next[1] !== prev[1];
+  };
+
+  _proto.shouldUpdateBounds = function shouldUpdateBounds(next, prev) {
+    return prev ? !(0,leaflet__WEBPACK_IMPORTED_MODULE_5__.latLngBounds)(next).equals((0,leaflet__WEBPACK_IMPORTED_MODULE_5__.latLngBounds)(prev)) : true;
+  };
+
+  _proto.render = function render() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement("div", {
+      className: this.className,
+      id: this.props.id,
+      ref: this.bindContainer,
+      style: this.props.style
+    }, this.contextValue ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(_context__WEBPACK_IMPORTED_MODULE_9__.LeafletProvider, {
+      value: this.contextValue
+    }, this.props.children) : null);
+  };
+
+  return Map;
+}(_MapEvented__WEBPACK_IMPORTED_MODULE_10__.default);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/react-leaflet/es/MapComponent.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-leaflet/es/MapComponent.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ MapComponent)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var _MapEvented__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MapEvented */ "./node_modules/react-leaflet/es/MapEvented.js");
+
+
+
+
+
+
+var MapComponent = /*#__PURE__*/function (_MapEvented) {
+  (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__.default)(MapComponent, _MapEvented);
+
+  function MapComponent() {
+    return _MapEvented.apply(this, arguments) || this;
+  }
+
+  var _proto = MapComponent.prototype;
+
+  _proto.getOptions = function getOptions(props) {
+    if (props.pane != null) {
+      return props;
+    }
+
+    if (props.leaflet != null && props.leaflet.pane != null) {
+      return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, props, {
+        pane: props.leaflet.pane
+      });
+    }
+
+    return props;
+  };
+
+  return MapComponent;
+}(_MapEvented__WEBPACK_IMPORTED_MODULE_2__.default);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/react-leaflet/es/MapEvented.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-leaflet/es/MapEvented.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "EVENTS_RE": () => (/* binding */ EVENTS_RE),
+/* harmony export */   "default": () => (/* binding */ MapEvented)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+
+
+
+
+
+var EVENTS_RE = /^on(.+)$/i;
+
+var MapEvented = /*#__PURE__*/function (_Component) {
+  (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__.default)(MapEvented, _Component);
+
+  function MapEvented(props) {
+    var _this;
+
+    _this = _Component.call(this, props) || this;
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__.default)(_this), "_leafletEvents", void 0);
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__.default)(_this), "leafletElement", void 0);
+
+    _this._leafletEvents = _this.extractLeafletEvents(props);
+    return _this;
+  }
+
+  var _proto = MapEvented.prototype;
+
+  _proto.componentDidMount = function componentDidMount() {
+    this.bindLeafletEvents(this._leafletEvents);
+  };
+
+  _proto.componentDidUpdate = function componentDidUpdate(_prevProps) {
+    this._leafletEvents = this.bindLeafletEvents(this.extractLeafletEvents(this.props), this._leafletEvents);
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    var _this2 = this;
+
+    var el = this.leafletElement;
+    if (!el) return;
+    Object.keys(this._leafletEvents).forEach(function (ev) {
+      el.off(ev, _this2._leafletEvents[ev]);
+    });
+  };
+
+  _proto.extractLeafletEvents = function extractLeafletEvents(props) {
+    return Object.keys(props).reduce(function (res, prop) {
+      if (EVENTS_RE.test(prop)) {
+        if (props[prop] != null) {
+          var _key = prop.replace(EVENTS_RE, function (match, p) {
+            return p.toLowerCase();
+          });
+
+          res[_key] = props[prop];
+        }
+      }
+
+      return res;
+    }, {});
+  };
+
+  _proto.bindLeafletEvents = function bindLeafletEvents(next, prev) {
+    if (next === void 0) {
+      next = {};
+    }
+
+    if (prev === void 0) {
+      prev = {};
+    }
+
+    var el = this.leafletElement;
+    if (el == null || el.on == null) return {};
+
+    var diff = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, prev);
+
+    Object.keys(prev).forEach(function (ev) {
+      if (next[ev] == null || prev[ev] !== next[ev]) {
+        delete diff[ev];
+        el.off(ev, prev[ev]);
+      }
+    });
+    Object.keys(next).forEach(function (ev) {
+      if (prev[ev] == null || next[ev] !== prev[ev]) {
+        diff[ev] = next[ev];
+        el.on(ev, next[ev]);
+      }
+    });
+    return diff;
+  };
+
+  _proto.fireLeafletEvent = function fireLeafletEvent(type, data) {
+    var el = this.leafletElement;
+    if (el) el.fire(type, data);
+  };
+
+  return MapEvented;
+}(react__WEBPACK_IMPORTED_MODULE_4__.Component);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/react-leaflet/es/MapLayer.js":
+/*!***************************************************!*\
+  !*** ./node_modules/react-leaflet/es/MapLayer.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ MapLayer)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./context */ "./node_modules/react-leaflet/es/context.js");
+/* harmony import */ var _MapComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./MapComponent */ "./node_modules/react-leaflet/es/MapComponent.js");
+
+
+
+
+
+
+
+
+
+
+var MapLayer = /*#__PURE__*/function (_MapComponent) {
+  (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__.default)(MapLayer, _MapComponent);
+
+  function MapLayer(props) {
+    var _this;
+
+    _this = _MapComponent.call(this, props) || this;
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__.default)(_this), "contextValue", void 0);
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__.default)(_this), "leafletElement", void 0);
+
+    _this.leafletElement = _this.createLeafletElement(props);
+    return _this;
+  }
+
+  var _proto = MapLayer.prototype;
+
+  _proto.createLeafletElement = function createLeafletElement(_props) {
+    throw new Error('createLeafletElement() must be implemented');
+  };
+
+  _proto.updateLeafletElement = function updateLeafletElement(_fromProps, _toProps) {};
+
+  _proto.componentDidMount = function componentDidMount() {
+    _MapComponent.prototype.componentDidMount.call(this);
+
+    this.layerContainer.addLayer(this.leafletElement);
+  };
+
+  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+    _MapComponent.prototype.componentDidUpdate.call(this, prevProps);
+
+    if (this.props.attribution !== prevProps.attribution) {
+      var map = this.props.leaflet.map;
+
+      if (map != null && map.attributionControl != null) {
+        map.attributionControl.removeAttribution(prevProps.attribution);
+        map.attributionControl.addAttribution(this.props.attribution);
+      }
+    }
+
+    this.updateLeafletElement(prevProps, this.props);
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    _MapComponent.prototype.componentWillUnmount.call(this);
+
+    this.layerContainer.removeLayer(this.leafletElement);
+  };
+
+  _proto.render = function render() {
+    var children = this.props.children;
+
+    if (children == null) {
+      return null;
+    }
+
+    return this.contextValue == null ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement(react__WEBPACK_IMPORTED_MODULE_4__.Fragment, null, children) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__.createElement(_context__WEBPACK_IMPORTED_MODULE_5__.LeafletProvider, {
+      value: this.contextValue
+    }, children);
+  };
+
+  (0,_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_0__.default)(MapLayer, [{
+    key: "layerContainer",
+    get: function get() {
+      return this.props.leaflet.layerContainer || this.props.leaflet.map;
+    }
+  }]);
+
+  return MapLayer;
+}(_MapComponent__WEBPACK_IMPORTED_MODULE_6__.default);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/react-leaflet/es/Marker.js":
+/*!*************************************************!*\
+  !*** ./node_modules/react-leaflet/es/Marker.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./context */ "./node_modules/react-leaflet/es/context.js");
+/* harmony import */ var _MapLayer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./MapLayer */ "./node_modules/react-leaflet/es/MapLayer.js");
+
+
+
+
+
+
+
+
+
+var Marker = /*#__PURE__*/function (_MapLayer) {
+  (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__.default)(Marker, _MapLayer);
+
+  function Marker() {
+    return _MapLayer.apply(this, arguments) || this;
+  }
+
+  var _proto = Marker.prototype;
+
+  _proto.createLeafletElement = function createLeafletElement(props) {
+    var el = new leaflet__WEBPACK_IMPORTED_MODULE_2__.Marker(props.position, this.getOptions(props));
+    this.contextValue = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, props.leaflet, {
+      popupContainer: el
+    });
+    return el;
+  };
+
+  _proto.updateLeafletElement = function updateLeafletElement(fromProps, toProps) {
+    if (toProps.position !== fromProps.position) {
+      this.leafletElement.setLatLng(toProps.position);
+    }
+
+    if (toProps.icon !== fromProps.icon) {
+      this.leafletElement.setIcon(toProps.icon);
+    }
+
+    if (toProps.zIndexOffset !== fromProps.zIndexOffset) {
+      this.leafletElement.setZIndexOffset(toProps.zIndexOffset);
+    }
+
+    if (toProps.opacity !== fromProps.opacity) {
+      this.leafletElement.setOpacity(toProps.opacity);
+    }
+
+    if (toProps.draggable !== fromProps.draggable) {
+      if (toProps.draggable === true) {
+        this.leafletElement.dragging.enable();
+      } else {
+        this.leafletElement.dragging.disable();
+      }
+    }
+  };
+
+  _proto.render = function render() {
+    var children = this.props.children;
+    return children == null || this.contextValue == null ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(_context__WEBPACK_IMPORTED_MODULE_4__.LeafletProvider, {
+      value: this.contextValue
+    }, children);
+  };
+
+  return Marker;
+}(_MapLayer__WEBPACK_IMPORTED_MODULE_5__.default);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_context__WEBPACK_IMPORTED_MODULE_4__.withLeaflet)(Marker));
+
+/***/ }),
+
+/***/ "./node_modules/react-leaflet/es/Popup.js":
+/*!************************************************!*\
+  !*** ./node_modules/react-leaflet/es/Popup.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./context */ "./node_modules/react-leaflet/es/context.js");
+/* harmony import */ var _DivOverlay__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./DivOverlay */ "./node_modules/react-leaflet/es/DivOverlay.js");
+
+
+
+
+
+
+
+
+
+
+var Popup = /*#__PURE__*/function (_DivOverlay) {
+  (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__.default)(Popup, _DivOverlay);
+
+  function Popup() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _DivOverlay.call.apply(_DivOverlay, [this].concat(args)) || this;
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__.default)(_this), "onPopupOpen", function (_ref) {
+      var popup = _ref.popup;
+
+      if (popup === _this.leafletElement) {
+        _this.onOpen();
+      }
+    });
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__.default)(_this), "onPopupClose", function (_ref2) {
+      var popup = _ref2.popup;
+
+      if (popup === _this.leafletElement) {
+        _this.onClose();
+      }
+    });
+
+    (0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__.default)((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__.default)(_this), "onRender", function () {
+      if (_this.props.autoPan !== false && _this.leafletElement.isOpen()) {
+        if (_this.leafletElement._map && _this.leafletElement._map._panAnim) {
+          _this.leafletElement._map._panAnim = undefined;
+        }
+
+        _this.leafletElement._adjustPan();
+      }
+    });
+
+    return _this;
+  }
+
+  var _proto = Popup.prototype;
+
+  _proto.getOptions = function getOptions(props) {
+    return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, _DivOverlay.prototype.getOptions.call(this, props), {
+      autoPan: false
+    });
+  };
+
+  _proto.createLeafletElement = function createLeafletElement(props) {
+    var options = this.getOptions(props);
+    options.autoPan = props.autoPan !== false;
+    return new leaflet__WEBPACK_IMPORTED_MODULE_4__.Popup(options, props.leaflet.popupContainer);
+  };
+
+  _proto.updateLeafletElement = function updateLeafletElement(fromProps, toProps) {
+    if (toProps.position !== fromProps.position) {
+      this.leafletElement.setLatLng(toProps.position);
+    }
+  };
+
+  _proto.componentDidMount = function componentDidMount() {
+    var position = this.props.position;
+    var _this$props$leaflet = this.props.leaflet,
+        map = _this$props$leaflet.map,
+        popupContainer = _this$props$leaflet.popupContainer;
+    var el = this.leafletElement;
+
+    if (map != null) {
+      map.on({
+        popupopen: this.onPopupOpen,
+        popupclose: this.onPopupClose
+      });
+    }
+
+    if (popupContainer) {
+      // Attach to container component
+      popupContainer.bindPopup(el);
+    } else {
+      // Attach to a Map
+      if (position) {
+        el.setLatLng(position);
+      }
+
+      el.openOn(map);
+    }
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    var map = this.props.leaflet.map;
+
+    if (map != null) {
+      map.off({
+        popupopen: this.onPopupOpen,
+        popupclose: this.onPopupClose
+      });
+      map.removeLayer(this.leafletElement);
+    }
+
+    _DivOverlay.prototype.componentWillUnmount.call(this);
+  };
+
+  return Popup;
+}(_DivOverlay__WEBPACK_IMPORTED_MODULE_5__.default);
+
+(0,_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_3__.default)(Popup, "defaultProps", {
+  pane: 'popupPane'
+});
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_context__WEBPACK_IMPORTED_MODULE_6__.withLeaflet)(Popup));
+
+/***/ }),
+
+/***/ "./node_modules/react-leaflet/es/TileLayer.js":
+/*!****************************************************!*\
+  !*** ./node_modules/react-leaflet/es/TileLayer.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
+/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./context */ "./node_modules/react-leaflet/es/context.js");
+/* harmony import */ var _GridLayer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./GridLayer */ "./node_modules/react-leaflet/es/GridLayer.js");
+
+
+
+
+
+
+
+var TileLayer = /*#__PURE__*/function (_GridLayer) {
+  (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__.default)(TileLayer, _GridLayer);
+
+  function TileLayer() {
+    return _GridLayer.apply(this, arguments) || this;
+  }
+
+  var _proto = TileLayer.prototype;
+
+  _proto.createLeafletElement = function createLeafletElement(props) {
+    return new leaflet__WEBPACK_IMPORTED_MODULE_1__.TileLayer(props.url, this.getOptions(props));
+  };
+
+  _proto.updateLeafletElement = function updateLeafletElement(fromProps, toProps) {
+    _GridLayer.prototype.updateLeafletElement.call(this, fromProps, toProps);
+
+    if (toProps.url !== fromProps.url) {
+      this.leafletElement.setUrl(toProps.url);
+    }
+  };
+
+  return TileLayer;
+}(_GridLayer__WEBPACK_IMPORTED_MODULE_2__.default);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_context__WEBPACK_IMPORTED_MODULE_3__.withLeaflet)(TileLayer));
+
+/***/ }),
+
+/***/ "./node_modules/react-leaflet/es/context.js":
+/*!**************************************************!*\
+  !*** ./node_modules/react-leaflet/es/context.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useLeaflet": () => (/* binding */ useLeaflet),
+/* harmony export */   "LeafletConsumer": () => (/* binding */ LeafletConsumer),
+/* harmony export */   "LeafletProvider": () => (/* binding */ LeafletProvider),
+/* harmony export */   "withLeaflet": () => (/* binding */ withLeaflet)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! hoist-non-react-statics */ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js");
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+
+
+
+var leafletContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_2__.createContext)({});
+var useLeaflet = function useLeaflet() {
+  return (0,react__WEBPACK_IMPORTED_MODULE_2__.useContext)(leafletContext);
+};
+var LeafletConsumer = leafletContext.Consumer;
+var LeafletProvider = leafletContext.Provider;
+var withLeaflet = function withLeaflet(WrappedComponent) {
+  var WithLeafletComponent = function WithLeafletComponent(props, ref) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(LeafletConsumer, null, function (leaflet) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(WrappedComponent, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__.default)({}, props, {
+        leaflet: leaflet,
+        ref: ref
+      }));
+    });
+  };
+
+  var name = // flowlint-next-line sketchy-null-string:off
+  WrappedComponent.displayName || WrappedComponent.name || 'Component';
+  WithLeafletComponent.displayName = "Leaflet(" + name + ")";
+  var LeafletComponent = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_2__.forwardRef)(WithLeafletComponent);
+  hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_1___default()(LeafletComponent, WrappedComponent);
+  return LeafletComponent;
+};
+
+/***/ }),
+
+/***/ "./node_modules/react-leaflet/es/utils/omit.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-leaflet/es/utils/omit.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ omit)
+/* harmony export */ });
+
+
+function omit(obj) {
+  for (var _len = arguments.length, keysToOmit = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    keysToOmit[_key - 1] = arguments[_key];
+  }
+
+  return Object.keys(obj).reduce(function (acc, key) {
+    if (keysToOmit.indexOf(key) === -1) {
+      acc[key] = obj[key];
+    }
+
+    return acc;
+  }, {});
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-leaflet/es/utils/updateClassName.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/react-leaflet/es/utils/updateClassName.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "addClassName": () => (/* binding */ addClassName),
+/* harmony export */   "removeClassName": () => (/* binding */ removeClassName),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
 /* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
 
 
-const TileLayer = (0,_react_leaflet_core__WEBPACK_IMPORTED_MODULE_1__.createTileLayerComponent)(function createTileLayer({
-  url,
-  ...options
-}, context) {
-  return {
-    instance: new leaflet__WEBPACK_IMPORTED_MODULE_0__.TileLayer(url, (0,_react_leaflet_core__WEBPACK_IMPORTED_MODULE_2__.withPane)(options, context)),
-    context
-  };
-}, _react_leaflet_core__WEBPACK_IMPORTED_MODULE_3__.updateGridLayer);
+
+
+var splitClassName = function splitClassName(className) {
+  if (className === void 0) {
+    className = '';
+  }
+
+  return className.split(' ').filter(Boolean);
+};
+
+var addClassName = function addClassName(container, className) {
+  splitClassName(className).forEach(function (cls) {
+    leaflet__WEBPACK_IMPORTED_MODULE_0__.DomUtil.addClass(container, cls);
+  });
+};
+var removeClassName = function removeClassName(container, className) {
+  splitClassName(className).forEach(function (cls) {
+    leaflet__WEBPACK_IMPORTED_MODULE_0__.DomUtil.removeClass(container, cls);
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (container, prevClassName, nextClassName) {
+  if (container != null && nextClassName !== prevClassName) {
+    if (prevClassName != null && prevClassName.length > 0) {
+      removeClassName(container, prevClassName);
+    }
+
+    if (nextClassName != null && nextClassName.length > 0) {
+      addClassName(container, nextClassName);
+    }
+  }
+});
 
 /***/ }),
 
