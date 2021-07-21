@@ -35,7 +35,7 @@ class BranchesController extends Controller
             "created_at"=>$now,
             "updated_at"=>$now,
         ]);
-        return redirect()->to("branches");
+        return redirect()->action([BranchesController::class, 'all']);
     }
 
     public function edit($id){
@@ -55,7 +55,7 @@ class BranchesController extends Controller
             "phone_number"=>$request->get("phone_number"),
             "updated_at"=>Carbon::now()
         ]);
-        return redirect()->to("branches");
+        return redirect()->action([BranchesController::class, 'all']);
     }
 
     public function delete($id)
@@ -63,9 +63,9 @@ class BranchesController extends Controller
         $cat = Branches::findOrFail($id);
         try {
             $cat->delete();
-            return redirect()->to("branches");
+            return redirect()->action([BranchesController::class, 'all']);
         } catch (\Exception $e) {
-            return redirect()->to("branches");
+            return redirect()->action([BranchesController::class, 'all']);
         }
     }
     public function info($id){

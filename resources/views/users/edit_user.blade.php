@@ -2,12 +2,19 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>List Customer</h1>
+    <h1>Edit User</h1>
 @stop
 
 @section('content')
-    <form action="{{url("/users/list/update",['id'=>$user->id])}}" method="post">
+    <form action="{{url("/users/list/update",['id'=>$user->id])}}" method="post" class="mt-4">
         @csrf
+        <div class="form-group">
+            <b class="mr-3">User Type: </b>
+            <input type="radio" id="driver" name="employee_type" value="driver" @if($user->employee_type === "driver") checked @endif>
+            <label for="html">Driver</label>
+            {{-- <input type="radio" id="customer" name="employee_type" value="customer" @if($user->employee_type === "customer") checked @endif>
+            <label for="css">Customer</label> --}}
+        </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label>Name</label>
@@ -30,12 +37,6 @@
                     <option value="{{ $branch->id }}" @if($user->user_branch== $branch->id) selected @endif>{{ $branch->full_address }}</option>
                 @endforeach
             </select>
-        </div>
-        <div class="form-group">
-            <input type="radio" id="driver" name="employee_type" value="driver" @if($user->employee_type === "driver") checked @endif>
-            <label for="html">Driver</label>
-            <input type="radio" id="customer" name="employee_type" value="customer" @if($user->employee_type === "customer") checked @endif>
-            <label for="css">Customer</label>
         </div>
         <button type="submit" class="btn btn-primary">Save</button>
     </form>

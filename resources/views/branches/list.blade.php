@@ -8,7 +8,7 @@
             <h1>All Branches</h1>
         </div>
         <div>
-            <button class="btn btn-primary" onclick="window.location='{{ url("branches/new") }}'">+ Add Branches</button>
+            <button class="btn btn-primary" onclick="window.location='{{ url("/admin/branches/new") }}'">+ Add Branches</button>
         </div>
     </div>
 @stop
@@ -41,13 +41,13 @@
                     {{-- <td >{{$cat->created_at}}</td>
                     <td >{{$cat->updated_at}}</td> --}}
                     <td class="d-flex align-items-center">
-                        <a href="{{url("/branches/info",["id"=>$cat->id])}}" class="mr-3">
+                        <a href="{{url("/admin/branches/info",["id"=>$cat->id])}}" class="mr-3">
                             <i  class="fas fa-eye"></i>
                         </a>
-                        <a href="{{url("/branches/edit",["id"=>$cat->id])}}" class="mr-3">
+                        <a href="{{url("/admin/branches/edit",["id"=>$cat->id])}}" class="mr-3">
                             <i class="fas fa-edit text-secondary"></i>
                         </a>
-                        <a href="{{url("/branches/list/delete",['id'=>$cat->id])}}">
+                        <a href="{{url("/admin/branches/list/delete",['id'=>$cat->id])}}">
                             <i class="fas fa-minus-circle text-danger"></i>
                         </a>
                     </td>

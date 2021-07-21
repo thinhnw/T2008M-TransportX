@@ -25,25 +25,13 @@
                     <td>{{$user->email}}</td>
                     <td>{{$user->user_branch}}</td>
                     <td>
-                        <button
-                            style="
-                            background-color: #007bff;
-                            border: none;
-                            border-radius: 5px;
-                            ">
-                            <a href="{{url("/users/list/edit",['id'=>$user->id])}}">
-                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABK0lEQVRIS82V7VHDMBBE31YAqQA6ICVAJ9ABdBA6oANCJVACdEA6oINlzmNn/CHLsrFn0K9MbO/b2ztJYuOljfVZBWD7ETDwJumnbboDsH0LvALXE5U9SDravgTegX39/idw14b0Ad/A1QLxr/qbG6AD6QOiTCRlo+s5D/GoPNYHEJAnSS+VVtut7UnAWCy1ThPXs6TDbEDCeWg0scTv6EVVUdOH4goKYglAR7y4gpR4OBz7Pzemgx7MFbe9lxSTVK1sREvEY19I2pUCwkk08ZxtLhbbsYsv2mM+VUEVGbAryTw15kWAcFTS0MWA3tExGMXm+RqAUfGAzAZMHHqDx/8CUI3ZXOe990+SzvdJ6sI5FtwJYx5OwL2kOLaHO/mPzpOfr3In54xtDvgFNKnzGTSjjxgAAAAASUVORK5CYII="/>
+                            <a href="{{url("/admin/users/list/edit",['id'=>$user->id])}}" class="btn btn-light">
+                                <i class="fas fa-edit btn-icon text-primary"></i>
                             </a>
-                        </button>
-                        <button style="
-                            background-color: #c82333;
-                            border: none;
-                            border-radius: 5px;
-                            ">
-                            <a href="{{url("/users/list/delete",['id'=>$user->id])}}">
-                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAt0lEQVRIS+2V3Q3CMAyE7yZghMImjEIng1EYpd2ADYyCFCk0P5cmRLy0b5Fjf3e2UhODPw6ujyLAzK4A7gDOGSELgJnkMydUAVyBSbhcSF5aAeYSSSaFmFkx/sktqVMFVDwC+ITewYeOvxwMB3jlNdZDl6X7zcP7KWCrUJ1DeJUDVbC7RQcgeld7W3LMQP6aulukCC2AF4CTKryJrySjzZd7yW5VPiq2mWesAG6p1fnfpb+zRcnrb968zhn/bNJ5AAAAAElFTkSuQmCC"/>
+                       
+                            <a href="{{url("/admin/users/list/delete",['id'=>$user->id])}}" class="btn btn-light">
+                                <i class="fas fa-minus-circle btn-icon text-danger"></i>
                             </a>
-                        </button>
                     </td>
                 </tr>
             @endforeach

@@ -14,20 +14,20 @@
 
 @section('content')
     <div class="px-5 mt-5">
-        <form action="{{url("/branches/save")}}" method="post">
+        <form action="{{url("/admin/branches/save")}}" method="post">
             @csrf
             <div class="row">
                 <div class="col col-6 form-group">
-                    <label>Address</label>
-                    <input type="text" class="form-control" placeholder="Enter address..." name="address" required />
+                    <label>Country</label>
+                    <input type="text" class="form-control" placeholder="Enter Country..." name="country" required value="Vietnam" readonly />
                 </div>
                 <div class="col col-6 form-group">
                     <label>City</label>
                     <input type="text" class="form-control" placeholder="Enter City..." name="city" required />
                 </div>
                 <div class="col col-6 form-group">
-                    <label>Country</label>
-                    <input type="text" class="form-control" placeholder="Enter Country..." name="country" required />
+                    <label>Street Address</label>
+                    <input type="text" class="form-control" placeholder="Enter address..." name="address" required />
                 </div>
                 <div class="col col-6 form-group">
                     <label>Zip-Code</label>
@@ -37,7 +37,7 @@
                     <label>Phone Number</label>
                     <input type="text" class="form-control" placeholder="Enter Phone Number..." name="phone_number" required />
                 </div>
-                <div class="col col-6 mt-3">
+                <div class="col-12 mt-3">
                     <button type="submit" class="btn btn-primary">Save</button>
                 </div>
             </div>

@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ShipmentTrackController;
+use App\Http\Controllers\ShippingRateController;
 use App\Models\Branches;
 use App\Models\Package;
 use App\Models\Shipment;
@@ -83,6 +84,10 @@ Route::group(
     Route::post('/branches/update/{id}',[BranchesController::class,"update"]);
     Route::get('/branches/list/delete/{id}',[BranchesController::class,"delete"]);
     Route::get('/branches/info/{id}',[BranchesController::class,"info"]);
+
+    Route::get('/settings/rate', [ShippingRateController::class, 'index']);
+    Route::get('/settings/rate/edit', [ShippingRateController::class, 'edit']);
+    Route::patch('/settings/rate/edit', [ShippingRateController::class, 'update']);
 });
   
 Route::group([
