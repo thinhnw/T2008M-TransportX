@@ -32,7 +32,7 @@ export default function PostOffices(props) {
     const renderListBranch=branches.map(
         (items,key)=>{
             return(
-                <div onClick={()=>flyTo(items.id)}>
+                <div onClick={()=>flyTo(items.id)} key={key}>
                     <span>{items.address}</span>
                     <span>{items.city}</span>
                     <span>{items.phone_number}</span>

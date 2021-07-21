@@ -8,19 +8,29 @@ import {
 } from "react-router-dom";
 
 import Home from './home/Home.jsx';
-import PostOffices from './search_post_office/SearchPostOffice'
+import PostOffices from './search_post_office/SearchPostOffice.jsx'
+import About from './about/About.jsx'
+import Menu from './partials/Menu'
+import Footer from './partials/Footer'
+// import { divIcon } from 'leaflet';
 function Example() {
 	return (
-		<Router>
-			<Switch>
-				<Route path="/post-office">
-					<PostOffices />
-				</Route>
-				<Route path="/">
-					<Home />
-				</Route>
-			</Switch>
-		</Router>
+			<Router>
+				<Menu />
+				<Switch>
+					<Route path="/post-office">
+						<PostOffices />
+					</Route>
+					<Route path="/about">
+						<About />
+					</Route>
+					<Route path="/">
+						<Home />
+					</Route>
+				</Switch>
+				<Footer />
+			</Router>
+		
 	);
 }
 

@@ -30,7 +30,7 @@ export default function Menu(props) {
     console.log('hello')
   }, [])
   return (
-    <div>
+    <div className="menu">
       <Navbar color="light" light expand="md" fixed="top" style={{ height: '80px' }}>
         <div className="container">
           <NavbarBrand href="/">
@@ -40,37 +40,43 @@ export default function Menu(props) {
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar className="w-100 d-flex justify-content-end">
-              <NavItem>
-                <NavLink href="/">Home</NavLink>
+              <NavItem className="border-right px-2">
+                <NavLink>
+                  <Link to="/">Home</Link>
+                </NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href="/about">About Us</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/contact">Contact Us</NavLink>
-              </NavItem>
-              <NavItem>
+              <UncontrolledDropdown nav inNavbar className="px-2 border-right">
+                <DropdownToggle nav caret>
+                  Our Services
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    <Link to="/delivery">
+                      Parcel Delivery
+                    </Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link to="/track">
+                      Track Your Delivery
+                    </Link>
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <NavItem className="border-right px-2">
                 <NavLink>
                   <Link to="/post-office">Post Offices</Link>
                 </NavLink>
               </NavItem>
-              {/* <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Dịch Vụ
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Chuyển phát nhanh
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown> */}
+              <NavItem className="border-right px-2">
+                <NavLink>
+                  <Link to="/about">About Us</Link>
+                </NavLink>
+              </NavItem>
+              <NavItem className="px-2">
+                <NavLink>
+                  <Link to="/contact">Contact Us</Link>
+                </NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </div>

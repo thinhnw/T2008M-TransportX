@@ -9,11 +9,9 @@ import Footer from '../partials/Footer.jsx'
 export default function Home(props) {
   return (
     <div>
-      <Menu /> 
       <Slider />
       <Features />
       <Calculator />
-      <Footer />
     </div>
   );
 }

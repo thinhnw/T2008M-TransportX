@@ -28,9 +28,9 @@ Route::get('/', function () {
     return view('client');
 });
 
+Route::get("/listBranch",[Controller::class,"listBranchData"]);
 Route::get('/{any}', function ($any) {
     return view('client');
-})->where("any", "post-office");
+})->where("any", "^((?!admin).)*$");
 
 
-Route::get("/listBranch",[Controller::class,"listBranchData"]);
