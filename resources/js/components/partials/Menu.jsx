@@ -33,35 +33,46 @@ export default function Menu(props) {
     <div>
       <Navbar color="light" light expand="md" fixed="top" style={{ height: '80px' }}>
         <div className="container">
-        <NavbarBrand href="/">Transport X</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">Trang Chủ</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">Liên Hệ</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Dịch Vụ
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Chuyển phát nhanh
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-        </Collapse>
+          <NavbarBrand href="/">
+            <h2 className="text-danger font-weight-bold">TRANSPORT X
+            </h2>
+          </NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="mr-auto" navbar className="w-100 d-flex justify-content-end">
+              <NavItem>
+                <NavLink href="/">Home</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/about">About Us</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/contact">Contact Us</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink>
+                  <Link to="/post-office">Post Offices</Link>
+                </NavLink>
+              </NavItem>
+              {/* <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Dịch Vụ
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                    Chuyển phát nhanh
+                  </DropdownItem>
+                  <DropdownItem>
+                    Option 2
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    Reset
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown> */}
+            </Nav>
+          </Collapse>
         </div>
       </Navbar>
     </div>

@@ -18,7 +18,7 @@ const items = [
     src: 'img/Druga-Pozadina.jpg',
     altText: 'Slide 2',
     header: 'Parcel deliveries',
-    caption: 'AROUND THE WORLD',
+    caption: 'NATION WIDE NETWORK',
   },
  
 ];

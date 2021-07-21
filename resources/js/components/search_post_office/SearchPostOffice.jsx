@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from "react";
 import {Marker,Map,Popup,TileLayer} from "react-leaflet";
 
-const Search_post_office=()=>{
+export default function PostOffices(props) {
     const [branches,setBranch]=useState([]);//data
     const latitudeAndLongitude=[
         [30.827433, -89.715243],
@@ -85,12 +85,12 @@ const Search_post_office=()=>{
 
 
     return(
-        <>
+        <div>
             <div id={"about_post_office"} className={"container"}>
                 <div id={"review_post_office"}>
                     <div>
-                        <span>Mạng lưới bưu cục trên 63 tỉnh thành</span>
-                        <small>Mạng lưới chuyển phát của Viettel Post phủ sóng khắp 63 tỉnh thành trên lãnh thổ Việt Nam.</small>
+                        <span>Post office network in 63 provinces</span>
+                        <small>Transport X's delivery network covers 63 provinces and cities in Vietnam.</small>
                     </div>
                     <div>
                         <img loading="lazy" src="https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4.png"
@@ -106,7 +106,6 @@ const Search_post_office=()=>{
                         {renderMap()}
                 </div>
             </div>
-        </>
+        </div>
     )
 }
-export default Search_post_office;

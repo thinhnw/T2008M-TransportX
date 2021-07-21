@@ -24,13 +24,13 @@ use App\Http\Controllers\Controller;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('client');
 });
 
-Route::get('/post-office', function () {
-    return view('postOffice');
-});
+Route::get('/{any}', function ($any) {
+    return view('client');
+})->where("any", "post-office");
+
 
 Route::get("/listBranch",[Controller::class,"listBranchData"]);

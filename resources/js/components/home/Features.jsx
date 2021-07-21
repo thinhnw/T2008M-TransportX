@@ -21,7 +21,7 @@ export default function Features(props) {
                 <Card>
                   <CardImg top width="100%" src="http://cargo.bold-themes.com/delivery-express/wp-content/uploads/sites/3/2015/10/transport1-1080x540.jpg" alt="Card image cap" />
                   <CardBody>
-                    <CardSubtitle tag="em" className="mb-2">Around the world</CardSubtitle>
+                    <CardSubtitle tag="em" className="mb-2">Around Vietnam</CardSubtitle>
                     <CardTitle tag="h5" className="text-danger">Shipping</CardTitle>
                     <CardText>
                       As one of the world’s leading supply chain management companies, we design and implement industry-leading solutions.
