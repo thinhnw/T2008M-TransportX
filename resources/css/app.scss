@@ -1,3 +1,4 @@
+$menu-height: 80px;
 .menu {
   a {
     color: #00000080;
@@ -7,7 +8,7 @@
   } 
 }
 .slider {
-  margin-top: 80px; 
+  margin-top: $menu-height; 
   .carousel-caption {
     top: 50%;
     transform: translateY(-50%);
@@ -172,4 +173,11 @@
     .row{
         margin-top: 90px;
     }
+}
+.delivery {
+  margin-top: $menu-height;
+}
+
+.track {
+
 }

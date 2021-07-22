@@ -12,6 +12,8 @@ import PostOffices from './search_post_office/SearchPostOffice.jsx'
 import About from './about/About.jsx'
 import Menu from './partials/Menu'
 import Footer from './partials/Footer'
+import Delivery from './services/Delivery'
+import Track from './services/Track'
 // import { divIcon } from 'leaflet';
 function Example() {
 	return (
@@ -23,6 +25,12 @@ function Example() {
 					</Route>
 					<Route path="/about">
 						<About />
+					</Route>
+					<Route path="/delivery">
+						<Delivery />
+					</Route>
+					<Route path="/track">
+						<Track />
 					</Route>
 					<Route path="/">
 						<Home />

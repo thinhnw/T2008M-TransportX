@@ -72,11 +72,6 @@ export default function Menu(props) {
                   <Link to="/about">About Us</Link>
                 </NavLink>
               </NavItem>
-              <NavItem className="px-2">
-                <NavLink>
-                  <Link to="/contact">Contact Us</Link>
-                </NavLink>
-              </NavItem>
             </Nav>
           </Collapse>
         </div>

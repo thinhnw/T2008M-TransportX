@@ -6,13 +6,28 @@
 @stop
 
 @section('content')
-    <form action="{{url("/users/save")}}" method="post">
+    <form action="{{url("/admin/users/save")}}" method="post">
         @csrf
+        <div class="form-group">
+            <label for="">Employee Type: </label>
+            <div class="ml-3">
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="driver" name="employee_type" value="driver" class="form-check-input">
+                    <label for="html" class="form-check-label">Driver</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" id="customer" name="employee_type" value="customer" class="form-check-input">
+                    <label for="css" class="form-check-label">Customer</label>
+                </div>
+                @error('employee_type')<div class="alert alert-danger">{{$message}}</div>@enderror
+            </div>
+
+        </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label>Name</label>
-                <input type="text" class="form-control" name="name" placeholder="Name">
-                @error('name')<div class="alert alert-danger">{{$message}}</div>@enderror
+                <label >Email</label>
+                <input type="email" name="email" class="form-control" placeholder="Email">
+                @error('email')<div class="alert alert-danger">{{$message}}</div>@enderror
             </div>
             <div class="form-group col-md-6">
                 <label >Password</label>
@@ -22,10 +37,9 @@
             </div>
         </div>
         <div class="form-group">
-            <label >Email</label>
-            <input type="email" name="email" class="form-control" placeholder="Email">
-            @error('email')<div class="alert alert-danger">{{$message}}</div>@enderror
-
+            <label>Name</label>
+            <input type="text" class="form-control" name="name" placeholder="Name">
+            @error('name')<div class="alert alert-danger">{{$message}}</div>@enderror
         </div>
         <div class="form-group">
             <label for="inputAddress2">Branch</label>
@@ -36,16 +50,6 @@
                 @endforeach
             </select>
             @error('branch')<div class="alert alert-danger">{{$message}}</div>@enderror
-
-        </div>
-        <div class="form-group">
-            <label for="">Employee Type</label>
-            <br>
-            <input type="radio" id="driver" name="employee_type" value="driver">
-            <label for="html">Driver</label>
-            {{-- <input type="radio" id="customer" name="employee_type" value="customer">
-            <label for="css">Customer</label> --}}
-            @error('employee_type')<div class="alert alert-danger">{{$message}}</div>@enderror
 
         </div>
         <button type="submit" class="btn btn-primary">Save</button>

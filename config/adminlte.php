@@ -273,7 +273,7 @@ return [
                     'url'  => 'admin/users/list/driver',
                 ],
                 [
-                    'text' => 'Add New Employee ',
+                    'text' => 'Add New User ',
                     'url'  => 'admin/users/new',
                 ],
                 // [
