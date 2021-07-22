@@ -82,28 +82,81 @@ export default function PostOffices(props) {
         )
     }
 //...................................................//
+//Search the office
+    const searchOffice=()=>{
+        return(
+            <div>
+                <input type={'text'} id={"addr"}/>
+                <button type={'button'} onClick={addr_search} id={"click_search"}>Search</button>
+            </div>
+        )
+    }
 
+    //Addr Search function
+    const addr_search=()=>{
+        let inp=document.getElementById('addr');
+        const xmlhttp=new XMLHttpRequest();
+        const url ="https://nominatim.openstreetmap.org/search?format=json&limit=3&q=" + inp.value;
+        xmlhttp.onreadystatechange = function (){
+            if (this.readyState===4 && this.status===200){
+                const myArr=JSON.parse(this.responseText);
+                myFunction(myArr);
+            }
+        };
+        xmlhttp.open("GET",url,true);
+        xmlhttp.send();
+    }
+//...................................................//
+
+    //myFunction()
+    const myFunction=(arr)=>{
+
+        const { current = {} } =mapRef;
+        const { leafletElement:map } =current;
+        map.flyTo([arr[0].lat,arr[0].lon],8,{
+            duration:2
+        })
+        return(
+            <Marker >
+
+            </Marker>
+        );
+
+    }
 
     return(
         <div>
             <div id={"about_post_office"} className={"container"}>
                 <div id={"review_post_office"}>
-                    <div>
+                    <div id={"reviews"}>
                         <span>Post office network in 63 provinces</span>
                         <small>Transport X's delivery network covers 63 provinces and cities in Vietnam.</small>
                     </div>
-                    <div>
+                    <div id={"advertise"}>
+                        <div id={"user_trust"}>
+                            <div>
+                                <h1>328.633</h1>
+                                <small>Khách hàng tin dùng</small>
+                            </div>
+                            <div>
+                                <h1>521.319</h1>
+                                <small>Đơn hàng đang vận chuyển</small>
+                            </div>
+                        </div>
                         <img loading="lazy" src="https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4.png"
-                             width="100%" height="745" alt="" title="buucuc4" className="img-responsive wp-image-624"
+                             width="100%" height="400" alt="" title="buucuc4" className="img-responsive wp-image-624"
                              srcSet="https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4-200x81.png 200w, https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4-400x163.png 400w, https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4-600x244.png 600w, https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4-800x326.png 800w, https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4-1200x488.png 1200w, https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4.png 1831w"
                              sizes="(max-width: 800px) 100vw, 1831px"/>
                     </div>
                 </div>
-                <div id={"branchAndMap"}>
-                    <div id={"listBranch"}>
-                        {renderListBranch}
+                <div id={"location"}>
+                    {searchOffice()}
+                    <div id={"branchAndMap"}>
+                        <div id={"listBranch"}>
+                            {renderListBranch}
+                        </div>
+                            {renderMap()}
                     </div>
-                        {renderMap()}
                 </div>
             </div>
         </div>

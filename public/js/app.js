@@ -3109,7 +3109,51 @@ function PostOffices(props) {
       }), renderMarker]
     });
   }; //...................................................//
+  //Search the office
 
+
+  var searchOffice = function searchOffice() {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+        type: 'text',
+        id: "addr"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+        type: 'button',
+        onClick: addr_search,
+        id: "click_search",
+        children: "Search"
+      })]
+    });
+  }; //Addr Search function
+
+
+  var addr_search = function addr_search() {
+    var inp = document.getElementById('addr');
+    var xmlhttp = new XMLHttpRequest();
+    var url = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q=" + inp.value;
+
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+      }
+    };
+
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+  }; //...................................................//
+  //myFunction()
+
+
+  var myFunction = function myFunction(arr) {
+    var _mapRef$current2 = mapRef.current,
+        current = _mapRef$current2 === void 0 ? {} : _mapRef$current2;
+    var map = current.leafletElement;
+    map.flyTo([arr[0].lat, arr[0].lon], 8, {
+      duration: 2
+    });
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_leaflet__WEBPACK_IMPORTED_MODULE_3__.default, {});
+  };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -3118,30 +3162,50 @@ function PostOffices(props) {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         id: "review_post_office",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          id: "reviews",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
             children: "Post office network in 63 provinces"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("small", {
             children: "Transport X's delivery network covers 63 provinces and cities in Vietnam."
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          id: "advertise",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            id: "user_trust",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+                children: "328.633"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("small", {
+                children: "Kh\xE1ch h\xE0ng tin d\xF9ng"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+                children: "521.319"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("small", {
+                children: "\u0110\u01A1n h\xE0ng \u0111ang v\u1EADn chuy\u1EC3n"
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
             loading: "lazy",
             src: "https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4.png",
             width: "100%",
-            height: "745",
+            height: "400",
             alt: "",
             title: "buucuc4",
             className: "img-responsive wp-image-624",
             srcSet: "https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4-200x81.png 200w, https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4-400x163.png 400w, https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4-600x244.png 600w, https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4-800x326.png 800w, https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4-1200x488.png 1200w, https://viettelpost.com.vn/wp-content/uploads/2019/01/buucuc4.png 1831w",
             sizes: "(max-width: 800px) 100vw, 1831px"
-          })
+          })]
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        id: "branchAndMap",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          id: "listBranch",
-          children: renderListBranch
-        }), renderMap()]
+        id: "location",
+        children: [searchOffice(), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          id: "branchAndMap",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            id: "listBranch",
+            children: renderListBranch
+          }), renderMap()]
+        })]
       })]
     })
   });
@@ -7718,92 +7782,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_tailwindcss_base_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../node_modules/tailwindcss/base.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/tailwindcss/base.css");
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_tailwindcss_components_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../node_modules/tailwindcss/components.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/tailwindcss/components.css");
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_tailwindcss_utilities_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../node_modules/tailwindcss/utilities.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/tailwindcss/utilities.css");
 // Imports
-
-
-
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_tailwindcss_base_css__WEBPACK_IMPORTED_MODULE_1__.default);
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_tailwindcss_components_css__WEBPACK_IMPORTED_MODULE_2__.default);
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_tailwindcss_utilities_css__WEBPACK_IMPORTED_MODULE_3__.default);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/tailwindcss/base.css":
-/*!**********************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/tailwindcss/base.css ***!
-  \**********************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, "@tailwind base;\n", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/tailwindcss/components.css":
-/*!****************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/tailwindcss/components.css ***!
-  \****************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, "@tailwind components;\n", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/tailwindcss/utilities.css":
-/*!***************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/tailwindcss/utilities.css ***!
-  \***************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, "@tailwind utilities;\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".slider {\n  margin-top: 80px;\n}\n.slider .carousel-caption {\n  top: 50%;\n  transform: translateY(-50%);\n}\n.slider .carousel-caption h3 {\n  font-style: italic;\n  font-weight: 300;\n}\n.slider .carousel-caption h3:after {\n  display: block;\n  content: \" \";\n  width: 100px;\n  height: 3px;\n  background-color: red;\n  position: absolute;\n  left: 50%;\n  top: 70px;\n  transform: translateX(-50%);\n}\n.slider .carousel-caption p {\n  font-size: 80px;\n  font-weight: 500;\n}\n.slider .icons {\n  z-index: 10;\n  position: absolute;\n  display: block;\n  top: 375px;\n  left: 50%;\n  transform: translateX(-50%);\n  color: white;\n}\n.slider .icons .truck-img {\n  width: 100%;\n  filter: invert(100%);\n}\n.slider .icons .icon-wrapper {\n  width: 60px;\n  height: 60px;\n  display: block;\n  margin-top: 40px;\n  fill: white;\n}\n.slider .icons .icon-wrapper img {\n  width: 100%;\n  display: block;\n  filter: invert(100%);\n}\n\n.features {\n  height: 1100px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/shutterstock_234753442.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  padding-top: 80px;\n  padding-bottom: 80px;\n}\n.features .features-1 .card {\n  border: none;\n  background: transparent;\n}\n.features .features-1 .card .card-img-top {\n  border-radius: calc(0.25rem - 1px);\n  height: 130px;\n}\n.features .features-1 .card .card-img-top img {\n  height: 150px;\n  display: block;\n}\n.features .features-1 .card .card-body {\n  padding: 20px 8px;\n}\n.features .features-2 .card {\n  border: none;\n  background: transparent;\n}\n.features .features-2 .card .card-img-top {\n  border-radius: calc(0.25rem - 1px);\n  height: 190px;\n}\n.features .features-2 .card .card-img-top img {\n  height: 150px;\n  display: block;\n}\n.features .features-2 .card .card-body {\n  padding: 20px 8px;\n}\n\n.testimonials {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/Gray-background-with-trucks.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  padding-top: 80px;\n  color: white;\n}\n.testimonials h2 {\n  font-size: 40px;\n}\n\n.calculator {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-color: white;\n  padding-top: 80px;\n}\n.calculator em {\n  font-size: 18px;\n}\n.calculator h2 {\n  font-size: 40px;\n}\n\n.footer {\n  height: 400px;\n  width: 100%;\n  display: block;\n  background-color: #42576A;\n}\n\n.about {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/Transparent-background-with-dots.png\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  padding-top: 80px;\n  padding-bottom: 80px;\n}\n.about .abouts .card {\n  border: 2px solid #E4E4E4;\n  background: transparent;\n}\n.about .abouts .card .card-img-top {\n  border-radius: calc(0.25rem - 1px);\n  height: 130px;\n}\n.about .abouts .card .card-img-top img {\n  width: 150px;\n  display: block;\n}\n.about .abouts .card .card-body {\n  padding: 20px 8px;\n  background: #fff;\n}\n.about .row {\n  margin-top: 90px;\n}\n\n#Map {\n  width: 67%;\n  height: 600px;\n}\n\n#branchAndMap {\n  display: flex;\n  width: 100%;\n  justify-content: space-between;\n  padding-top: 7px;\n}\n\n#postOffice {\n  width: 1182px;\n  margin: auto;\n  float: none;\n}\n\n#listBranch {\n  display: flex;\n  flex-direction: column;\n  width: 32%;\n  height: 600px;\n  overflow: auto;\n}\n\n#listBranch div {\n  border-bottom: 1px solid #dddddd;\n  padding: 20px 0;\n}\n\n#about_post_office {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n#review_post_office {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  height: 530px;\n}\n\n#reviews {\n  width: 42%;\n}\n\n#reviews h4 {\n  font-weight: 400;\n}\n\n#advertise {\n  width: 50%;\n}\n\n#review_post_office img {\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n\n#location {\n  width: 100%;\n}\n\n#addr {\n  width: 93%;\n}\n\n#click_search {\n  width: 7%;\n}\n\n#user_trust {\n  display: flex;\n  justify-content: space-around;\n  width: 100%;\n}\n\n#user_trust h1 {\n  color: red;\n}\n\n#user_trust div {\n  width: 220px;\n  height: 115px;\n  text-align: center;\n  padding-top: 12px;\n  border: 1px solid;\n}\n\n#location {\n  border: 1px solid #b5b5b5;\n  padding: 7px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -7827,7 +7810,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".slider {\n  margin-top: 80px;\n}\n.slider .carousel-caption {\n  top: 50%;\n  transform: translateY(-50%);\n}\n.slider .carousel-caption h3 {\n  font-style: italic;\n  font-weight: 300;\n}\n.slider .carousel-caption h3:after {\n  display: block;\n  content: \" \";\n  width: 100px;\n  height: 3px;\n  background-color: red;\n  position: absolute;\n  left: 50%;\n  top: 70px;\n  transform: translateX(-50%);\n}\n.slider .carousel-caption p {\n  font-size: 80px;\n  font-weight: 500;\n}\n.slider .icons {\n  z-index: 10;\n  position: absolute;\n  display: block;\n  top: 375px;\n  left: 50%;\n  transform: translateX(-50%);\n  color: white;\n}\n.slider .icons .truck-img {\n  width: 100%;\n  filter: invert(100%);\n}\n.slider .icons .icon-wrapper {\n  width: 60px;\n  height: 60px;\n  display: block;\n  margin-top: 40px;\n  fill: white;\n}\n.slider .icons .icon-wrapper img {\n  width: 100%;\n  display: block;\n  filter: invert(100%);\n}\n\n.features {\n  height: 1100px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/shutterstock_234753442.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  padding-top: 80px;\n  padding-bottom: 80px;\n}\n.features .features-1 .card {\n  border: none;\n  background: transparent;\n}\n.features .features-1 .card .card-img-top {\n  border-radius: calc(0.25rem - 1px);\n  height: 130px;\n}\n.features .features-1 .card .card-img-top img {\n  height: 150px;\n  display: block;\n}\n.features .features-1 .card .card-body {\n  padding: 20px 8px;\n}\n.features .features-2 .card {\n  border: none;\n  background: transparent;\n}\n.features .features-2 .card .card-img-top {\n  border-radius: calc(0.25rem - 1px);\n  height: 190px;\n}\n.features .features-2 .card .card-img-top img {\n  height: 150px;\n  display: block;\n}\n.features .features-2 .card .card-body {\n  padding: 20px 8px;\n}\n\n.testimonials {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/Gray-background-with-trucks.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  padding-top: 80px;\n  color: white;\n}\n.testimonials h2 {\n  font-size: 40px;\n}\n\n.calculator {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-color: white;\n  padding-top: 80px;\n}\n.calculator em {\n  font-size: 18px;\n}\n.calculator h2 {\n  font-size: 40px;\n}\n\n.footer {\n  height: 400px;\n  width: 100%;\n  display: block;\n  background-color: #42576A;\n}\n\n.about {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/Transparent-background-with-dots.png\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  padding-top: 80px;\n  padding-bottom: 80px;\n}\n.about .abouts .card {\n  border: 2px solid #E4E4E4;\n  background: transparent;\n}\n.about .abouts .card .card-img-top {\n  border-radius: calc(0.25rem - 1px);\n  height: 130px;\n}\n.about .abouts .card .card-img-top img {\n  width: 150px;\n  display: block;\n}\n.about .abouts .card .card-body {\n  padding: 20px 8px;\n  background: #fff;\n}\n.about .row {\n  margin-top: 90px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".slider {\n  margin-top: 80px;\n}\n.slider .carousel-caption {\n  top: 50%;\n  transform: translateY(-50%);\n}\n.slider .carousel-caption h3 {\n  font-style: italic;\n  font-weight: 300;\n}\n.slider .carousel-caption h3:after {\n  display: block;\n  content: \" \";\n  width: 100px;\n  height: 3px;\n  background-color: red;\n  position: absolute;\n  left: 50%;\n  top: 70px;\n  transform: translateX(-50%);\n}\n.slider .carousel-caption p {\n  font-size: 80px;\n  font-weight: 500;\n}\n.slider .icons {\n  z-index: 10;\n  position: absolute;\n  display: block;\n  top: 375px;\n  left: 50%;\n  transform: translateX(-50%);\n  color: white;\n}\n.slider .icons .truck-img {\n  width: 100%;\n  filter: invert(100%);\n}\n.slider .icons .icon-wrapper {\n  width: 60px;\n  height: 60px;\n  display: block;\n  margin-top: 40px;\n  fill: white;\n}\n.slider .icons .icon-wrapper img {\n  width: 100%;\n  display: block;\n  filter: invert(100%);\n}\n\n.features {\n  height: 1100px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/shutterstock_234753442.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  padding-top: 80px;\n  padding-bottom: 80px;\n}\n.features .features-1 .card {\n  border: none;\n  background: transparent;\n}\n.features .features-1 .card .card-img-top {\n  border-radius: calc(0.25rem - 1px);\n  height: 130px;\n}\n.features .features-1 .card .card-img-top img {\n  height: 150px;\n  display: block;\n}\n.features .features-1 .card .card-body {\n  padding: 20px 8px;\n}\n.features .features-2 .card {\n  border: none;\n  background: transparent;\n}\n.features .features-2 .card .card-img-top {\n  border-radius: calc(0.25rem - 1px);\n  height: 190px;\n}\n.features .features-2 .card .card-img-top img {\n  height: 150px;\n  display: block;\n}\n.features .features-2 .card .card-body {\n  padding: 20px 8px;\n}\n\n.testimonials {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/Gray-background-with-trucks.jpg\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  padding-top: 80px;\n  color: white;\n}\n.testimonials h2 {\n  font-size: 40px;\n}\n\n.calculator {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-color: white;\n  padding-top: 80px;\n}\n.calculator em {\n  font-size: 18px;\n}\n.calculator h2 {\n  font-size: 40px;\n}\n\n.footer {\n  height: 400px;\n  width: 100%;\n  display: block;\n  background-color: #42576A;\n}\n\n.about {\n  height: 900px;\n  width: 100%;\n  display: block;\n  background-image: url(\"/img/Transparent-background-with-dots.png\");\n  background-repeat: no-repeat;\n  background-size: cover;\n  padding-top: 80px;\n  padding-bottom: 80px;\n}\n.about .abouts .card {\n  border: 2px solid #E4E4E4;\n  background: transparent;\n}\n.about .abouts .card .card-img-top {\n  border-radius: calc(0.25rem - 1px);\n  height: 130px;\n}\n.about .abouts .card .card-img-top img {\n  width: 150px;\n  display: block;\n}\n.about .abouts .card .card-body {\n  padding: 20px 8px;\n  background: #fff;\n}\n.about .row {\n  margin-top: 90px;\n}\n\n#Map {\n  width: 67%;\n  height: 600px;\n}\n\n#branchAndMap {\n  display: flex;\n  width: 100%;\n  justify-content: space-between;\n  padding-top: 7px;\n}\n\n#postOffice {\n  width: 1182px;\n  margin: auto;\n  float: none;\n}\n\n#listBranch {\n  display: flex;\n  flex-direction: column;\n  width: 32%;\n  height: 600px;\n  overflow: auto;\n}\n\n#listBranch div {\n  border-bottom: 1px solid #dddddd;\n  padding: 20px 0;\n}\n\n#about_post_office {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n#review_post_office {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  height: 530px;\n}\n\n#reviews {\n  width: 42%;\n}\n\n#reviews h4 {\n  font-weight: 400;\n}\n\n#advertise {\n  width: 50%;\n}\n\n#review_post_office img {\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n\n#location {\n  width: 100%;\n}\n\n#addr {\n  width: 93%;\n}\n\n#click_search {\n  width: 7%;\n}\n\n#user_trust {\n  display: flex;\n  justify-content: space-around;\n  width: 100%;\n}\n\n#user_trust h1 {\n  color: red;\n}\n\n#user_trust div {\n  width: 220px;\n  height: 115px;\n  text-align: center;\n  padding-top: 12px;\n  border: 1px solid;\n}\n\n#location {\n  border: 1px solid #b5b5b5;\n  padding: 7px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
