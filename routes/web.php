@@ -29,6 +29,9 @@ Route::get('/', function () {
 });
 
 Route::get("/listBranch",[Controller::class,"listBranchData"]);
+Route::get("/shipping-rates",[Controller::class,"shippingRates"]);
+Route::post("/book-shipment",[Controller::class,"bookShipment"]);
+
 Route::get('/{any}', function ($any) {
     return view('client');
 })->where("any", "^((?!admin).)*$");

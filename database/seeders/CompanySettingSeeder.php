@@ -17,28 +17,28 @@ class CompanySettingSeeder extends Seeder
         //
         $shippingRateSettings = [
             'to100' => [
-                'intraprovince' => 0,
-                'to100km' => 0,
-                'to300km' => 0,
-                'above300km' => 0
+                'intraprovince' => 8000,
+                'to100km' => 10000,
+                'to300km' => 16000,
+                'above300km' => 20000
             ],
             'to500' => [
-                'intraprovince' => 0,
-                'to100km' => 0,
-                'to300km' => 0,
-                'above300km' => 0
+                'intraprovince' => 10000,
+                'to100km' => 15000,
+                'to300km' => 20000,
+                'above300km' => 25000
             ],
             'to1000' => [
-                'intraprovince' => 0,
-                'to100km' => 0,
-                'to300km' => 0,
-                'above300km' => 0
+                'intraprovince' => 15000,
+                'to100km' => 20000,
+                'to300km' => 25000,
+                'above300km' => 30000
             ],
             'every500' => [
-                'intraprovince' => 0,
-                'to100km' => 0,
-                'to300km' => 0,
-                'above300km' => 0
+                'intraprovince' => 3000,
+                'to100km' => 6000,
+                'to300km' => 9000,
+                'above300km' => 12000
             ]
         ];
         

@@ -48,7 +48,7 @@ export default function Calculator(props) {
           </div>
         </div>
       </div> 
-      <div class="w-100 p-3 text-center bg-secondary description">
+      <div class="w-100 p-3 text-center bg-secondary description copyright">
         Copyright © Transport X 2021. All rights reserved.
       </div>
     </section>

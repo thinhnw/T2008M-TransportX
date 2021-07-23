@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Branches;
+use App\Models\CompanySetting;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -18,5 +20,18 @@ class Controller extends BaseController
             "message"=>"Success",
             "listbranch"=>$listbranch
         ]);
+    }
+    public function shippingRates()
+    {
+        //
+        return response()->json([
+           "status" => true,
+           "message" => "Success",
+           "data" => json_decode(CompanySetting::where("name", "shipping_rate")->first()->settings)
+        ]);
+    }
+    public function bookShipment(Request $request) {
+        dd($request->data);
+        return [];
     }
 }

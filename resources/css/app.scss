@@ -22,98 +22,87 @@ $menu-height: 80px;
         height: 3px;
         background-color: red;
         position: absolute;
-        left: 50%;
-        top: 70px;
-        transform: translateX(-50%);
-      }
-    }
-    p {
-      font-size: 80px;
-      font-weight: 500;
-    }
-  }
-  .icons {
-    z-index: 10;
-    position: absolute;
-    display: block;
-    top: 375px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    .truck-img {
-      width: 100%;
-      filter: invert(100%);
-    }
-    .icon-wrapper {
-      width: 60px;
-      height: 60px;
-      display: block;
-      margin-top: 40px;
-        fill: white;
-      img {
-        width: 100%;
         display: block;
-        filter: invert(100%);
-      }
+        top: 375px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        .truck-img {
+            width: 100%;
+            filter: invert(100%);
+        }
+        .icon-wrapper {
+            width: 60px;
+            height: 60px;
+            display: block;
+            margin-top: 40px;
+            fill: white;
+            img {
+                width: 100%;
+                display: block;
+                filter: invert(100%);
+            }
+        }
+        }
     }
-  }
+}
 }
 .features {
-  height: 1100px;
-  width: 100%;
-  display: block;
-  background-image: url('/img/shutterstock_234753442.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  .features-1 {
-    .card {
-      border: none;
-      background: transparent;
-      .card-img-top {
-        border-radius: calc(0.25rem - 1px);
-        height: 130px;
-        img {
-          height: 150px;
-          display: block;
+    height: 1100px;
+    width: 100%;
+    display: block;
+    background-image: url('/img/shutterstock_234753442.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    .features-1 {
+        .card {
+            border: none;
+            background: transparent;
+            .card-img-top {
+                border-radius: calc(0.25rem - 1px);
+                height: 130px;
+                img {
+                    height: 150px;
+                    display: block;
+                }
+            }
+            .card-body {
+                padding: 20px 8px;
+            }
         }
-      }
-      .card-body {
-        padding: 20px 8px;
-      }
     }
-  }
-  .features-2 {
-    .card {
-      border: none;
-      background: transparent;
-      .card-img-top {
-        border-radius: calc(0.25rem - 1px);
-        height: 190px;
-        img {
-          height: 150px;
-          display: block;
+    .features-2 {
+        .card {
+            border: none;
+            background: transparent;
+            .card-img-top {
+                border-radius: calc(0.25rem - 1px);
+                height: 190px;
+                img {
+                    height: 150px;
+                    display: block;
+                }
+            }
+            .card-body {
+                padding: 20px 8px;
+            }
         }
-      }
-      .card-body {
-        padding: 20px 8px;
-      }
     }
-  }
 }
 .testimonials {
-  height: 900px;
-  width: 100%;
-  display: block;
-  background-image: url('/img/Gray-background-with-trucks.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-	padding-top: 80px;
-	color: white;
-	h2 {
-		font-size: 40px;
-	}
+    height: 900px;
+    width: 100%;
+    display: block;
+    background-image: url('/img/Gray-background-with-trucks.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+    color: white;
+    h2 {
+        font-size: 40px;
+    }
 }
 
 .calculator {
@@ -137,12 +126,17 @@ $menu-height: 80px;
   background-color: #42576A;
   padding-top: 60px;
   padding-bottom: 0px;
+  position: relative;
+  .copyright {
+      position: absolute;
+      bottom: 0;
+  }
   .description {
     color: rgba(255, 255, 255, 0.7);
   }
 }
 
-                        // about
+// about
 .about {
     height: 900px;
     width: 100%;
@@ -180,4 +174,81 @@ $menu-height: 80px;
 
 .track {
 
+}
+#Map {
+    width:67%;
+    height: 600px;
+}
+#branchAndMap{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 7px;
+}
+#postOffice{
+    width: 1182px;
+    margin: auto;
+    float: none;
+}
+#listBranch{
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    height: 600px;
+    overflow: auto;
+}
+#listBranch div{
+    border-bottom: 1px solid rgb(221,221,221);
+    padding: 20px 0;
+}
+#about_post_office{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+#review_post_office{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 530px;
+}
+#reviews{
+    width: 42%;
+}
+#reviews h4{
+    font-weight: 400;
+}
+#advertise{
+    width: 50%
+}
+#review_post_office img{
+    object-fit: contain;
+}
+#location{
+    width: 100%;
+}
+#addr{
+    width: 93%;
+}
+#click_search{
+    width: 7%;
+}
+#user_trust{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+#user_trust h1{
+    color: red;
+}
+#user_trust div{
+    width: 220px;
+    height: 115px;
+    text-align: center;
+    padding-top: 12px;
+    border: 1px solid;
+}
+#location{
+    border: 1px solid rgb(181 181 181);
+    padding: 7px;
 }

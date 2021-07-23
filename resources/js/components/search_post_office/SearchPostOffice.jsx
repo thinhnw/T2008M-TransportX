@@ -33,9 +33,9 @@ export default function PostOffices(props) {
         (items,key)=>{
             return(
                 <div onClick={()=>flyTo(items.id)}>
-                    <p>{items.address}</p>
-                    <span>{items.city}</span><br/>
-                    <span>{items.phone_number}</span><br/>
+                    <span>{items.address}</span>
+                    <span>{items.city}</span>
+                    <span>{items.phone_number}</span>
                     <span>{items.zip_code}</span>
                 </div>
             )
@@ -72,7 +72,7 @@ export default function PostOffices(props) {
     //Render Map
     const renderMap=()=>{
         return(
-            <Map ref={mapRef} center={position} zoom={2} scrollWheelZoom={true} id={"Map"}  minZoom={2}>
+            <Map ref={mapRef} center={position} zoom={8} scrollWheelZoom={true} id={"Map"}  minZoom={2}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -82,8 +82,7 @@ export default function PostOffices(props) {
         )
     }
 //...................................................//
-
-    //Search the office
+//Search the office
     const searchOffice=()=>{
         return(
             <div>
@@ -118,19 +117,20 @@ export default function PostOffices(props) {
             duration:2
         })
         return(
-          <Marker >
+            <Marker >
 
-          </Marker>
+            </Marker>
         );
 
     }
+
     return(
         <div>
-            <div id={"about_post_office"} >
+            <div id={"about_post_office"} className={"container"}>
                 <div id={"review_post_office"}>
                     <div id={"reviews"}>
-                        <h4>Mạng lưới bưu cục trên 63 tỉnh thành</h4>
-                        <small>Mạng lưới chuyển phát của Viettel Post phủ sóng khắp 63 tỉnh thành trên lãnh thổ Việt Nam.</small>
+                        <span>Post office network in 63 provinces</span>
+                        <small>Transport X's delivery network covers 63 provinces and cities in Vietnam.</small>
                     </div>
                     <div id={"advertise"}>
                         <div id={"user_trust"}>
