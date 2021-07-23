@@ -117,7 +117,7 @@
                                     </a>
                                 @endif
 
-                                <x-jet-button class="ml-4">
+                                <x-jet-button class="ml-4" style="background: #ff7324">
                                     {{ __('Log in') }}
                                 </x-jet-button>
                             </div>
