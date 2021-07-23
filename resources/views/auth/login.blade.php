@@ -28,7 +28,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="text-align: left;border-bottom: 1px solid #eee;font-weight:bold;padding: 0 10px;">
+                        <td style="text-align: left;border-bottom: 1px solid #eee;font-weight:bold;padding: 0px 10px;">
                             ADMIN
                             <br>
                             <span id="login_admin" class="text-muted font-size-xs font-weight-normal">Click to Copy</span>
@@ -40,7 +40,7 @@
                         <td style="border-bottom: 1px solid #eee;text-align: left;font-weight:bold;padding: 0 10px;">
                             EMPLOYEE
                             <br>
-                            <span id="login_admin" class="text-muted font-size-xs font-weight-normal">Click to Copy</span>
+                            <span class="text-muted font-size-xs font-weight-normal">Click to Copy</span>
                         </td>
                         <td style="border-bottom: 1px solid #eee;text-align: left;padding: 0 10px">employee@cargo.com</td>
                         <td style="border-bottom: 1px solid #eee;text-align: right;">123456</td>
@@ -49,7 +49,7 @@
                         <td style="border-bottom: 1px solid #eee;text-align: left;font-weight:bold;padding: 0 10px;">
                             BRANCH MANAGER
                             <br>
-                            <span id="login_admin" class="text-muted font-size-xs font-weight-normal">Click to Copy</span>
+                            <span class="text-muted font-size-xs font-weight-normal">Click to Copy</span>
                         </td>
                         <td style="border-bottom: 1px solid #eee;text-align: left;padding: 0 10px">branch@cargo.com</td>
                         <td style="border-bottom: 1px solid #eee;text-align: right;">123456</td>
@@ -58,7 +58,7 @@
                         <td style="border-bottom: 1px solid #eee;text-align: left;font-weight:bold;padding: 0 10px;">
                             DRIVER/CAPTAIN
                             <br>
-                            <span id="login_admin" class="text-muted font-size-xs font-weight-normal">Click to Copy</span>
+                            <span class="text-muted font-size-xs font-weight-normal">Click to Copy</span>
                         </td>
                         <td style="border-bottom: 1px solid #eee;text-align: left;padding: 0 10px">driver@cargo.com</td>
                         <td style="border-bottom: 1px solid #eee;text-align: right;">123456</td>
@@ -67,7 +67,7 @@
                         <td style="border-bottom: 1px solid #eee;text-align: left;font-weight:bold;padding: 0 10px;">
                             Client
                             <br>
-                            <span id="login_admin" class="text-muted font-size-xs font-weight-normal">Click to Copy</span>
+                            <span class="text-muted font-size-xs font-weight-normal">Click to Copy</span>
                         </td>
                         <td style="text-align: left;padding: 0 10px">client@cargo.com</td>
                         <td style="text-align: right;">123456</td>
