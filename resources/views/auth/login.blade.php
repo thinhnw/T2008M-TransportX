@@ -1,6 +1,6 @@
 <img src="img/bg-3.jpg" alt="background" style="position: absolute;width: 100%;height: 900px">
 <div style="display: block" class="d-flex flex-center flex-row-fluid bgi-size-cover bgi-position-top bgi-no-repeat">
-    <div style="width: 100%;max-width: 450px;text-align: center;margin-top: 60px;margin-left:750px" class="login-form text-center p-7 position-relative overflow-hidden">
+    <div style="width: 100%;max-width: 450px;text-align: center;margin-top: 60px;margin-left: 35%" class="login-form text-center p-7 position-relative overflow-hidden">
         <!--begin::Login Header-->
         <div class="d-flex flex-center mb-5" style="text-align: center">
             <a href="#" style="position: relative;text-align: center">
